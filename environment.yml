@@ -1,0 +1,20 @@
+name: quangis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.7
+  - spacy
+  - spacy-model-en_core_web_sm
+  - antlr4-python3-runtime=4.9.3
+  - nltk
+  - word2number
+  - django
+  - checklist
+  - allenlp
+  - allenlp-models
+  - rdflib
+  - plumbum
+  - pip:
+    - git+https://github.com/quangis/transformation-algebra.git@d5184db79b9ad4f2aa49d44250e905caf67d5aad#egg=transformation-algebra
+    - git+https://github.com/quangis/cct.git@5b039c2e68231aeda230ce6f562101bf48471464#egg=cct
+    - git+https://github.com/quangis/geo-question-parser.git#egg=geo-question-parser
