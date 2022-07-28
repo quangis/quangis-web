@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  
+    <head>
+        <meta charset="UTF-8">
+        <title>Geo-analytical question formulation</title>
+    
+        <!-- [SC] CSS styling for blockly -->
+        <link rel="stylesheet" href="{% static 'blocklyUI/css/blockly.css'%}">
+    
+        <!-- [SC] importing Blockly core code -->
+        <!-- <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/blockly/blockly_compressed.js'%}"></script> -->
+        <script src="{% static 'blocklyUI/js/blockly/blockly.min.js'%}"></script>
+    
+        <!-- [SC] include the custom block definitions -->
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/blocks.js'%}"></script>
+	
+        <!-- [SC] custom code for sentence generation -->
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/generator.js'%}"></script>
+    
+        <!-- [SC] code for cytoscape-based workflow visualization -->
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/cytoscape.min.js'%}"></script>
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/klay.js'%}"></script> 
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/cytoscape-klay.js'%}"></script>
+    
+        <link rel="shortcut icon" href="#" />
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('qGenPage', this, 'green')" id="defaultOpen">Question generator</button>
+        <button class="tablink" onclick="openPage('wfViewPage', this, 'orange')">Workflow viewer</button>
+   
+        <div id="qGenPage" class="tabcontent">
+            <h3>Generate your geo-analytical question</h3>
+        
+            <xml id="toolbox">
+                <category name="Question words" colour="150" toolboxitemid="queCate">
+                    <block type="where">
+                        <value name = "where_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "where_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="what">
+                        <value name = "what_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "what_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="which">
+                        <value name = "which_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "which_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="what_area1">
+                        <value name = "wharea_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "wharea_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="what_area2">
+                        <value name = "wharea_rel_shadow">
+                            <shadow type="rel_reminder"></shadow>
+                        </value>
+                        <value name = "wharea_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="how_many">
+                        <value name = "howmany_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "howmany_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="from_where">
+                        <value name = "fromwh_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                        <value name = "fromwh_extent_shadow">
+                            <shadow type="extent_reminder"></shadow>
+                        </value>
+                    </block>
+                </category>
+                <!--for which, how many-->
+                <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
+                    <block type="noun_phrase1_1">
+                        <value name = "coreCAux_shadow1">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="noun_phrase1_2">
+                        <value name = "coreCAux_shadow2">
+                            <shadow type="rel_reminder"></shadow>
+                        </value>
+                    </block>
+                </category>
+                <!--for where, what, what_area, from where and noun_phrase1-->
+                <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
+                    <block type="noun_phrase2">
+                        <value name = "adjcoreC_shadow">
+                            <shadow type="rel_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="noun_phrase3">
+                        <value name = "coreCOfCoreC_shadow1">
+                            <block type="noun_phrase3_connect">
+                                <value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
+                            </block>
+                            <!-- <shadow type="np_reminder"></shadow>-->
+                        </value>
+                    </block>
+                    <block type="noun_phrase4">
+                        <value name = "distCoreC">
+                            <block type="noun_phrase4_from">
+                                <value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
+                            </block>
+                        </value>
+                        <value name = "distCoreC_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                    </block>
+                </category>
+                <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
+        <!--			<block type="noun_phrase2">-->
+        <!--				<value name = "adjcoreC_shadow">-->
+        <!--					<shadow type="rel_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<block type="grid1"></block>-->
+        <!--			<block type="grid2"></block>-->
+                </category>
+                <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
+                    <block type="noun_phrase2">
+                        <value name = "adjcoreC_shadow">
+                            <shadow type="rel_reminder"></shadow>
+                        </value>
+                    </block>
+                </category>
+                <category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
+                    <block type="relationship1">
+                        <value name = "rel1_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="relationship2">
+                        <value name = "rel3_np_shadow">
+                            <shadow type="np_reminder"></shadow>
+                        </value>
+                    </block>
+                    <block type="relationship3"></block>
+                    <block type="relationship4">
+                        <value name = "rel4_np">
+                            <block type="rel4_np"></block>
+                        </value>
+                    </block>
+                    <block type="relationship5">
+                        <value name = "rel5_np">
+                            <block type="rel5_np"></block>
+                        </value>
+                    </block>
+                    <block type="relationship6"></block>
+                </category>
+                <category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
+        <!--			<block type="support">-->
+        <!--				<value name = "sup_np_shadow">-->
+        <!--					<shadow type="np_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--				<value name = "sup_ext_shadow">-->
+        <!--					<shadow type="spaextent_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<label text="Spatial extent:"></label>-->
+        <!--			<block type="extent">-->
+        <!--				<value name = "temext_shadow">-->
+        <!--					<shadow type="temextent_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<label text="Temporal extent:"></label>-->
+        <!--			<block type="temporalextent1"></block>-->
+        <!--			<block type="temporalextent2"></block>-->
+                </category>
+            </xml>
+    
+            <!-- [SC][TODO] django does not seem to parse embedded code within static files; so added this js code in html file -->
+            <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script>
+            <!-- [SC][TODO] This is temporary code for loading datafiles from the server -->
+            <script> const datapath = "{% static 'blocklyUI/data/' %}"; </script>
+        
+            <div class="qInputMode">
+                <section id="quesContainer">
+                    <div id="questionDiv"></div>
+                </section>
+                
+                <section id="blocklyContainer">
+                    <!-- <div id="blocklyDiv" style="height: 480px; width: 1000px;"></div> -->
+                    <div id="blocklyDiv"></div>
+                </section>
+            
+                <!-- [SC][TODO]remove the code; form-based GET request to parse blockly question
+                <form action="{% url 'blocklyUINS:urln_parsedQ' %}" method="get">
+                    <input type="hidden" name="qStr" value="" id="qStrParam"/>
+                    <input type="submit" value="Parse blockly question" />
+                </form>
+                -->
+                <!-- [SC][TODO] AJAX based alternative to the form above -->
+                <input type="button" value="Parse blockly question" onclick="parseBlocklyQ();" />
+            </div>
+    
+            <!-- [SC][TODO] remove this test code -->
+            <div class="qInputMode">
+                <select name="qStr" id="qCorpusList">
+                    <option value="What is the percentage of households within 2000 metres from the supermarkets for each district in Amsterdam">What is the percentage of households within 2000 metres from the supermarkets for each district in Amsterdam</option>
+                    <option value="What is the crime density within the buffer area of the shortest path from home to workplace in Amsterdam">What is the crime density within the buffer area of the shortest path from home to workplace in Amsterdam</option>
+                    <option value="What is the total walking time to the nearest waste disposal places from each household in the Amsterdam city centre">What is the total walking time to the nearest waste disposal places from each household in the Amsterdam city centre</option>
+                    <option value="What is the density of residential areas for each neighbourhood in Amsterdam">What is the density of residential areas for each neighbourhood in Amsterdam</option>
+                    <option value="What is the density of street intersections for each neighbourhood in Amsterdam">What is the density of street intersections for each neighbourhood in Amsterdam</option>
+                    <option value="What is the average temperature for each neighborhood in Amsterdam">What is the average temperature for each neighborhood in Amsterdam</option>
+                    <option value="What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam">What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam</option>
+                    <option value="What is the travel distance from car accidents to the nearest hospitals in Amsterdam">What is the travel distance from car accidents to the nearest hospitals in Amsterdam</option>
+                    <option value="What are the potentials of solar power for each rooftop in Amsterdam">What are the potentials of solar power for each rooftop in Amsterdam</option>
+                    <option value="What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam">What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam</option>
+
+                        
+                    <option value="Which houses are for sale in Utrecht">Which houses are for sale in Utrecht</option>
+                    <option value="Which houses have construction year between 1990 and 2000 in Utrecht">Which houses have construction year between 1990 and 2000 in Utrecht</option>
+                    <option value="What houses are for sale and within 0.5km from the main roads in Utrecht">What houses are for sale and within 0.5km from the main roads in Utrecht</option>
+                    <option value="What houses are for sale and within 1km from the nearest school in Utrecht">What houses are for sale and within 1km from the nearest school in Utrecht</option>
+                    <option value="What houses are for sale and within 1km from the nearest supermarket in Utrecht">What houses are for sale and within 1km from the nearest supermarket in Utrecht</option>
+                    <option value="What houses are for sale in urban areas in Utrecht">What houses are for sale in urban areas in Utrecht</option>
+                    <option value="What houses are for sale and in neighborhoods with crime rate lower than 50 per 1000 people in Utrecht">What houses are for sale and in neighborhoods with crime rate lower than 50 per 1000 people in Utrecht</option>
+                    <option value="What houses are for sale and within 1km from the parks in Utrecht">What houses are for sale and within 1km from the parks in Utrecht</option>
+                    <option value="Where are the five star hotels in the Happy Valley ski resort">Where are the five star hotels in the Happy Valley ski resort</option>
+                    <option value="Which shops are open at 6 pm in Happy Valley ski resort">Which shops are open at 6 pm in Happy Valley ski resort</option>
+                    <option value="Which cafes are in forested areas in Happy Valley ski resort">Which cafes are in forested areas in Happy Valley ski resort</option>
+                    <option value="Where are the ski pistes in Happy Valley ski resort">Where are the ski pistes in Happy Valley ski resort</option>
+                    <option value="Where is the most popular ski piste in Happy Valley ski resort">Where is the most popular ski piste in Happy Valley ski resort</option>
+                    <option value="Which ski piste is longest in the Happy Valley">Which ski piste is longest in the Happy Valley</option>
+                    <option value="Which hotels are within 0.3km of the longest ski piste in Happy Valley ski resort">Which hotels are within 0.3km of the longest ski piste in Happy Valley ski resort</option>
+                    <option value="Which neighborhood has the highest crime rate in Amsterdam">Which neighborhood has the highest crime rate in Amsterdam</option>
+                    <option value="Where are the individual crimes in Amsterdam">Where are the individual crimes in Amsterdam</option>
+                    <option value="Which neighborhood has the highest robbery rate in Amsterdam">Which neighborhood has the highest robbery rate in Amsterdam</option>
+                    <option value="Which neighborhood has the highest arson rate in Amsterdam">Which neighborhood has the highest arson rate in Amsterdam</option>
+                    <option value="Which neighborhood has the highest burglary rate in Amsterdam">Which neighborhood has the highest burglary rate in Amsterdam</option>
+                    <option value="Which buildings are within 1 minute of driving time from a fire station in Fort Worth">Which buildings are within 1 minute of driving time from a fire station in Fort Worth</option>
+                    <option value="What buildings are within 2 minutes but not within 1 minute of driving time from a fire station in Fort Worth">What buildings are within 2 minutes but not within 1 minute of driving time from a fire station in Fort Worth</option>
+                    <option value="Which schools are not within 3 minutes of driving time from a fire station in Fort Worth">Which schools are not within 3 minutes of driving time from a fire station in Fort Worth</option>
+                    <option value="What is the nearest fire station to each fire call in Fort Worth">What is the nearest fire station to each fire call in Fort Worth</option>
+                    <option value="Where are the hurricanes in Oleander in 1977">Where are the hurricanes in Oleander in 1977</option>
+                    <option value="What was the trajectory of a hurricane in Oleander in 1977">What was the trajectory of a hurricane in Oleander in 1977</option>
+                    <option value="Where was the most intense hurricane in Oleander in 1977">Where was the most intense hurricane in Oleander in 1977</option>
+                    <option value="Where was the fastest hurricane in Oleander in 1977">Where was the fastest hurricane in Oleander in 1977</option>
+                    <option value="How many buildings are affected by a hurricane in Oleander">How many buildings are affected by a hurricane in Oleander</option>
+                    <option value="Which buildings are affected by a hurricane in Oleander">Which buildings are affected by a hurricane in Oleander</option>
+                    <option value="How many people are affected by a hurricane in Oleander">How many people are affected by a hurricane in Oleander</option>
+                    <option value="Where are the rocky areas in Spain">Where are the rocky areas in Spain</option>
+                    <option value="What areas do have slope larger than 10 percent in Spain">What areas do have slope larger than 10 percent in Spain</option>
+                    <option value="What areas do have altitude between 700 and 2000 meters in Spain">What areas do have altitude between 700 and 2000 meters in Spain</option>
+                    <option value="What areas do have temperature in Celsius larger than 0 degrees in Spain">What areas do have temperature in Celsius larger than 0 degrees in Spain</option>
+                    <option value="What areas do have precipitation lower than 40 millimeters in Spain">What areas do have precipitation lower than 40 millimeters in Spain</option>
+                    <option value="What areas are at least 3000 meters from the rivers in Spain">What areas are at least 3000 meters from the rivers in Spain</option>
+                    <option value="What areas are more than 5000 meters from the roads in Spain">What areas are more than 5000 meters from the roads in Spain</option>
+                    <option value="What is the predicted distribution probability for the little midwife toad in Spain in 2030">What is the predicted distribution probability for the little midwife toad in Spain in 2030</option>
+                    <option value="Where are the industrial areas in Utrecht">Where are the industrial areas in Utrecht</option>
+                    <option value="Which park is biggest in Utrecht">Which park is biggest in Utrecht</option>
+                    <option value="Which freeways do have 4 lanes in Netherlands">Which freeways do have 4 lanes in Netherlands</option>
+                    <option value="Which city has the highest crime rate in Netherlands">Which city has the highest crime rate in Netherlands</option>
+                    <option value="Which city has the highest population density in Netherlands">Which city has the highest population density in Netherlands</option>
+                    <option value="What areas do not have groundwater in the UK">What areas do not have groundwater in the UK</option>
+                    <option value="What areas do have population density less than 300 per square kilometer in UK">What areas do have population density less than 300 per square kilometer in UK</option>
+                    <option value="What areas are minimum 3000 meters and maximum 5000 meters from the roads in UK">What areas are minimum 3000 meters and maximum 5000 meters from the roads in UK</option>
+                    <option value="Where are not conservation areas in UK">Where are not conservation areas in UK</option>
+                    <option value="Which houses do not have plumbing in Utrecht">Which houses do not have plumbing in Utrecht</option>
+                    <option value="Which emergency vehicle is closest to the accident in Utrecht">Which emergency vehicle is closest to the accident in Utrecht</option>
+                    <option value="Where is the best site for a new landfill in UK">Where is the best site for a new landfill in UK</option>
+                    <option value="Which forestry areas have Norwegian Spruce trees in Europe">Which forestry areas have Norwegian Spruce trees in Europe</option>
+                    <option value="Where is the cluster of student residence in Utrecht">Where is the cluster of student residence in Utrecht</option>
+                    <option value="Where is the best site for a landscape conservation park in Zdarske Vrchy">Where is the best site for a landscape conservation park in Zdarske Vrchy</option>
+                    <option value="Where are the fire stations in Utrecht">Where are the fire stations in Utrecht</option>
+                    <option value="Where are the holiday accommodations within 1000 meters of a windsurfing spot in Italy">Where are the holiday accommodations within 1000 meters of a windsurfing spot in Italy</option>
+                    <option value="Where are the flat areas within 500 meters of a major highway in the United Kingdom">Where are the flat areas within 500 meters of a major highway in the United Kingdom</option>
+                    <option value="What is the traffic flow of the A28 motorway in Utrecht">What is the traffic flow of the A28 motorway in Utrecht</option>
+                    <option value="What is the shortest route from the resort center to ski pistes in Happy Valley">What is the shortest route from the resort center to ski pistes in Happy Valley</option>
+                    <option value="Where is the best site for a wind farm in Portland">Where is the best site for a wind farm in Portland</option>
+                    <option value="Where is the best site for a new retail store in Toronto">Where is the best site for a new retail store in Toronto</option>
+                    <option value="What is the land use in Netherlands">What is the land use in Netherlands</option>
+                    <option value="Where are the commercial areas in Amsterdam">Where are the commercial areas in Amsterdam</option>
+                    <option value="How many luxury hotels are in Happy Valley ski resort">How many luxury hotels are in Happy Valley ski resort</option>
+                    <option value="Where are the luxury hotels with more than 20 bedrooms in Happy Valley ski resort">Where are the luxury hotels with more than 20 bedrooms in Happy Valley ski resort</option>
+                    <option value="Where are forestry lands in Happy Valley ski resort">Where are forestry lands in Happy Valley ski resort</option>
+                    <option value="Which hotels are within 0.2 km of the main roads in Happy Valley ski resort">Which hotels are within 0.2 km of the main roads in Happy Valley ski resort</option>
+                    <option value="Which land use contains meteorological stations in Netherlands">Which land use contains meteorological stations in Netherlands</option>
+                    <option value="Which roads are intersected with forest areas in UK">Which roads are intersected with forest areas in UK</option>
+                    <option value="What is the land use in the Happy Valley resort">What is the land use in the Happy Valley resort</option>
+                    <option value="Where is the best site for a new ski piste in Happy Valley">Where is the best site for a new ski piste in Happy Valley</option>
+                    <option value="What is the predicted probability surface for snowfall in Happy Valley">What is the predicted probability surface for snowfall in Happy Valley</option>
+                    <option value="What is the shortest route from the center of the resort to the ski pistes in Happy Valley">What is the shortest route from the center of the resort to the ski pistes in Happy Valley</option>
+                    <option value="What is the slope of the new ski piste in the Happy Valley resort">What is the slope of the new ski piste in the Happy Valley resort</option>
+                    <option value="From where are the wind farms visible in Amsterdam">From where are the wind farms visible in Amsterdam</option>
+                    <option value="Which ski pistes are in the avalanche danger zones in Happy Valley">Which ski pistes are in the avalanche danger zones in Happy Valley</option>
+                    <option value="Where are the accidents within ski pistes in the Happy Valley">Where are the accidents within ski pistes in the Happy Valley</option>
+                    <option value="Which visitor facilities are in the Happy Valley">Which visitor facilities are in the Happy Valley</option>
+                    <option value="Which properties are within 1000 meters of an abandoned lead smelter in Oleander">Which properties are within 1000 meters of an abandoned lead smelter in Oleander</option>
+                    <option value="What areas are affected by a tsunami in Indonesia in 2004">What areas are affected by a tsunami in Indonesia in 2004</option>
+                    <option value="What areas are within 100 meters of cameras in Salford">What areas are within 100 meters of cameras in Salford</option>
+                    <option value="Where is the best site of bus stops that maximize the overall population that are within 600-meters buffer areas in Utrecht">Where is the best site of bus stops that maximize the overall population that are within 600-meters buffer areas in Utrecht</option>
+                    <option value="What are the political leaning for each county in the United States">What are the political leaning for each county in the United States</option>
+                    <option value="What is the number of crime cases for each police district in Texas in 2018">What is the number of crime cases for each police district in Texas in 2018</option>
+                    <option value="Where is the mean center of households in the Oost district in Amsterdam">Where is the mean center of households in the Oost district in Amsterdam</option>
+                    <option value="What is the central feature of bank branches in Oleander">What is the central feature of bank branches in Oleander</option>
+                    <option value="What is the mean center of library patrons for each district in Oleander">What is the mean center of library patrons for each district in Oleander</option>
+                    <option value="What is the mean center of the fire calls weighted by the priority in Fort Worth">What is the mean center of the fire calls weighted by the priority in Fort Worth</option>
+                    <option value="What is the mean center of customers weighted by the number of transactions in Oleander city">What is the mean center of customers weighted by the number of transactions in Oleander city</option>
+                    <option value="What is the central feature of bank branches weighted by the number of employees in Oleander city">What is the central feature of bank branches weighted by the number of employees in Oleander city</option>
+                    <option value="Which police stations have fire calls that are outside their alarm territory in Fort Worth">Which police stations have fire calls that are outside their alarm territory in Fort Worth</option>
+                    <option value="What are the standard distance circles of West Nile Virus in Fort Worth">What are the standard distance circles of West Nile Virus in Fort Worth</option>
+                    <option value="What is the directional trend of fire calls for each fire station in Fort Worth">What is the directional trend of fire calls for each fire station in Fort Worth</option>
+                    <option value="What is the directional trend of crimes in Amsterdam in 2019">What is the directional trend of crimes in Amsterdam in 2019</option>
+                    <option value="What is the directional trend of animal migration in the Netherlands">What is the directional trend of animal migration in the Netherlands</option>
+                    <option value="Where are the single-family zones in Tarrant County, Texas">Where are the single-family zones in Tarrant County, Texas</option>
+                    <option value="What is the total linear mileage of the asphalt streets in Tarrant County in Texas">What is the total linear mileage of the asphalt streets in Tarrant County in Texas</option>
+                    <option value="How many arson cases in Fort Worth in February 2004">How many arson cases in Fort Worth in February 2004</option>
+                    <option value="Where are the Hispanic food stores in Tarrant County in Texas">Where are the Hispanic food stores in Tarrant County in Texas</option>
+                    <option value="What is the median household income for each census block in Tarrant County in Texas">What is the median household income for each census block in Tarrant County in Texas</option>
+                    <option value="Where are the auto accidents in Tarrant County in Texas">Where are the auto accidents in Tarrant County in Texas</option>
+                    <option value="What is the total population for each census block in Tarrant County, Texas">What is the total population for each census block in Tarrant County, Texas</option>
+                    <option value="What is the median people age for each census tract in Tarrant County in Texas">What is the median people age for each census tract in Tarrant County in Texas</option>
+                    <option value="What is the construction year for each house in Oleander">What is the construction year for each house in Oleander</option>
+                    <option value="What is the percentage of the Hispanic population to the total population for each census block in Tarrant County in Texas">What is the percentage of the Hispanic population to the total population for each census block in Tarrant County in Texas</option>
+                    <option value="Which park has the highest proportion of bald eagles to the bird totals in Texas">Which park has the highest proportion of bald eagles to the bird totals in Texas</option>
+                    <option value="What is the number of tractors for each road in Texas">What is the number of tractors for each road in Texas</option>
+                    <option value="What is the percentage of owner-occupied houses to the house totals for each census tract in Tarrant County, Texas">What is the percentage of owner-occupied houses to the house totals for each census tract in Tarrant County, Texas</option>
+                    <option value="What is the crime rate for each police district in Texas in 2019">What is the crime rate for each police district in Texas in 2019</option>
+                    <option value="What are the vote totals of an election for each precinct in Dallas">What are the vote totals of an election for each precinct in Dallas</option>
+                    <option value="What is the population density for each census block in Dallas">What is the population density for each census block in Dallas</option>
+                    <option value="What is the density of robberies for each police beat in Dallas">What is the density of robberies for each police beat in Dallas</option>
+                    <option value="What is the density of rental units for each census block in Oleander">What is the density of rental units for each census block in Oleander</option>
+                    <option value="What is the density of rental units in Oleander">What is the density of rental units in Oleander</option>
+                    <option value="What is the density of registered voters for each precinct in Dallas">What is the density of registered voters for each precinct in Dallas</option>
+                    <option value="What is the point density of trees in parks in Oleander">What is the point density of trees in parks in Oleander</option>
+                    <option value="What is the point density of fire calls in Oleander">What is the point density of fire calls in Oleander</option>
+                    <option value="What is the density surface of rainfall measurements in the Netherlands">What is the density surface of rainfall measurements in the Netherlands</option>
+                    <option value="What is the density surface of temperature measurements in Oleander city">What is the density surface of temperature measurements in Oleander city</option>
+                    <option value="What are the directional trends of tornadoes in the Tarrant county from 2010 to 2019">What are the directional trends of tornadoes in the Tarrant county from 2010 to 2019</option>
+                    <option value="What is the mean direction of freeways in Oleander">What is the mean direction of freeways in Oleander</option>
+                    <option value="What is the degree of clustering of fire calls in Fort Worth in 2015">What is the degree of clustering of fire calls in Fort Worth in 2015</option>
+                    <option value="What is the degree of dispersion of the flu cases in Amsterdam in 2019">What is the degree of dispersion of the flu cases in Amsterdam in 2019</option>
+                    <option value="What is the degree of clustering of false fire alarms in Fort Worth">What is the degree of clustering of false fire alarms in Fort Worth</option>
+                    <option value="Where are the clusters of fire alarms with the similar priority in Fort Worth">Where are the clusters of fire alarms with the similar priority in Fort Worth</option>
+                    <option value="Where are the clusters of census blocks with the similar median household income in Fort Worth">Where are the clusters of census blocks with the similar median household income in Fort Worth</option>
+                    <option value="Where are the clusters of neighborhoods with the similar crime rate in Amsterdam">Where are the clusters of neighborhoods with the similar crime rate in Amsterdam</option>
+                    <option value="What is the percentage of residential areas inside 1 km area of the central station in Oleander">What is the percentage of residential areas inside 1 km area of the central station in Oleander</option>
+                    <option value="Which properties are within 0.5 km of the Independence Day parade route in Washington D.C.">Which properties are within 0.5 km of the Independence Day parade route in Washington D.C.</option>
+                    <option value="How many dwelling units are in the flood zones in Oleander">How many dwelling units are in the flood zones in Oleander</option>
+                    <option value="What is the total area of flood zones in Oleander">What is the total area of flood zones in Oleander</option>
+                    <option value="What are the land use inside the flood zones in Oleander">What are the land use inside the flood zones in Oleander</option>
+                    <option value="What is the number of households for each precinct in Dallas County">What is the number of households for each precinct in Dallas County</option>
+                    <option value="How many high school students are in the school district of senior high schools in Oleander">How many high school students are in the school district of senior high schools in Oleander</option>
+                    <option value="Which properties are within 100 meters of creeks in Oleander">Which properties are within 100 meters of creeks in Oleander</option>
+                    <option value="What areas are within 1000 meters of the schools in Oleander">What areas are within 1000 meters of the schools in Oleander</option>
+                    <option value="What areas are within 2000 meters of the playgrounds in Oleander">What areas are within 2000 meters of the playgrounds in Oleander</option>
+                    <option value="What areas are within 1000 meters of the arcades in Oleander">What areas are within 1000 meters of the arcades in Oleander</option>
+                    <option value="What areas are within 100 meters of the hospitals in Oleander">What areas are within 100 meters of the hospitals in Oleander</option>
+                    <option value="What is the percentage of soil type inside 1 km buffer areas of the water wells in Oleander">What is the percentage of soil type inside 1 km buffer areas of the water wells in Oleander</option>
+                    <option value="What is the percentage of noise polluted areas in Oleander">What is the percentage of noise polluted areas in Oleander</option>
+                    <option value="Where are the houses within 2640 feet, 5280 feet, and 7920 feet from fire station in Oleander">Where are the houses within 2640 feet, 5280 feet, and 7920 feet from fire station in Oleander</option>
+                    <option value="What areas are within 300 meters of runways in Schiphol airport">What areas are within 300 meters of runways in Schiphol airport</option>
+                    <option value="How many fire calls were answered by a fire station that was not the closest to the fire accidents in Oleander">How many fire calls were answered by a fire station that was not the closest to the fire accidents in Oleander</option>
+                    <option value="Which fire hydrant is closest to the households in Oleander">Which fire hydrant is closest to the households in Oleander</option>
+                    <option value="What areas are within 3 minutes of driving time from the nearest fire station in Oleander">What areas are within 3 minutes of driving time from the nearest fire station in Oleander</option>
+                    <option value="How many buildings are within 3 minutes of driving time from fire stations in Oleander">How many buildings are within 3 minutes of driving time from fire stations in Oleander</option>
+                    <option value="Which buildings are located in the fire areas in Oleander">Which buildings are located in the fire areas in Oleander</option>
+                    <option value="Which buildings were affected by tornado in Oleander">Which buildings were affected by tornado in Oleander</option>
+                    <option value="What is the walkability for each neighborhood in Ghent">What is the walkability for each neighborhood in Ghent</option>
+                    <option value="What is the density of residential units for each neighborhood in Ghent">What is the density of residential units for each neighborhood in Ghent</option>
+                    <option value="What is the connectivity for each neighborhood in Ghent">What is the connectivity for each neighborhood in Ghent</option>
+                    <option value="What is the land use mix for each neighborhood in Ghent">What is the land use mix for each neighborhood in Ghent</option>
+                    <option value="What is the bikeability surface in the Metro Vancouver region in Canada">What is the bikeability surface in the Metro Vancouver region in Canada</option>
+                    <option value="What is the density surface of bicycle route in the Metro Vancouver region in Canada">What is the density surface of bicycle route in the Metro Vancouver region in Canada</option>
+                    <option value="Where are the bicycle tracks in the Metro Vancouver region in Canada">Where are the bicycle tracks in the Metro Vancouver region in Canada</option>
+                    <option value="What is the density raster of intersections of bicycle-friendly streets in the Metro Vancouver region in Canada">What is the density raster of intersections of bicycle-friendly streets in the Metro Vancouver region in Canada</option>
+                    <option value="What is the topography in the Metro Vancouver region in Canada">What is the topography in the Metro Vancouver region in Canada</option>
+                    <option value="What is the point density of cycling destinations in the Metro Vancouver region in Canada">What is the point density of cycling destinations in the Metro Vancouver region in Canada</option>
+                    <option value="What is the network distance from hexagonal grid with 2000 meter to the closest public primary school in the Multifunctional Urban Area of Barcelona">What is the network distance from hexagonal grid with 2000 meter to the closest public primary school in the Multifunctional Urban Area of Barcelona</option>
+                    <option value="What is the average network distance for people to public primary schools for each census area in Rotterdam">What is the average network distance for people to public primary schools for each census area in Rotterdam</option>
+                    <option value="What is the percentage of population within 1000 meters network distance from hexagonal grids with a diameter of 2000 meters to primary schools in Rotterdam">What is the percentage of population within 1000 meters network distance from hexagonal grids with a diameter of 2000 meters to primary schools in Rotterdam</option>
+                    <option value="What is the network distance to primary schools for children aged between 4 and 12 in Multifunctional Urban Area of Rotterdam">What is the network distance to primary schools for children aged between 4 and 12 in Multifunctional Urban Area of Rotterdam</option>
+                    <option value="What is the average network distance for people to the three closest primary schools for each census area in Rotterdam">What is the average network distance for people to the three closest primary schools for each census area in Rotterdam</option>
+                    <option value="What is the number of people within 1000 meters network distance from hexagonal grids with a diameter of 2000 meters to primary schools in Barcelona">What is the number of people within 1000 meters network distance from hexagonal grids with a diameter of 2000 meters to primary schools in Barcelona</option>
+                    <option value="Where are the best sites for metro stations in Karbala in Iraq">Where are the best sites for metro stations in Karbala in Iraq</option>
+                    <option value="What is the travel time from the centroids of municipalities to outpatient services in Tuscany in Italy">What is the travel time from the centroids of municipalities to outpatient services in Tuscany in Italy</option>
+                    <option value="What is the number of inhabitants for each 100 by 100 meter grid in Banten province in Indonesia">What is the number of inhabitants for each 100 by 100 meter grid in Banten province in Indonesia</option>
+                    <option value="What area are within 50 km from family physician services in Saskatchewan in Canada">What area are within 50 km from family physician services in Saskatchewan in Canada</option>
+                    <option value="What is the travel time from the centers of 2 by 2 km grid cells to the closest hospital in Sichuan in China">What is the travel time from the centers of 2 by 2 km grid cells to the closest hospital in Sichuan in China</option>
+                    <option value="What is the percentage of elderly population to the total population for each municipality area in the Aichi prefecture in Japan">What is the percentage of elderly population to the total population for each municipality area in the Aichi prefecture in Japan</option>
+                    <option value="What is the density of elderly population for each municipality area in Aichi prefecture in Japan">What is the density of elderly population for each municipality area in Aichi prefecture in Japan</option>
+                    <option value="What is the potential geographic access of communities to the sexual and productive health services located in rural areas in Chibuto, Chokwe, Guija and Mandlakaze in Mozambique in 2019">What is the potential geographic access of communities to the sexual and productive health services located in rural areas in Chibuto, Chokwe, Guija and Mandlakaze in Mozambique in 2019</option>
+                    <option value="Where is the best site for a new landfill in Houston">Where is the best site for a new landfill in Houston</option>
+                    <option value="What areas are not green belt areas in Houston">What areas are not green belt areas in Houston</option>
+                    <option value="What areas are outside 3000 meters from turbojet runways in Houston">What areas are outside 3000 meters from turbojet runways in Houston</option>
+                    <option value="What areas are within 800 meter from major highways in Houston">What areas are within 800 meter from major highways in Houston</option>
+                    <option value="What is the potential accessibility by local road for each 2 by 2 km grid cell in Finland">What is the potential accessibility by local road for each 2 by 2 km grid cell in Finland</option>
+                    <option value="What is the potential accessibility by regional road for each 2 by 2 km grid cell in Finland">What is the potential accessibility by regional road for each 2 by 2 km grid cell in Finland</option>
+                    <option value="Where are clusters of pedestrian injuries in Georgia from 2000 to 2007 ">Where are clusters of pedestrian injuries in Georgia from 2000 to 2007 </option>
+                    <option value="Where are the clusters of Chinese immigrants in Auckland from 1991 to 2006">Where are the clusters of Chinese immigrants in Auckland from 1991 to 2006</option>
+                    <option value="Where is the hot spots and cold spots of robberies in Shanghai in January 2009">Where is the hot spots and cold spots of robberies in Shanghai in January 2009</option>
+                    <option value="What is the cervix cancer mortality rate of white females for each city in the Western USA from 1970 to 1994">What is the cervix cancer mortality rate of white females for each city in the Western USA from 1970 to 1994</option>
+                    <option value="What is the interpolation surface of NO2 concentration in Vancouver">What is the interpolation surface of NO2 concentration in Vancouver</option>
+                    <option value="Where are health care facilities in Riverside San Bernardino in California">Where are health care facilities in Riverside San Bernardino in California</option>
+                    <option value="What is the population density for each neighborhood in Riverside San Bernardino in CA">What is the population density for each neighborhood in Riverside San Bernardino in CA</option>
+                    <option value="What is the population density for each neighborhoods with no health care facility in Riverside-San Bernardino">What is the population density for each neighborhoods with no health care facility in Riverside-San Bernardino</option>
+                    <option value="What land use is on top of sandy soil in the Netherlands">What land use is on top of sandy soil in the Netherlands</option>
+                    <option value="What is the aspect of ski pistes in the Happy Valley resort">What is the aspect of ski pistes in the Happy Valley resort</option>
+                    <option value="What are the directional trends of animal grazing in the Netherlands">What are the directional trends of animal grazing in the Netherlands</option>
+                    <option value="What is the density surface of crape myrtles in Oleander">What is the density surface of crape myrtles in Oleander</option>
+                    <option value="What is the access score to family physicians services for each Census Consolidated Subdivision in Saskatchewan in Canada">What is the access score to family physicians services for each Census Consolidated Subdivision in Saskatchewan in Canada</option>
+                    <option value="What is the accessibility index from the centers of 2 by 2 km grid cells to the closest public hospital in Sichuan in China">What is the accessibility index from the centers of 2 by 2 km grid cells to the closest public hospital in Sichuan in China</option>
+                    <option value="What areas are within 10 minutes, 30 minutes, and 60 minutes of driving time from private hospitals in Sichuan in China">What areas are within 10 minutes, 30 minutes, and 60 minutes of driving time from private hospitals in Sichuan in China</option>
+                    <option value="What is the travel time from the centers of 2 by 2 km grids to public hospitals in East Sichuan in China">What is the travel time from the centers of 2 by 2 km grids to public hospitals in East Sichuan in China</option>
+                    <option value="What is the kernel density surface of potential geographic access of communities to clinics in Chibuto in Mozambique in 2019">What is the kernel density surface of potential geographic access of communities to clinics in Chibuto in Mozambique in 2019</option>
+                    <option value="What is the percentage of vacant houses to the house totals in Tarrant County, Texas">What is the percentage of vacant houses to the house totals in Tarrant County, Texas</option>
+                    <option value="What is the access score to nurse practitioner services for each Census Consolidated Subdivision in Alberta in Canada">What is the access score to nurse practitioner services for each Census Consolidated Subdivision in Alberta in Canada</option>
+                    <option value="What is the percentage of population older than 65 for each Census Consolidated Subdivision in Alberta in Canada">What is the percentage of population older than 65 for each Census Consolidated Subdivision in Alberta in Canada</option>
+                    <option value="What is the potential accessibility by national network for each 2 by 2km grid cell in Finland">What is the potential accessibility by national network for each 2 by 2km grid cell in Finland</option>
+                    <option value="What is the travel time from the centroids of 2 by 2 km grid cells to the nearest railway stations in Finland">What is the travel time from the centroids of 2 by 2 km grid cells to the nearest railway stations in Finland</option>
+                    <option value="What is the travel time from the centroids of 2 by 2 km grid cells to the nearest airport in Finland">What is the travel time from the centroids of 2 by 2 km grid cells to the nearest airport in Finland</option>
+                    <option value="What areas do not have natural resources in the UK">What areas do not have natural resources in the UK</option>
+                    <option value="What areas are within 1000 meters of the major transport routes in Amsterdam">What areas are within 1000 meters of the major transport routes in Amsterdam</option>
+                    <option value="What is the proportion of people over 65 for each PC4 area in Amsterdam">What is the proportion of people over 65 for each PC4 area in Amsterdam</option>
+                    <option value="What is the density of parks for each PC4 area in Amsterdam">What is the density of parks for each PC4 area in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to parks for each PC4 area in Amsterdam">What is the average Euclidean distance to parks for each PC4 area in Amsterdam</option>
+                    <option value="What is the mean center of the fire calls for each alarm territory in Fort Worth in 2017">What is the mean center of the fire calls for each alarm territory in Fort Worth in 2017</option>
+                    <option value="What is the central feature of fire station in Fort Worth">What is the central feature of fire station in Fort Worth</option>
+                    <option value="What is the mean center of crimes weighted by the severity in Fort Worth">What is the mean center of crimes weighted by the severity in Fort Worth</option>
+                    <option value="Where is a best site for a radioactive waste site in UK">Where is a best site for a radioactive waste site in UK</option>
+                    <option value="Which store has the highest monthly sales in Tarrant County in Texas">Which store has the highest monthly sales in Tarrant County in Texas</option>
+                    <option value="Which road has the highest traffic count in Tarrant County in Texas">Which road has the highest traffic count in Tarrant County in Texas</option>
+                    <option value="What is the mean center of accidents weighted by priority for each alarm territories in Fort Worth">What is the mean center of accidents weighted by priority for each alarm territories in Fort Worth</option>
+                    <option value="What is the standard distance circles of fire calls answered by fire stations in Fort Worth">What is the standard distance circles of fire calls answered by fire stations in Fort Worth</option>
+                    <option value="What are the standard distance circles of accidents for each fire station in Fort Worth">What are the standard distance circles of accidents for each fire station in Fort Worth</option>
+                    <option value="What are the standard distance circles of fire calls weighted by priority for each fire station in Fort Worth">What are the standard distance circles of fire calls weighted by priority for each fire station in Fort Worth</option>
+                    <option value="What is the directional trend of fire calls weighted by priority for each fire station in Fort Worth">What is the directional trend of fire calls weighted by priority for each fire station in Fort Worth</option>
+                    <option value="What is the number of Hispanics for each census block in Tarrant County in Texas">What is the number of Hispanics for each census block in Tarrant County in Texas</option>
+                    <option value="What is the percentage of the bald eagle to the bird totals for each park in Texas">What is the percentage of the bald eagle to the bird totals for each park in Texas</option>
+                    <option value="What is the households density for each census block in Fort Worth">What is the households density for each census block in Fort Worth</option>
+                    <option value="What is the average neighbor distance to the 7 nearest neighbors for fire alarms in Fort Worth">What is the average neighbor distance to the 7 nearest neighbors for fire alarms in Fort Worth</option>
+                    <option value="What is the degree of clustering of fire alarms weighted by priority for each 60 meters distance band in Fort Worth">What is the degree of clustering of fire alarms weighted by priority for each 60 meters distance band in Fort Worth</option>
+                    <option value="What is the degree of clustering of fire alarms weighted by priority rankings for each distance band from 60 to 600 meters by 30 meter increments in Fort Worth">What is the degree of clustering of fire alarms weighted by priority rankings for each distance band from 60 to 600 meters by 30 meter increments in Fort Worth</option>
+                    <option value="How many fire calls are inside 150 by 150 meters grid cell in Fort Worth">How many fire calls are inside 150 by 150 meters grid cell in Fort Worth</option>
+                    <option value="What is the degree of clustering of fire alarms density for each 300 meter distance band in Fort Worth">What is the degree of clustering of fire alarms density for each 300 meter distance band in Fort Worth</option>
+                    <option value="Where are the clusters of fire alarms with similar priority for each 300 meter distance band in Fort Worth">Where are the clusters of fire alarms with similar priority for each 300 meter distance band in Fort Worth</option>
+                    <option value="Which houses are within 2 minutes driving time from fire stations in Oleander">Which houses are within 2 minutes driving time from fire stations in Oleander</option>
+                    <option value="Which houses are within 3 minutes driving time from the nearest fire station in Oleander">Which houses are within 3 minutes driving time from the nearest fire station in Oleander</option>
+                    <option value="What is the Euclidean distance to hospitals in Oleander">What is the Euclidean distance to hospitals in Oleander</option>
+                    <option value="What areas are within 20 minutes driving time from flower stores in Oleander">What areas are within 20 minutes driving time from flower stores in Oleander</option>
+                    <option value="Which warehouse is closest to each household in Oleander">Which warehouse is closest to each household in Oleander</option>
+                    <option value="Where are the tornado touchdowns in Oleander in April 2011">Where are the tornado touchdowns in Oleander in April 2011</option>
+                    <option value="What is the tornado path in Oleander in April 2011">What is the tornado path in Oleander in April 2011</option>
+                    <option value="What is a hurricane trajectory in Texas">What is a hurricane trajectory in Texas</option>
+                    <option value="What is the intensity of a hurricane in Texas">What is the intensity of a hurricane in Texas</option>
+                    <option value="What is the mean center of crimes in Amsterdam in 2019">What is the mean center of crimes in Amsterdam in 2019</option>
+                    <option value="What is the degree of clustering of 911 calls for each distance band from 300 to 900 meters by 60 meter increments in Portland">What is the degree of clustering of 911 calls for each distance band from 300 to 900 meters by 60 meter increments in Portland</option>
+                    <option value="What is the average network distance to hospitals from household for each PC4 area in Amsterdam">What is the average network distance to hospitals from household for each PC4 area in Amsterdam</option>
+                    <option value="What is the average construction year of buildings for each PC4 area in Amsterdam">What is the average construction year of buildings for each PC4 area in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to hospitals per PC4 area in Amsterdam">What is the average Euclidean distance to hospitals per PC4 area in Amsterdam</option>
+                    <option value="What is the number of elderly people for each neighborhood in Amsterdam">What is the number of elderly people for each neighborhood in Amsterdam</option>
+                    <option value="What is the density of green roofs for each PC4 area in Amsterdam">What is the density of green roofs for each PC4 area in Amsterdam</option>
+                    <option value="What is the average income of households for each PC4 area in Amsterdam">What is the average income of households for each PC4 area in Amsterdam</option>
+                    <option value="What is the percentage of seriously lonely people for each PC4 area in Amsterdam">What is the percentage of seriously lonely people for each PC4 area in Amsterdam</option>
+                    <option value="What is the Euclidean distance to green areas in Amsterdam">What is the Euclidean distance to green areas in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to green areas per PC4 area in Amsterdam">What is the average Euclidean distance to green areas per PC4 area in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to residential care complexes per PC4 area in Amsterdam">What is the average Euclidean distance to residential care complexes per PC4 area in Amsterdam</option>
+                    <option value="What is the Safety Index for each district in Amsterdam">What is the Safety Index for each district in Amsterdam</option>
+                    <option value="What is the number of sport facilities in a 1000 square meters circle per neighborhood in Amsterdam">What is the number of sport facilities in a 1000 square meters circle per neighborhood in Amsterdam</option>
+                    <option value="What is the Euclidean distance to subway stations in Amsterdam">What is the Euclidean distance to subway stations in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to subway stations per neighborhood in Amsterdam">What is the average Euclidean distance to subway stations per neighborhood in Amsterdam</option>
+                    <option value="What is the Euclidean distance to tram stations in Amsterdam">What is the Euclidean distance to tram stations in Amsterdam</option>
+                    <option value="What is the average Euclidean distance to a tram station per neighborhood in Amsterdam">What is the average Euclidean distance to a tram station per neighborhood in Amsterdam</option>
+                    <option value="What is the tree density for each PC4 area in Amsterdam">What is the tree density for each PC4 area in Amsterdam</option>
+                    <option value="What is the average urban heat island effect for each PC4 area in Amsterdam">What is the average urban heat island effect for each PC4 area in Amsterdam</option>
+                    <option value="What is the WOZ-waarde for each neighborhood in Amsterdam">What is the WOZ-waarde for each neighborhood in Amsterdam</option>
+                    <option value="What is the wall plant density for each PC4 area in Amsterdam">What is the wall plant density for each PC4 area in Amsterdam</option>
+                    <option value="What is the percentage of water areas for each PC4 area in Amsterdam">What is the percentage of water areas for each PC4 area in Amsterdam</option>
+                    <option value="What is the percentage of population between 16 and 24 years to the total population per neighborhood in Amsterdam">What is the percentage of population between 16 and 24 years to the total population per neighborhood in Amsterdam</option>
+                    <option value="Which buildings are not within 1 minute of driving time from a fire station in Fort Worth">Which buildings are not within 1 minute of driving time from a fire station in Fort Worth</option>
+                    <option value="Which fire station is closest to the fire calls in Fort Worth">Which fire station is closest to the fire calls in Fort Worth</option>
+                    <option value="What is the number of buildings affected by a hurricane in Oleander">What is the number of buildings affected by a hurricane in Oleander</option>
+                    <option value="What is the number of people affected by a hurricane in Oleander">What is the number of people affected by a hurricane in Oleander</option>
+                    <option value="What areas are outside 3000 meters of the rivers in Spain">What areas are outside 3000 meters of the rivers in Spain</option>
+                    <option value="What areas are outside 5000 meters of the roads in Spain">What areas are outside 5000 meters of the roads in Spain</option>
+                    <option value="What is the number of luxury hotels in Happy Valley ski resort">What is the number of luxury hotels in Happy Valley ski resort</option>
+                    <option value="What is the number of arson cases in Fort Worth on February 2004">What is the number of arson cases in Fort Worth on February 2004</option>
+                    <option value="What is the number of election votes for each precinct in Dallas">What is the number of election votes for each precinct in Dallas</option>
+                    <option value="What is the number of dwelling units inside the flood zones in Oleander">What is the number of dwelling units inside the flood zones in Oleander</option>
+                    <option value="What is the number of high school students for each senior high school district in Oleander">What is the number of high school students for each senior high school district in Oleander</option>
+                    <option value="What is the number of buildings within 3 minutes of driving time from fire stations in Oleander">What is the number of buildings within 3 minutes of driving time from fire stations in Oleander</option>
+                    <option value="Where are the off street paths in the Metro Vancouver region in Canada">Where are the off street paths in the Metro Vancouver region in Canada</option>
+                    <option value="What land use areas are intersected with sandy soil in the Netherlands">What land use areas are intersected with sandy soil in the Netherlands</option>
+                    <option value="What is the degree of dispersion for fire calls for each fire station in Fort Worth">What is the degree of dispersion for fire calls for each fire station in Fort Worth</option>
+                    <option value="What is the degree of dispersion for fire calls weighted by priority for each fire station in Fort Worth">What is the degree of dispersion for fire calls weighted by priority for each fire station in Fort Worth</option>
+                    <option value="What is the percentage of elderly population to the total population for each 1 km grid in the Aichi prefecture in Japan">What is the percentage of elderly population to the total population for each 1 km grid in the Aichi prefecture in Japan</option>
+                    <option value="What is the population for each city in Aichi prefecture in Japan">What is the population for each city in Aichi prefecture in Japan</option>
+                    <option value="What is the density of elderly population for each 500 meters grid in Aichi prefecture in Japan">What is the density of elderly population for each 500 meters grid in Aichi prefecture in Japan</option>
+                    <option value="What is the lung cancer mortality rate of white males for each city in the Western USA from 1970 to 1994">What is the lung cancer mortality rate of white males for each city in the Western USA from 1970 to 1994</option>
+                    <option value="Where is the hot spots and cold spots of thefts in Shanghai in December 2009">Where is the hot spots and cold spots of thefts in Shanghai in December 2009</option>
+                    <option value="What is the number of injured pedestrians for each census tract in Georgia from 2000 to 2007 ">What is the number of injured pedestrians for each census tract in Georgia from 2000 to 2007 </option>
+                    <option value="Where are the clusters of Indian immigrants in Auckland from 1991 to 2006">Where are the clusters of Indian immigrants in Auckland from 1991 to 2006</option>
+                    <option value="Where are the clusters of Korean immigrants in Auckland from 1991 to 2007">Where are the clusters of Korean immigrants in Auckland from 1991 to 2007</option>
+                    <option value="Where are the clusters of Filipino immigrants in Auckland from 1991 to 2008">Where are the clusters of Filipino immigrants in Auckland from 1991 to 2008</option>
+                    <option value="Where are the clusters of Japanese immigrants in Auckland from 1991 to 2009">Where are the clusters of Japanese immigrants in Auckland from 1991 to 2009</option>
+                    <option value="Where are the clusters of Cambodian immigrants in Auckland from 1991 to 2010">Where are the clusters of Cambodian immigrants in Auckland from 1991 to 2010</option>
+                    <option value="What is the number of inhabitants for each village in Banten province in Indonesia">What is the number of inhabitants for each village in Banten province in Indonesia</option>
+                    <option value="What areas are outside 300 meters from streams in Houston">What areas are outside 300 meters from streams in Houston</option>
+                    <option value="What areas are not park in Houston">What areas are not park in Houston</option>
+                    <option value="What areas are outside 155 meters from nature reserve districts in Houston">What areas are outside 155 meters from nature reserve districts in Houston</option>
+                    <option value="What areas are outside 155 meters from endangered species areas in Houston">What areas are outside 155 meters from endangered species areas in Houston</option>
+                    <option value="What areas are outside 155 meters from developed areas in Houston">What areas are outside 155 meters from developed areas in Houston</option>
+                    <option value="What areas are not wetlands in Houston">What areas are not wetlands in Houston</option>
+                    <option value="What areas are outside 60 meters from water body in Houston">What areas are outside 60 meters from water body in Houston</option>
+                    <option value="What areas are outside 60 meters from residence in Houston">What areas are outside 60 meters from residence in Houston</option>
+                    <option value="What areas are outside 150 meters from hospitals in Houston">What areas are outside 150 meters from hospitals in Houston</option>
+                    <option value="What areas are outside 150 meters from schools in Houston">What areas are outside 150 meters from schools in Houston</option>
+                    <option value="What areas are not hurricane areas in Houston">What areas are not hurricane areas in Houston</option>
+                    <option value="What areas are not flood plain in Houston">What areas are not flood plain in Houston</option>
+                    <option value="What areas are within 500 meters from universities in Karbala in Iraq">What areas are within 500 meters from universities in Karbala in Iraq</option>
+                    <option value="What areas are within 500 meters from religious places in Karbala in Iraq">What areas are within 500 meters from religious places in Karbala in Iraq</option>
+                    <option value="Which hospitals are within 15 minute driving time of an accident in New York">Which hospitals are within 15 minute driving time of an accident in New York</option>
+                    <option value="What is the average Euclidean distance to the nearest supermarket for each PC4 area in Amsterdam">What is the average Euclidean distance to the nearest supermarket for each PC4 area in Amsterdam</option>
+                    <option value="What is the average noise level for each PC4 area in Amsterdam">What is the average noise level for each PC4 area in Amsterdam</option>
+                    <option value="What is the average temperature for each PC4 area in Amsterdam">What is the average temperature for each PC4 area in Amsterdam</option>
+                    <option value="What is the total area of agriculture in Netherlands">What is the total area of agriculture in Netherlands</option>
+                    <option value="What area do have elevation higher than 30 meters in Netherlands">What area do have elevation higher than 30 meters in Netherlands</option>
+                    <option value="What is the density of greens for each PC4 area in Amsterdam">What is the density of greens for each PC4 area in Amsterdam</option>
+                </select><br>
+                <input type="button" value="Parse corpus question" onclick="parseCorpusQ();" />
+            </div>
+        
+            <!-- [SC][TODO] remove this test code -->
+            <div class="qInputMode">
+                <input type="text" id="nlQuestionStr" name="qStr" placeholder="Custom question in NL" size=170><br>
+                <input type="button" value="Parse NL question" onclick="parseNLQ();" />
+            </div>
+            
+            <!-- [SC] this textarea contains the output of the question parser -->
+            <textarea readonly id="parsedQContainer" rows="40" cols="150" placeholder="Result of question sentence parsing"></textarea>
+        </div>
+        
+        <div id="wfViewPage" class="tabcontent">
+            <h3>Workflow viewer</h3>
+            
+            <select id="wfFileSelector">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="01a-NoisePortionAmsterdam.json">01a-NoisePortionAmsterdam</option>
+                <option value="01b-NoiseProportionAmsterdam_Raster.json">01b-NoiseProportionAmsterdam_Raster</option>
+                <option value="01b-NoiseProportionAmsterdam_Vector.json">01b-NoiseProportionAmsterdam_Vector</option>
+                <option value="02a-PopulationUtrecht.json">02a-PopulationUtrecht</option>
+                <option value="03a-TemperatureUtrecht.json">03a-TemperatureUtrecht</option>
+                <option value="04a-HospitalsUtrecht_Near.json">04a-HospitalsUtrecht_Near</option>
+                <option value="04a-HospitalsUtrecht_Network.json">04a-HospitalsUtrecht_Network</option>
+                <option value="05a-DeforestationAmazon.json">05a-DeforestationAmazon</option>
+                <option value="06a-SolarPowerPotentialGloverPark.json">06a-SolarPowerPotentialGloverPark</option>
+                <option value="07a-InfrastructureAccessShikoku.json">07a-InfrastructureAccessShikoku</option>
+                <option value="08a-OgallalaAquifer.json">08a-OgallalaAquifer</option>
+                <option value="09a-FloodsVermont.json">09a-FloodsVermont</option>
+                <option value="10a-MalariaCongo.json">10a-MalariaCongo</option>
+            </select>
+            
+            <div id="cy"></div> 
+            
+            <div id="cyInfo"></div>
+        </div>
+    
+        <script>
+            // inject Blockly into an empty div. This script should be at the bottom of the page, or called by the onload event.
+            let workspace = Blockly.inject('blocklyDiv', {
+                toolbox: document.getElementById('toolbox'),
+                zoom: {
+                    controls: true,
+                    wheel: true,
+                    startScale: 1,
+                    maxScale: 1.5,
+                    minScale: 0.8,
+                    scaleSpeed: 1.2
+                }
+            });
+          
+            function refresh(){
+                setCategory()
+                ques_generator()
+                disable_sup_grid()
+            }
+            
+            workspace.addChangeListener(refresh);
+            hideCategory();
+            Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
+            Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
+        </script>
+    
+        <!-- [SC] main javascript code for the page -->
+        <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/main.js'%}"></script>
+    </body>
+</html>
