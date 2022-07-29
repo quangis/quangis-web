@@ -3,26 +3,34 @@
 The web interface that brings all the different components of the 
 QuAnGIS project together into a single pipeline.
 
+1.  [Overview](#overview)
+    -   [Workflow generator](#workflow-generator)
+    -   [Algebra abstractor](#algebra-abstractor)
+    -   [Query formulator](#query-formulator)
+    -   [Query translator](#query-translator)
+    -   [Query executor](#query-executor)
+    -   [Data reifier](#data-reifier)
+2.  [Usage](#usage)
+
 
 ## Overview
 
-#### Workflow specifier/generator
+#### Workflow generator
 
 The *workflow repository* contains possible GIS workflows that might 
 solve a user's task. At the moment, it contains only [example 
 workflows][wf]. However, eventually, the [`workflow-synthesis`][wfs] 
-module will be used to pre-generate workflows.
+module will be used to pre-generate workflows. In it, we use [APE][ape] 
+to discover sensible workflows in which [GIS tools][tls] are used. To 
+this end, the inputs and outputs of the tools are annotated with [core 
+concept data types][ccd].
 
-To this end, the inputs and outputs of GIS [tools][tls] are annotated 
-with [core concept data types][ccd]. We then use [APE][ape] to discover 
-sensible workflows in which those tools are used.
-
-(The *specifier* would find meaningful combinations of input/output CCD 
-types for the transformation algebra query at hand, suggesting that 
-workflows are also generated on-the-fly.)
+(The *workflow specifier* would find meaningful combinations of 
+input/output CCD types for the transformation algebra query at hand, 
+suggesting that workflows are also generated on-the-fly.)
 
 
-#### Transformation algebra abstractor
+#### Algebra abstractor
 
 Each workflow in the workflow repository is enriched with a 
 *transformation graph*. This is a directed acyclic graph, with core 
@@ -30,29 +38,30 @@ concepts of geographical information encoded as [CCT][cct] types at the
 nodes. The edges represent transformations between these concepts.
 
 These transformation graphs are constructed automatically. A workflow 
-simply connects individual tool applications, and we have manually 
-annotated the [tools][tls] with [CCT][cct] expressions that capture the 
-underlying conceptual transformation. The [`transformation-algebra`][ta] 
-library parses these expressions into subgraphs for every tool 
-application. It then stitches them together, using type inference to 
-find the correct [CCT][cct] types at every node.
+connects individual tool applications, and we have manually annotated 
+the [tools][tls] with [CCT][cct] expressions that capture the underlying 
+conceptual transformation. The [`transformation-algebra`][ta] library 
+parses these expressions into subgraphs for every tool application. It 
+then stitches them together, using type inference to find the most 
+specific [CCT][cct] type at every node.
 
 
 #### Query formulator
 
 A *web interface* presents users with a constrained natural language, 
-using [blockly][blo]. The interface passes the user's question on to the 
-rest of the pipeline. The implementation can be found in the current 
-repository.
+using [`blockly`][blo]. The interface passes the user's question on to 
+the rest of the pipeline. At the end of the pipeline, it presents a set 
+of workflows to the user as possible solutions to their task. The 
+implementation is in this repository, [`quangis-web`][web].
 
 
 #### Query translator
 
-The user's input is parsed into a tree and then further into a 
-*transformation query*, which is essentially a transformation graph that 
-represents only parts of the workflow. Leaf nodes may have keywords, to 
-be matched with possible data sources. This is implemented in the 
-[`geo-question-parser`][gqp] module.
+The user's natural language question is parsed into a tree and then 
+further into a *transformation query*, which is essentially a 
+transformation graph that represents only parts of the workflow. Leaf 
+nodes may have keywords, to be matched with possible data sources. This 
+is implemented in the [`geo-question-parser`][gqp] module.
 
 
 #### Query executor
@@ -62,7 +71,7 @@ the workflow repository. To this end, the transformation query is
 converted to a SPARQL query via the [`transformation-algebra`][ta] 
 library and sent to a triple store such as [MarkLogic][ml] or the 
 open-source [Apache Jena Fuseki][fus]. This yields a set of workflows 
-that are presented back to the user as possible solutions to their task.
+that may solve the user's task.
 
 
 #### Data reifier
@@ -73,7 +82,7 @@ or automatically annotated with text descriptions and
 [CCD][ccd]/[CCT][cct] types.
 
 
-## Installation
+## Usage
 
 #### Setting up the environment
 
