@@ -99,11 +99,27 @@ relevant data files:
     python -m nltk.downloader averaged_perceptron_tagger omw-1.4
 
 
+#### Setting up JavaScript libraries
+
+We use the [`blockly`][blo], [`cytoscape`][cts] and [`klay`][kly] 
+JavaScript libraries. For now, these are just bundled as static JS 
+files; we will need a maintainable front-end workflow in the future. 
+(Also, `klay` is deprecated.)
+
+    npm install
+    cp  node_modules/blockly/blockly.min.js \
+        node_modules/cytoscape/dist/cytoscape.min.js \
+        node_modules/cytoscape-klay/cytoscape-klay.js \
+        node_modules/klay/klay.js \
+        blocklyUI/static/blocklyUI/js/
+
 [cnd]: https://repo.anaconda.com/miniconda/
 [cnl]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/rpm-debian.html
 [ml]:  https://www.marklogic.com/
 [fus]: https://jena.apache.org/documentation/fuseki2/
 [blo]: https://developers.google.com/blockly/
+[cts]: https://cytoscape.org/
+[kly]: https://github.com/kieler/klayjs
 [ccd]: https://github.com/simonscheider/QuAnGIS/tree/master/Ontology/CoreConceptData.ttl
 [ape]: https://github.com/sanctuuary/APE
 [apy]: https://github.com/quangis/apey
@@ -114,3 +130,6 @@ relevant data files:
 [tls]: https://github.com/quangis/cct/blob/master/tools/tools.ttl
 [wf]:  https://github.com/quangis/cct/blob/master/workflows/
 [web]: https://github.com/quangis/quangis-web
+
+[so51325809]: https://stackoverflow.com/questions/51325809/django-how-to-use-npm-modules-with-static-templates
+[so70089451]: https://stackoverflow.com/questions/70089451/how-can-i-use-npm-modules-with-django-inside-an-app

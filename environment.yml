@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9.7
+  - nodejs
   - spacy
   - spacy-model-en_core_web_sm
   - antlr4-python3-runtime=4.9.3
