@@ -20,10 +20,10 @@ QuAnGIS project together into a single pipeline.
 The *workflow repository* contains possible GIS workflows that might 
 solve a user's task. At the moment, it contains only [example 
 workflows][wf]. However, eventually, the [`workflow-synthesis`][wfs] 
-module will be used to pre-generate workflows. In it, we use [APE][ape] 
-to discover sensible workflows in which [GIS tools][tls] are used. To 
-this end, the inputs and outputs of the tools are annotated with [core 
-concept data types][ccd].
+module will be used to pre-generate workflows. This module interfaces 
+with the [Automated Pipeline Explorer][ape] via [`apey`][apy] to 
+discover sensible workflows. It does this by matching [core concept data 
+types][ccd] of the [GIS tools'][tls] inputs and outputs.
 
 (The *workflow specifier* would find meaningful combinations of 
 input/output CCD types for the transformation algebra query at hand, 
@@ -33,18 +33,17 @@ suggesting that workflows are also generated on-the-fly.)
 #### Algebra abstractor
 
 Each workflow in the workflow repository is enriched with a 
-*transformation graph*. This is a directed acyclic graph, with core 
+*transformation graph*. This is a directed acyclic graph with core 
 concepts of geographical information encoded as [CCT][cct] types at the 
 nodes. The edges represent transformations between these concepts.
 
-These transformation graphs are constructed automatically. A workflow 
-connects individual tool applications, and we have manually annotated 
+These graphs are constructed automatically. We have manually annotated 
 the [tools][tls] with [CCT][cct] expressions that capture the underlying 
-conceptual transformation. The [`transformation-algebra`][ta] library 
-parses these expressions into subgraphs for every tool application. It 
-then stitches them together, using type inference to find the most 
-specific [CCT][cct] type at every node.
-
+conceptual transformation. A workflow connects individual tool 
+applications, each of them now associated with a CCT expression that is 
+parsed into a subgraph by the [`transformation-algebra`][ta] library. 
+The library then stitches the subgraphs together, using type inference 
+to find the most specific type at every node.
 
 #### Query formulator
 
@@ -107,7 +106,7 @@ relevant data files:
 [blo]: https://developers.google.com/blockly/
 [ccd]: https://github.com/simonscheider/QuAnGIS/tree/master/Ontology/CoreConceptData.ttl
 [ape]: https://github.com/sanctuuary/APE
-[apy]: https://github.com/quangis/pyAPE
+[apy]: https://github.com/quangis/apey
 [wfs]: https://github.com/quangis/workflow-synthesis
 [gqp]: https://github.com/quangis/geo-question-parser
 [ta]:  https://github.com/quangis/transformation-algebra
