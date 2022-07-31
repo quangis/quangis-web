@@ -11,6 +11,9 @@ QuAnGIS project together into a single pipeline.
     -   [Query executor](#query-executor)
     -   [Data reifier](#data-reifier)
 2.  [Usage](#usage)
+    -   [Setting up the environment](#setting-up-the-environment)
+    -   [Setting up JavaScript libraries](#setting-up-javascript-libraries)
+    -   [Loading data](#loading-data)
 
 
 ## Overview
@@ -113,8 +116,28 @@ files; we will need a maintainable front-end workflow in the future.
         node_modules/klay/klay.js \
         blocklyUI/static/blocklyUI/js/
 
+
+#### Loading data
+
+The [`cct`][cct] repository contains example workflows. These can be 
+augmented with their transformation graphs using the tools in that 
+repository:
+
+    make build/everything.ttl
+
+This will produce `everything.ttl` in the `build/` directory. For 
+MarkLogic, these triples can be [loaded][mls84491] into the database via 
+its [REST API][mlrest] (for now, just into the default graph):
+
+    curl -s -X PUT --data-binary '@everything.ttl' \
+        -H "Content-type: application/turle" \
+        --digest --user "<user>:<pass>" \
+        "http://<server>:8000/v1/graphs?default"
+
+
+<!-- References -->
+
 [cnd]: https://repo.anaconda.com/miniconda/
-[cnl]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/rpm-debian.html
 [ml]:  https://www.marklogic.com/
 [fus]: https://jena.apache.org/documentation/fuseki2/
 [blo]: https://developers.google.com/blockly/
@@ -130,6 +153,6 @@ files; we will need a maintainable front-end workflow in the future.
 [tls]: https://github.com/quangis/cct/blob/master/tools/tools.ttl
 [wf]:  https://github.com/quangis/cct/blob/master/workflows/
 [web]: https://github.com/quangis/quangis-web
-
-[so51325809]: https://stackoverflow.com/questions/51325809/django-how-to-use-npm-modules-with-static-templates
-[so70089451]: https://stackoverflow.com/questions/70089451/how-can-i-use-npm-modules-with-django-inside-an-app
+[cnl]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/rpm-debian.html
+[mls84491]: https://docs.marklogic.com/guide/semantics/loading#id_84491
+[mlrest]: https://docs.marklogic.com/guide/semantics/REST
