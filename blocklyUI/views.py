@@ -10,38 +10,54 @@ from django.http import HttpResponse
 from django.http import HttpResponseBadRequest, JsonResponse
 
 import json
-import urllib  # cf <https://realpython.com/urllib-request/>
-from rdflib import Graph
-from rdflib.plugins.stores.sparqlstore import SPARQLStore
-from cct.language import question2query
+from rdflib import BNode, RDF
+from transformation_algebra import \
+    TransformationGraph, TransformationQuery, TA
+from transformation_algebra.type import Product, Top, TypeOperation
+from transformation_algebra.util.store import WorkflowStore
+from cct.language import cct, R3
+from geo_question_parser import QuestionParser
+from geo_question_parser import TypesToQueryConverter
 
-from questionParser.models import QuestionParser
-from questionParser.models import TypesToQueryConverter
-
-# While you can pass authorization to the `SPARQLStore` object, this
-# authorization is basic; DIGEST authorization is only handled for
-# `SPARQLUpdateStore`. To work around this, we add a custom opener to the
-# `urllib.request` module that SPARQLConnector is using under the hood. It
-# seems we could also pull the external dependency of SPARQLWrapper, as
-# mentioned in <https://github.com/RDFLib/rdflib/issues/343>, but RDFLib
-# dropped this dependency in <https://github.com/RDFLib/rdflib/pull/744>, so
-# I'd rather not re-import it (but see also
-# <https://github.com/RDFLib/sparqlwrapper/pull/126>). Note also that there was
-# a QuAnGIS-MarkLogic client at <https://github.com/quangis/marklogic_client>,
-# but I'd rather not roll my own for this sort of thing (plus: we do have to
-# inferface with `rdflib`).
-passmgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()
-passmgr.add_password(
-    None, "https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql",
-    "username", "password")
-auth_handler = urllib.request.HTTPDigestAuthHandler(passmgr)
-opener = urllib.request.build_opener(auth_handler)
-urllib.request.install_opener(opener)
-store = SPARQLStore("https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql")
-graph = Graph(store)
+wf_store = WorkflowStore.endpoint(
+    "https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql"
+)
 
 # [SC] for testing
 # from django.apps import apps
+
+
+def question2query(q: dict) -> TransformationQuery:
+    """
+    Converts a dictionary returned by Haiqi's natural language parser into a
+    `TransformationGraph`, which can be in turn translated to a SPARQL query.
+    """
+    # This should probably go in a more sane place eventually, when the
+    # structure of the modules is more stable
+    base = q['cctrans']
+
+    g = TransformationGraph(cct)
+    task = BNode()
+    types = {}
+    for x in base['types']:
+        types[x['id']] = x
+        x['node'] = node = BNode()
+        t = cct.parse_type(x['cct']).concretize(Top)
+        if isinstance(t, TypeOperation) and t.params[0].operator == Product:
+            assert isinstance(t.params[0], TypeOperation)
+            t = R3(t.params[0].params[0], t.params[1], t.params[0].params[1])
+        g.add((node, TA.type, cct.uri(t)))
+
+    for edge in base['transformations']:
+        for before in edge['before']:
+            for after in edge['after']:
+                b = types[before]['node']
+                a = types[after]['node']
+                g.add((b, TA["from"], a))
+
+    g.add((task, RDF.type, TA.Task))
+    g.add((task, TA.output, types['0']['node']))
+    return TransformationQuery(cct, g)
 
 
 def parseQuestion(qStr):
@@ -56,7 +72,9 @@ def parseQuestion(qStr):
     # [SC] you can send the marklogic query from here
     # [SC] also attach the JSON-LD workflow to qParsed
 
-    qParsed['matches'] = [str(wf) for wf in question2query(qParsed).run(graph)]
+    query = question2query(qParsed)
+
+    qParsed['matches'] = [str(wf) for wf in query.run(wf_store)]
 
     return qParsed
     
