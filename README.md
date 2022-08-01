@@ -135,6 +135,13 @@ its [REST API][mlrest] (for now, just into the default graph):
         "http://<server>:8000/v1/graphs?default"
 
 
+### Running the server
+
+During debugging, we can use the built-in Django test server. However, 
+do set environment variables with the appropriate secrets:
+
+    DJANGO_KEY=… TDB_USER=… TDB_PASS=… python manage.py runserver 3000
+
 <!-- References -->
 
 [cnd]: https://repo.anaconda.com/miniconda/

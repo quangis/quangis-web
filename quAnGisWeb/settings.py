@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iq$bfap8l+y4rw+_a*agr2t8*m@!0c(ixft9re7-0hy)86%vw-'
+SECRET_KEY = os.environ['DJANGO_KEY']
+
+TDB_URL = "https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql"
+TDB_USER = os.environ['TDB_USER']
+TDB_PASS = os.environ['TDB_PASS']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-
+from django.conf import settings
 from django.template import loader
 from django.http import Http404
 
@@ -20,7 +20,9 @@ from geo_question_parser import QuestionParser
 from geo_question_parser import TypesToQueryConverter
 
 wf_store = WorkflowStore.endpoint(
-    "https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql"
+    url=settings.TDB_URL,
+    user=settings.TDB_USER,
+    password=settings.TDB_PASS
 )
 
 # [SC] for testing
