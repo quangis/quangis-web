@@ -142,6 +142,11 @@ do set environment variables with the appropriate secrets:
 
     DJANGO_KEY=… TDB_USER=… TDB_PASS=… python manage.py runserver 3000
 
+Or, on Windows:
+
+    set DJANGO_KEY=… & TDB_USER=… & TDB_PASS=… & python manage.py runserver 3000
+
+
 <!-- References -->
 
 [cnd]: https://repo.anaconda.com/miniconda/

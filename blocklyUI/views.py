@@ -14,12 +14,12 @@ from rdflib import BNode, RDF
 from transformation_algebra import \
     TransformationGraph, TransformationQuery, TA
 from transformation_algebra.type import Product, Top, TypeOperation
-from transformation_algebra.util.store import WorkflowStore
+from transformation_algebra.util.store import TransformationStore
 from cct.language import cct, R3
 from geo_question_parser import QuestionParser
 from geo_question_parser import TypesToQueryConverter
 
-wf_store = WorkflowStore.endpoint(
+wf_store = TransformationStore(
     url=settings.TDB_URL,
     user=settings.TDB_USER,
     password=settings.TDB_PASS
