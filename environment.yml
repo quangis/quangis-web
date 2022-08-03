@@ -19,6 +19,6 @@ dependencies:
     - checklist # versioning conflicts
     - allennlp # not available for windows on conda-forge
     - allennlp-models
-    - git+https://github.com/quangis/transformation-algebra.git@d5184db79b9ad4f2aa49d44250e905caf67d5aad#egg=transformation-algebra
-    - git+https://github.com/quangis/cct.git@5b039c2e68231aeda230ce6f562101bf48471464#egg=cct
-    - git+https://github.com/quangis/geo-question-parser.git#egg=geo-question-parser
+    - "--editable=git+https://github.com/quangis/transformation-algebra.git@develop#egg=transformation-algebra"
+    - "--editable=git+https://github.com/quangis/cct.git#egg=cct"
+    - "--editable=git+https://github.com/quangis/geo-question-parser.git#egg=geo-question-parser"
