@@ -29,7 +29,11 @@ wf_store = MarkLogic(
 # from django.apps import apps
 
 
-def question2query(qParsed: dict) -> TransformationQuery:
+def question2query(queryEx: dict) -> TransformationQuery:
+    """
+    Converts a query formatted as a dictionary into a `TransformationQuery`,
+    which can be in turn translated to a SPARQL query.
+    """
     # This should probably go in a more sane place eventually, when the
     # structure of the modules is more stable
 
@@ -38,25 +42,22 @@ def question2query(qParsed: dict) -> TransformationQuery:
     g.add((task, RDF.type, TA.Task))
 
     def f(q: dict) -> BNode:
-        """
-        Converts a dictionary returned by Haiqi's natural language parser into a
-        `TransformationGraph`, which can be in turn translated to a SPARQL query.
-        """
-
         node = BNode()
-
         t = cct.parse_type(q['after']['cct']).concretize(Top)
+
+        # This is a temporary solution: R(x * z, y) is for now converted to the
+        # old-style R3(x, y, z)
         if isinstance(t.params[0], TypeOperation) and \
                 t.params[0].operator == Product:
             t = R3(t.params[0].params[0], t.params[1], t.params[0].params[1])
-        g.add((node, TA.type, cct.uri(t)))
 
+        g.add((node, TA.type, cct.uri(t)))
         for b in q.get('before') or ():
             g.add((node, TA['from'], f(b)))
 
         return node
 
-    g.add((task, TA.output, f(qParsed['queryEx'])))
+    g.add((task, TA.output, f(queryEx)))
     return TransformationQuery(cct, g)
 
 
@@ -73,7 +74,7 @@ def parseQuestion(qStr):
     # [SC] also attach the JSON-LD workflow to qParsed
 
     # Query for matches
-    query = question2query(qParsed)
+    query = question2query(qParsed['queryEx'])
     qParsed['matches'] = matches = [str(wf) for wf in query.run(wf_store)]
 
     # Add the first match as JSON-LD
