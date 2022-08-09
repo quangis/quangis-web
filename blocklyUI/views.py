@@ -76,7 +76,14 @@ def parseQuestion(qStr):
 
     query = question2query(qParsed)
 
-    qParsed['matches'] = [str(wf) for wf in query.run(wf_store)]
+    qParsed['matches'] = matches = [str(wf) for wf in query.run(wf_store)]
+
+    # Add the first match as JSON-LD
+    if matches:
+        g = wf_store.get(matches[0])
+        qParsed['workflow'] = json.loads(g.serialize(format="json-ld"))
+    else:
+        qParsed['workflow'] = None
 
     return qParsed
     
