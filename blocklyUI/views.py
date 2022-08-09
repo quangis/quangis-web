@@ -16,14 +16,13 @@ from rdflib import BNode, RDF
 from transformation_algebra import \
     TransformationGraph, TransformationQuery, TA
 from transformation_algebra.type import Product, Top, TypeOperation
-from transformation_algebra.util.store import TransformationStore
+from transformation_algebra.util.store import MarkLogic
 from cct.language import cct, R3
 from geo_question_parser import QuestionParser, TypesToQueryConverter
 
-wf_store = TransformationStore(
+wf_store = MarkLogic(
     url=settings.TDB_URL,
-    user=settings.TDB_USER,
-    password=settings.TDB_PASS
+    cred=(settings.TDB_USER, settings.TDB_PASS)
 )
 
 # [SC] for testing
