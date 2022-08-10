@@ -120,19 +120,17 @@ files; we will need a maintainable front-end workflow in the future.
 #### Loading data
 
 The [`cct`][cct] repository contains example workflows. These can be 
-augmented with their transformation graphs using the tools in that 
-repository:
+augmented with their transformation graphs using the 
+[`transformation-algebra`][ta] command-line tool. For example, to 
+produce a [TriG][trig] file containing all graphs, you could use:
 
-    make build/everything.ttl
+    python -m transformation_algebra graph -L cct -T tools/tools.ttl \
+        workflows/*.ttl -o transformations.trig
 
-This will produce `everything.ttl` in the `build/` directory. For 
-MarkLogic, these triples can be [loaded][mls84491] into the database via 
-its [REST API][mlrest] (for now, just into the default graph):
+To additionally upload these graphs to a graph store, additionally pass 
+arguments such as these:
 
-    curl -s -X PUT --data-binary '@everything.ttl' \
-        -H "Content-type: application/turle" \
-        --digest --user "<user>:<pass>" \
-        "http://<server>:8000/v1/graphs?default"
+    -b marklogic -u "<user>:<pass>" -s "https://<host>:<port>"
 
 
 ### Running the server
@@ -166,5 +164,5 @@ Or, on Windows:
 [wf]:  https://github.com/quangis/cct/blob/master/workflows/
 [web]: https://github.com/quangis/quangis-web
 [cnl]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/rpm-debian.html
-[mls84491]: https://docs.marklogic.com/guide/semantics/loading#id_84491
 [mlrest]: https://docs.marklogic.com/guide/semantics/REST
+[trig]: https://www.w3.org/TR/trig/
