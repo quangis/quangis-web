@@ -15,9 +15,9 @@ import json
 from rdflib import BNode, RDF
 from transformation_algebra import \
     TransformationGraph, TransformationQuery, TA
-from transformation_algebra.type import Product, Top, TypeOperation
+from transformation_algebra.type import Product, TypeOperation
 from transformation_algebra.util.store import MarkLogic
-from cct.language import cct, R3
+from cct.language import cct, R3, R2, Obj, Reg
 from geo_question_parser import QuestionParser, TypesToQueryConverter
 
 wf_store = MarkLogic(
@@ -43,13 +43,24 @@ def question2query(queryEx: dict) -> TransformationQuery:
 
     def f(q: dict) -> BNode:
         node = BNode()
-        t = cct.parse_type(q['after']['cct']).concretize(Top)
+        t = cct.parse_type(q['after']['cct']).concretize()
 
         # This is a temporary solution: R(x * z, y) is for now converted to the
         # old-style R3(x, y, z)
         if isinstance(t.params[0], TypeOperation) and \
                 t.params[0].operator == Product:
             t = R3(t.params[0].params[0], t.params[1], t.params[0].params[1])
+
+        # Another temporary solution. the question parser often returns `R(Obj,
+        # x)` where the manually constructed queries ("gold standard") would
+        # use `R(Obj, Reg * x)`. So, whenever we encounter the former, we will
+        # manually also allow the latter
+        # cf. <https://github.com/quangis/transformation-algebra/issues/79#issuecomment-1210661153>
+        if isinstance(t.params[0], TypeOperation) and \
+                t.operator == R2 and \
+                t.params[0].operator == Obj and \
+                t.params[1].operator != Product:
+            g.add((node, TA.type, cct.uri(R2(t.params[0], Reg * t.params[1]))))
 
         g.add((node, TA.type, cct.uri(t)))
         for b in q.get('before') or ():
