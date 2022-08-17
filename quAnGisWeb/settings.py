@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['DJANGO_KEY']
 
-TDB_URL = "https://qanda.soliscom.uu.nl:8000/v1/graphs/sparql"
+TDB_URL = "https://qanda.soliscom.uu.nl:8000"
 TDB_USER = os.environ['TDB_USER']
 TDB_PASS = os.environ['TDB_PASS']
 
