@@ -5,25 +5,28 @@ from django.shortcuts import render
 # Create your views here.
 from django.conf import settings
 from django.template import loader
+
 from django.http import Http404
-
 from django.http import HttpResponse
-
 from django.http import HttpResponseBadRequest, JsonResponse
 
 import json
+
+from questionParser.models import QuestionParser
+from questionParser.models import TypesToQueryConverter
+
 from rdflib import BNode, RDF
 from transformation_algebra import \
     TransformationGraph, TransformationQuery, TA
 from transformation_algebra.type import Product, TypeOperation
 from transformation_algebra.util.store import MarkLogic
 from cct.language import cct, R3, R2, Obj, Reg
-from geo_question_parser import QuestionParser, TypesToQueryConverter
 
 wf_store = MarkLogic(
-    url=settings.TDB_URL,
+    url=settings.TDB_URL,   
     cred=(settings.TDB_USER, settings.TDB_PASS)
 )
+
 
 # [SC] for testing
 # from django.apps import apps
@@ -94,16 +97,90 @@ def parseQuestion(qStr):
         g = wf_store.get(matches[0])
         qParsed['workflow'] = json.loads(g.serialize(format="json-ld"))
     else:
+        # [SC][TODO][REMOVE] for testing purpose only
+        # qParsed['matches'] = [
+        #    'https://example.com/#DeforestationAmazon',
+        #     'https://example.com/#HospitalsUtrecht_Network',
+        #     'https://example.com/#InfrastructureAccessShikoku',
+        #     'https://example.com/#NoisePortionAmsterdam',
+        #     'https://example.com/#NoiseProportionAmsterdam_Vector',
+        #     'https://example.com/#OgallalaAquifer',
+        #     'https://example.com/#TemperatureUtrecht',
+        #     'https://example.com/#MalariaCongo',
+        #     'https://example.com/#NoiseProportionAmsterdam_Raster',
+        #     'https://example.com/#PopulationUtrecht',
+        #     'https://example.com/#FloodsVermont',
+        #     'https://example.com/#HospitalsUtrecht_Near',
+        #     'https://example.com/#SolarPowerPotentialGloverPark'
+        # ]
+        
         qParsed['workflow'] = None
 
     return qParsed
+
+
+# [SC] for retrieving by URI a workflow graph on demand from the client
+def retrieveWfGraphAsync(request):
+    print("========================= request from " + get_client_ip(request))
     
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    
+    if is_ajax:
+        if request.method == 'GET':
+            garphId = request.GET.get('graphId', '')
+            
+            g = wf_store.get(garphId)
+            jsonLd = json.loads(g.serialize(format="json-ld"))
+
+            return JsonResponse(jsonLd, safe=False)
+        return JsonResponse({'status': 'Invalid request'}, status=400)
+    else:
+        return HttpResponseBadRequest('Invalid request')
+    
+
 
 def loadBlocklyUI(request):
     print("========================= request from " + get_client_ip(request))
     
     context = {}
     return render(request, 'blocklyUI/index.html', context)
+
+def loadDemo(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/demo.html', context)
+
+def loadTutorials(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/tutorials.html', context)
+    
+def loadDocsTool(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/docs-tool.html', context)
+    
+def loadDocsCCD(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/docs-ccd.html', context)
+    
+def loadDocsAlgebra(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/docs-algebra.html', context)
+
+def loadAbout(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    context = {}
+    return render(request, 'blocklyUI/about.html', context)
+
 
 
 # [SC][TODO] remove the function    

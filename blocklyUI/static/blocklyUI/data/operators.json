@@ -1,0 +1,1852 @@
+[
+  {
+    "@id": "https://github.com/quangis/cct#join",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Join of two unary concepts, like a table join"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "join"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(x, y) → R2(y, z) → R2(x, z)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#pi1",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "projects a given relation to the first attribute, resulting in a collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pi1"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → R1(x) [rel << (R1(x), R2(x, _), R3(x, _, _), R2(x, (_ × _)))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#lDist",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "computes Euclidean distances between locations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "lDist"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → R1(Loc) → R3(Loc, Ratio, Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#get_attrL",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "get_attrL"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(x, (y × z)) → R2(x, y)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#accumulate",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "finds all locations reachable from a given location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "accumulate"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, Loc) → R2(Loc, R1(Loc))"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nominalize",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "interpret an object as a name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nominalize"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Obj → Nom"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#arealinterpol",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "areal interpolation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "arealinterpol"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Reg, x) → R1(Reg) → R2(Reg, x) [x <= Ratio]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nest",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "put value in unary relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nest"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "x → R1(x)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#flowdirgraph",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "flow direction graph from DEM (location field)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "flowdirgraph"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, Itv) → R2(Loc, Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#subset",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Subset a relation to those tuples having an attribute value contained in a collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "subset"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → R1(x) → rel [rel << (R1(x), R2(x, _), R2(_, x), R3(x, _, _), R3(_, x, _), R3(_, _, x), R2(x, (_ × _)), R2(_, (x × _)), R2(_, (_ × x)))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#aspect",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "spatial aspect (cardinal direction) from DEM"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "aspect"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, Itv) → R2(Loc, Ratio)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#fcover",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "measures the spatial coverage of a field that is constrained to certain field values"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "fcover"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, x) → R1(x) → R1(Loc) [x < Qlt]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nbuild",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "build a network from objects with impedance values"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nbuild"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, (Reg × Ratio)) → R3(Obj, Ratio, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#swap",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "swap binary function inputs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "swap"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(α → β → γ) → β → α → γ"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#add",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "add value to unary relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "add"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(x) → x → R1(x)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#ocont",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "counts the number of objects within a region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ocont"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → Reg → Count"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#relunion",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "union of a set of relations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "relunion"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(rel) → rel [rel << (R1(_), R3(_, _, _), R2(_, _))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nDist",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "compute network distances between objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nDist"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R2(Obj, Reg) → R3(Obj, Ratio, Obj) → R3(Obj, Ratio, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#coveragesum",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "summing up nominal coverages"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "coveragesum"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Nom, Reg) → R2(Nom, Reg)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#get",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "get some value from unary relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "get"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(x) → x"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#id",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "identity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "id"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "α → α"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#groupbyR",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Group quantified relations by the right key, summarizing lists of quality values with the same key value into a new value per key, resulting in a unary concept."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "groupbyR"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(rel → q2) → R3(l, q1, r) → R2(r, q2) [rel << (R2(l, q1), R1(l))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#join_attr",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "join_attr"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(x, y) → R2(x, z) → R2(x, (y × z))"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#objectify",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "interpet a name as an object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "objectify"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Nom → Obj"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#join_key",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Substitute the quality of a quantified relation to some quality of one of its keys."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "join_key"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R3(x, q1, y) → rel → R3(x, q2, y) [rel << (R2(y, q2), R2(x, q2))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#merge",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "merge regions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "merge"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Reg) → Reg"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#interpol",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "spatial point interpolation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "interpol"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Reg, x) → R1(Loc) → R2(Loc, x) [x <= Itv]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#leq",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "less than or equal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "leq"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Ord → Ord → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#set_inters",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "intersection of two relations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "set_inters"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → rel → rel"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#conj",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "conjunction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "conj"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Bool → Bool → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#get_attrR",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "get_attrR"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(x, (y × z)) → R2(x, z)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#contentsum",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "summing up content amounts (regions and their values)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contentsum"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Reg, x) → R2(Reg, x) [x <= Ratio]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#pi12",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "projects a given ternary relation to the first two attributes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pi12"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R3(x, y, _) → R2(x, y)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#reify",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "make a region from locations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reify"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → Reg"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#centroid",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "measure centroid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "centroid"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → Loc"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#classify",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "classification table"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "classify"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Itv → Ord"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#disj",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "disjunction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "disj"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Bool → Bool → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#prod",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A constructor for quantified relations. Prod generates a cartesian product of two relations as a nested binary relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "prod"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(y → z → u) → R2(x, y) → R2(w, z) → R2(x, R2(w, u))"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#out",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "out"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Nom"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#compose",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "compose unary functions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "compose"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(β → γ) → (α → β) → α → γ"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#groupbyL",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Group quantified relations by the left key, summarizing lists of quality values with the same key value into a new value per key, resulting in a unary concept."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "groupbyL"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(rel → q2) → R3(l, q1, r) → R2(l, q2) [rel << (R1(r), R2(r, q1))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#getamounts",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "get amounts from object based amount qualities"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "getamounts"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, (Reg × x)) → R2(Reg, x) [x <= Ratio]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#fcont",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "summarizes the content of a field within a region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "fcont"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(R2(Val, x) → y) → R2(Loc, x) → Reg → y [x < Qlt, y < Qlt]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#max",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "maximum"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "max"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Val, y) → y [y <= Ord]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#avg",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "average"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "avg"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Val, y) → y [y <= Itv]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#loTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological position of locations on objects (in, out, boundary)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "loTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → R2(Obj, Reg) → R3(Loc, Nom, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#deify",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "make locations from a region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "deify"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Reg → R1(Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#pi2",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "projects a given relation to the second attribute, resulting in a collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pi2"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → R1(x) [rel << (R2(_, x), R3(_, x, _), R2(_, (x × _)))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#lrTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological position of locations on regions (in, out, boundary)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "lrTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → R1(Reg) → R3(Loc, Nom, Reg)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#min",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "minimum"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "min"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Val, y) → y [y <= Ord]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#size",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "measure size"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "size"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → Ratio"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#ocover",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "measures the spatial coverage of a collection of objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ocover"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R1(Obj) → Reg"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#select",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Selects a subset of a relation using a constraint on one attribute, like equality (eq) or order (leq)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "select"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(x → y → Bool) → rel → y → rel [rel << (R1(x), R2(x, _), R2(_, x), R3(x, _, _), R3(_, x, _), R3(_, _, x), R2(x, (_ × _)), R2(_, (x × _)), R2(_, (_ × x)))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#count",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "count objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "count"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Obj) → Count"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nest3",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "put values in ternary relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nest3"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "x → y → z → R3(x, y, z)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#apply2",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Join with binary function. Generates a unary concept from two other unary concepts of the same type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "apply2"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(x1 → x2 → x3) → R2(y, x1) → R2(y, x2) → R2(y, x3)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#notj",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "logical negation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "notj"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Bool → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#set_diff",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "difference of two relations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "set_diff"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → rel → rel"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#rTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological relations between two sets of regions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "rTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Reg) → R1(Reg) → R3(Reg, Nom, Reg)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#invert",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "invert a field, generating a coverage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "invert"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, x) → R2(x, Reg) [x < Val]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#pi23",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "projects a given ternary relation to the last two attributes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pi23"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R3(_, x, y) → R2(x, y)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#product",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "product"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Ratio → Ratio → Ratio"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#pi3",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "projects a given ternary relation to the third attribute, resulting in a collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pi3"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R3(_, _, x) → R1(x)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#prod3",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "prod3 generates a quantified relation from two nested binary relations. The keys of the nested relations become two keys of the quantified relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "prod3"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(z, R2(x, y)) → R3(x, y, z)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#select2",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Selects a subset of a relation using a constraint on two attributes, like equality (eq) or order (leq)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "select2"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(x → y → Bool) → rel → rel [rel << (R1(y), R2(y, _), R2(_, y), R3(y, _, _), R3(_, y, _), R3(_, _, y), R2(y, (_ × _)), R2(_, (y × _)), R2(_, (_ × y))), rel << (R1(x), R2(x, _), R2(_, x), R3(x, _, _), R3(_, x, _), R3(_, _, x), R2(x, (_ × _)), R2(_, (x × _)), R2(_, (_ × x)))]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#oDist",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "computes Euclidean distances between objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "oDist"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R2(Obj, Reg) → R3(Obj, Ratio, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#slope",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "slope"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "slope"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, Itv) → R2(Loc, Ratio)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#sum",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "summing up values"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "sum"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Val, y) → y [y <= Ratio]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#oTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological relations between two sets of objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "oTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R2(Obj, Reg) → R3(Obj, Nom, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#compose2",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "compose binary functions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "compose2"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(β → γ) → (δ → α → β) → δ → α → γ"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#groupby",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Group by qualities of binary relations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "groupby"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(R1(l) → q) → R2(l, y) → R2(y, q)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#loDist",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "computes Euclidean distances between locations and objects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "loDist"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → R2(Obj, Reg) → R3(Loc, Ratio, Obj)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#eq",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "equal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "eq"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Val → Val → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#revert",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "invert a coverage to a field"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "revert"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(x, Reg) → R2(Loc, x) [x < Val]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#lgDist",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "compute gridgraph distances between locations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "lgDist"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R3(Loc, Ratio, Loc) → R1(Loc) → R1(Loc) → R3(Loc, Ratio, Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#lTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological position of locations on a region (in, out, boundary)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "lTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → Reg → R3(Loc, Nom, Reg)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#apply",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "applying a function to a collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "apply"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(x → y) → R1(x) → R2(x, y)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#nest2",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "put values in binary relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "nest2"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "x → y → R2(x, y)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#apply1",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Join with unary function. Generates a unary concept from one other unary concept using a function"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "apply1"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "(x1 → x2) → R2(y, x1) → R2(y, x2)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#extrapol",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "buffering, defined in terms of some distance (given as parameter)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "extrapol"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R2(Loc, Bool)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#true",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "true"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#orTopo",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "detects the topological relations between a set of objects and a set of regions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "orTopo"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Obj, Reg) → R1(Reg) → R3(Obj, Nom, Reg)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#name",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "combine nominal values"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "name"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(x) → x [x <= Nom]"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#gridgraph",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "build a gridgraph using some location field and some impedance field"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "gridgraph"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R2(Loc, Loc) → R2(Loc, Ratio) → R3(Loc, Ratio, Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#set_union",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "union of two relations"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "set_union"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "rel → rel → rel"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#getobjectnames",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "make objects from names"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "getobjectnames"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Nom) → R2(Obj, Nom)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#lVis",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "build a visibility relation between locations using a DEM"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "lVis"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "R1(Loc) → R1(Loc) → R2(Loc, Itv) → R3(Loc, Bool, Loc)"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#inrel",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "whether some value is in a relation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "inrel"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "x → R1(x) → Bool"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#in",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "in"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Nom"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/quangis/cct#ratio",
+    "@type": [
+      "https://github.com/quangis/transformation-algebra#Operation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ratio"
+      }
+    ],
+    "https://github.com/quangis/cct#signature": [
+      {
+        "@value": "Ratio → Ratio → Ratio"
+      }
+    ]
+  }
+]

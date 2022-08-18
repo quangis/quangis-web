@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    
+    {% include "blocklyUI/head.html" %}
+    
+    <xml id="toolbox">
+        <category name="Question words" colour="150" toolboxitemid="queCate">
+            <block type="where">
+                <value name = "where_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "where_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="what">
+                <value name = "what_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "what_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="which">
+                <value name = "which_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "which_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="what_area1">
+                <value name = "wharea_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "wharea_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="what_area2">
+                <value name = "wharea_rel_shadow">
+                    <shadow type="rel_reminder"></shadow>
+                </value>
+                <value name = "wharea_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="how_many">
+                <value name = "howmany_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "howmany_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+            <block type="from_where">
+                <value name = "fromwh_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+                <value name = "fromwh_extent_shadow">
+                    <shadow type="extent_reminder"></shadow>
+                </value>
+            </block>
+        </category>
+        <!--for which, how many-->
+        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
+            <block type="noun_phrase1_1">
+                <value name = "coreCAux_shadow1">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+            </block>
+            <block type="noun_phrase1_2">
+                <value name = "coreCAux_shadow2">
+                    <shadow type="rel_reminder"></shadow>
+                </value>
+            </block>
+        </category>
+        <!--for where, what, what_area, from where and noun_phrase1-->
+        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
+            <block type="noun_phrase2">
+                <value name = "adjcoreC_shadow">
+                    <shadow type="rel_reminder"></shadow>
+                </value>
+            </block>
+            <block type="noun_phrase3">
+                <value name = "coreCOfCoreC_shadow1">
+                    <block type="noun_phrase3_connect">
+                        <value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
+                    </block>
+                    <!-- <shadow type="np_reminder"></shadow>-->
+                </value>
+            </block>
+            <block type="noun_phrase4">
+                <value name = "distCoreC">
+                    <block type="noun_phrase4_from">
+                        <value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
+                    </block>
+                </value>
+                <value name = "distCoreC_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+            </block>
+        </category>
+        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
+        </category>
+        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
+            <block type="noun_phrase2">
+                <value name = "adjcoreC_shadow">
+                    <shadow type="rel_reminder"></shadow>
+                </value>
+            </block>
+        </category>
+        <category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
+            <block type="relationship1">
+                <value name = "rel1_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+            </block>
+            <block type="relationship2">
+                <value name = "rel3_np_shadow">
+                    <shadow type="np_reminder"></shadow>
+                </value>
+            </block>
+            <block type="relationship3"></block>
+            <block type="relationship4">
+                <value name = "rel4_np">
+                    <block type="rel4_np"></block>
+                </value>
+            </block>
+            <block type="relationship5">
+                <value name = "rel5_np">
+                    <block type="rel5_np"></block>
+                </value>
+            </block>
+            <block type="relationship6"></block>
+        </category>
+        <category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
+        </category>
+    </xml>
+    
+    <body onload='init("demo")'>
+        <div class="pageContainer">
+            {% include "blocklyUI/nav-bar.html" %}
+            
+            <!-- [SC][TODO] django does not seem to parse embedded code within static files; so added this js code in html file -->
+            <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script>
+            <script> const getWfGraphUrl = "{% url 'blocklyUINS:urln_getWfGraphAsync' %}"; </script>
+            
+            <div class="tabContainer">
+                <div class="tab">
+                    <button class="tablinks active" id="blocklyTabBtn" onclick="openTab(event, 'blocklyTab')">Question generator</button>
+                    <button class="tablinks" id="queryTabBtn" onclick="openTab(event, 'queryTab')">Query viewer</button>
+                    <button class="tablinks" id="wfTabBtn" onclick="openTab(event, 'wfTab')">Workflow viewer</button>
+                </div>
+
+                <div id="blocklyTab" class="tabcontent">
+                    <h3>Generate your geo-analytical question</h3>
+                    
+                    <div class="qInputMode">
+                        <section id="quesContainer">
+                            <div id="questionDiv"></div>
+                        </section>
+
+                        <section id="blocklyContainer">
+                            <div id="blocklyDiv"></div>
+                        </section>
+                    
+                        <!-- [SC][TODO]remove the code; form-based GET request to parse blockly question
+                        <form action="{% url 'blocklyUINS:urln_parsedQ' %}" method="get">
+                            <input type="hidden" name="qStr" value="" id="qStrParam"/>
+                            <input type="submit" value="Parse blockly question" />
+                        </form>
+                        -->
+                        <!-- [SC][TODO] AJAX based alternative to the form above -->
+                        <input type="button" value="Parse blockly question" onclick="parseBlocklyQ();" />
+                    </div>
+                    
+                    <!-- [SC][TODO] django does not seem to parse embedded code within static files; so added this js code in html file -->
+                    <!-- <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script> -->
+                    <!-- [SC][TODO] This is temporary code for loading datafiles from the server -->
+                    <!-- <script> const datapath = "{% static 'blocklyUI/data/' %}"; </script> -->
+                
+                    <!-- [SC][TODO] remove this test code -->
+                    <div class="qInputMode">
+                        <select name="qStr" id="qCorpusList" style="width:100%;" >
+                            <option value="What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam">
+                                1bTask: What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam
+                            </option>
+                            <option value="What is the average temperature for each neighborhood in Amsterdam">
+                                3aTask: What is the average temperature for each neighborhood in Amsterdam
+                            </option>
+                            <option value="What is the travel distance from car accidents to the nearest hospitals in Amsterdam">
+                                4aTask: What is the travel distance from car accidents to the nearest hospitals in Amsterdam
+                            </option>
+                            <option value="What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam">
+                                6aTask: What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam
+                            </option>
+                            
+                            <option value="What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam">
+                                1bWf: What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam
+                            </option>
+                            <option value="What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam">
+                                1bWf: What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam
+                            </option>
+                            <option value="What three hospitals are closest to 2350 Pine St, San Francisco, at most within a two minutes drive">
+                                4aWf: What three hospitals are closest to 2350 Pine St, San Francisco, at most within a two minutes drive
+                            </option>
+                            <option value="Which hospital is closest to the incidents within a two minutes drive">
+                                4aWf: Which hospital is closest to the incidents within a two minutes drive
+                            </option>
+                            <option value="How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year">
+                                6aWf: How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year
+                            </option>
+                        </select><br>
+                        <input type="button" value="Parse corpus question" onclick="parseCorpusQ();" />
+                    </div>
+                
+                    <!-- [SC][TODO] remove this test code -->
+                    <div class="qInputMode">
+                        <input type="text" id="nlQuestionStr" name="qStr" placeholder="Custom question in NL" style="width:100%;" ><br>
+                        <input type="button" value="Parse NL question" onclick="parseNLQ();" />
+                    </div>
+                    
+                    <!-- [SC] this textarea contains the output of the question parser -->
+                    <!-- [SC][TODO] remove this test code -->
+                    <textarea readonly id="parsedQContainer" style="width:100%;height:300px;" placeholder="Result of question sentence parsing"></textarea>
+                </div>
+
+                <div id="queryTab" class="tabcontent">
+                    <div class="w-row">
+                        <div class="tabTitle w-col w-col-6">
+                            View the query
+                        </div>
+                        <div class="tabFunc w-col w-col-6">
+                            <select id="queryDownloadBtn" disabled>
+                                <option value="idle">Download</option>
+                                <option value="json">Json format</option>
+                                <option value="png">PNG/Image format</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="questionStr" id="queryQuestionStr"></div>
+                    
+                    <!-- [SC] cytoscape canvas for visualizing workflows-->
+                    <div id="queryCy"></div>
+                    
+                    <div id="queryCyInfo">
+                        <div id="queryCyInfoTitle">Description</div>
+                        <div id="queryCyInfoBody"></div>
+                    </div>
+                    
+                    <select id="queryFileSelector">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="q01.json">1</option>
+                        <option value="q02.json">2</option>
+                        <option value="q03.json">3</option>
+                        <option value="q04.json">4</option>
+                        <option value="q05.json">5</option>
+                        <option value="q06.json">6</option>
+                        <option value="q07.json">7</option>
+                        <option value="q08.json">8</option>
+                        <option value="q09.json">9</option>
+                        <option value="q10.json">10</option>
+                    </select>
+                    
+                    <input type="button" value="Reset" onclick="resetQueryGraph();" />
+                </div>
+
+                <div id="wfTab" class="tabcontent">                    
+                    <div class="w-row">
+                        <div class="tabTitle w-col w-col-6">
+                            View the workflow
+                        </div>
+                        <div class="tabFunc left w-col w-col-3">
+                            <div class="sliderContainer">
+                                <!-- [SC] slider button for expanding the workflow -->
+                                <label class="inputLabel">Concretize Workflow</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="expandWfBtn" disabled>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tabFunc w-col w-col-3">
+                            <select id="wfDownloadBtn" disabled>
+                                <option value="idle">Download</option>
+                                <option value="json">Json format</option>
+                                <option value="png">PNG/Image format</option>
+                                <!--<option value="rdf">RDF/Turtle format</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="questionStr" id="wfQuestionStr"></div>
+                    
+                    <!-- [SC] cytoscape canvas for visualizing workflows-->
+                    <div id="cy"></div> 
+                    
+                    <div id="cyInfo">
+                        <div id="cyInfoTitle">Description</div>
+                        <div id="cyInfoBody"></div>
+                    </div>
+                    
+                    <select id="matchingWfSelector">
+                        <option disabled selected value> -- select an option -- </option>
+                    </select>
+                    
+                    <select id="wfFileSelector">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="01a-NoisePortionAmsterdam.json">01a-NoisePortionAmsterdam</option>
+                        <option value="01b-NoiseProportionAmsterdam_Raster.json">01b-NoiseProportionAmsterdam_Raster</option>
+                        <option value="01b-NoiseProportionAmsterdam_Vector.json">01b-NoiseProportionAmsterdam_Vector</option>
+                        <option value="02a-PopulationUtrecht.json">02a-PopulationUtrecht</option>
+                        <option value="03a-TemperatureUtrecht.json">03a-TemperatureUtrecht</option>
+                        <option value="04a-HospitalsUtrecht_Near.json">04a-HospitalsUtrecht_Near</option>
+                        <option value="04a-HospitalsUtrecht_Network.json">04a-HospitalsUtrecht_Network</option>
+                        <option value="05a-DeforestationAmazon.json">05a-DeforestationAmazon</option>
+                        <option value="06a-SolarPowerPotentialGloverPark.json">06a-SolarPowerPotentialGloverPark</option>
+                        <option value="07a-InfrastructureAccessShikoku.json">07a-InfrastructureAccessShikoku</option>
+                        <option value="08a-OgallalaAquifer.json">08a-OgallalaAquifer</option>
+                        <option value="09a-FloodsVermont.json">09a-FloodsVermont</option>
+                        <option value="10a-MalariaCongo.json">10a-MalariaCongo</option>
+                    </select>
+                    
+                    <input type="button" value="Reset" onclick="resetWfGraph();" />
+                </div>
+            </div>
+            
+            <script>
+                // inject Blockly into an empty div. This script should be at the bottom of the page, or called by the onload event.
+                let workspace = Blockly.inject('blocklyDiv', {
+                    toolbox: document.getElementById('toolbox'),
+                    zoom: {
+                        controls: true,
+                        wheel: true,
+                        startScale: 1,
+                        maxScale: 1.5,
+                        minScale: 0.8,
+                        scaleSpeed: 1.2
+                    }
+                });
+              
+                function refresh(){
+                    setCategory()
+                    ques_generator()
+                    disable_sup_grid()
+                }
+                
+                workspace.addChangeListener(refresh);
+                hideCategory();
+                Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
+                Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
+            </script>
+        
+            {% include "blocklyUI/footer.html" %}
+        </div>
+    </body>
+</html>

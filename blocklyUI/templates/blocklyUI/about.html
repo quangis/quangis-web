@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    
+    {% include "blocklyUI/head.html" %}
+   
+    <body onload='init("about")'>
+        <div class="pageContainer">
+            {% include "blocklyUI/nav-bar.html" %}
+            
+            <div class="centered section grey">
+                <div class="w-container">
+                    <h2 class="section-title">About QuAnGIS project.</h2>
+                    
+                    <p>QuAnGIS stands for Question-based analysis of Geographic Information with Semantic Queries.</p>
+                    <p>Within the project, we aim to develop a novel theory of interrogative spatial concepts to turn geo-analytical questions into a machine-readable form using semantic queries. Or in plain language: teaching analytical systems to process full sentenced questions. In this form, questions can directly be matched with the capacity of major analytic GIS tools and data on the web.</p>
+                    <p>With this project we want to lay the theoretical as well as computational foundations for a Semantic Web based GIS infrastructure. This allows analysts to search for appropriate data and tools on the Web, simply by formulating an analytical question, and to load the required resources to answer this question directly from the web into a GIS.</p>
+                </div>
+            </div>
+            
+            <div class="centered section white">
+                <div class="w-container">
+                    <h2 class="section-title">About the QuAnGIS team.</h2>
+                    <div class="w-row">
+                        <div class="w-col w-col-4 w-col-small-4">
+                            <div class="portrait"><img src="{% static 'blocklyUI/media/images/scheider.png'%}"></div>
+                            <h3><a href="https://www.uu.nl/medewerkers/SScheider" target="_blank">Dr. Simon Scheider</a></h3>
+                            <h5>Principal investigator.</h5>
+                            <p>SGPL, Faculty of Geosciences, Utrecht University.</p>
+                            <p>An assistant professor in geographic information science. My research lies at the interface between conceptual modeling, geographic data analysis and knowledge extraction. I am particularly interested in understanding the concepts underlying spatio-temporal data, inlcuding reference systems, fields, places, spatial objects, events, trajectories and their relationship to human activities, and in practical methods for modeling and handling them with GIS and semantic technology.</p>
+                        </div>
+                        <div class="w-col w-col-4 w-col-small-4">
+                            <div class="icons"><img src="" width="25"></div>
+                            <h3><a href="#" target="_blank">Dr. Enkhbold Nyamsuren</a></h3>
+                            <h5>Postdoc researcher, developer.</h5>
+                            <p>SGPL, Faculty of Geosciences, Utrecht University.</p>
+                            <p>Specializes in Cognitive Science and symbolic knowledge modeling. Responsible for the front- and back-end development.</p>
+                        </div>
+                        <div class="w-col w-col-4 w-col-small-4">
+                            <div class="icons"><img src="" width="25"></div>
+                            <h3><a href="#" target="_blank">Haiqi Xu, MSc</a></h3>
+                            <h5>PhD student.</h5>
+                            <p>SGPL, Faculty of Geosciences, Utrecht University.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="w-row">
+                        <div class="w-col w-col-4 w-col-small-4">
+                            <div class="icons"><img src="" width="25"></div>
+                            <h3><a href="#" target="_blank">Eric Top, MSc</a></h3>
+                            <h5>PhD student.</h5>
+                            <p>SGPL, Faculty of Geosciences, Utrecht University.</p>
+                            <p></p>
+                        </div>
+                        <div class="w-col w-col-4 w-col-small-4">
+                            <div class="icons"><img src="" width="25"></div>
+                            <h3><a href="#" target="_blank">Niels Steenbergen, MSc</a></h3>
+                            <h5>Research assistant, developer.</h5>
+                            <p>SGPL, Faculty of Geosciences, Utrecht University.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section grey">
+                <div class="w-container">
+                    <h2 class="section-title">Contact Info.</h2>
+                    
+                    <div class="w-row">
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h3>Contact person</h3>
+                        </div>
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h5>Dr. Simon Scheider</h5>
+                        </div>
+                    </div>
+                    <div class="w-row">
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h3>Email</h3>
+                        </div>
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h5>s.scheider@uu.nl</h5>
+                        </div>
+                    </div>
+                    <div class="w-row">
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h3>Phone</h3>
+                        </div>
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h5>030 253 2966</h5>
+                        </div>
+                    </div>
+                    <div class="w-row">
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h3>Address</h3>
+                        </div>
+                        <div class="w-col w-col-6 w-col-small-6">
+                            <h5>Room 6.16, Vening Meineszgebouw A, Utrecht University, Princetonlaan 8a, 3584 CB Utrecht</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% include "blocklyUI/footer.html" %}
+        </div>
+    </body>
+</html>

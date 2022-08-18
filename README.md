@@ -12,7 +12,6 @@ QuAnGIS project together into a single pipeline.
     -   [Data reifier](#data-reifier)
 2.  [Usage](#usage)
     -   [Setting up the environment](#setting-up-the-environment)
-    -   [Setting up JavaScript libraries](#setting-up-javascript-libraries)
     -   [Loading data](#loading-data)
 
 
@@ -87,36 +86,60 @@ or automatically annotated with text descriptions and
 ## Usage
 
 #### Setting up the environment
+    
+1.Install the 64-Bit version of Miniconda 4.10.3  from (https://repo.anaconda.com/miniconda/) (Windows,MaxOS and Linux).
 
-There are myriad ways to manage Python packages and environments. We 
-have chosen [Miniconda][cnd]; also see [instructions for Linux][cnl]. 
-After installing it, create and activate the `quangis` environment:
+2.Install Git (https://git-scm.com/downloads).
 
-    conda env create --file environment.yml
+3.Make a new python environment and give it a quangis
+
+    conda create -n quangis python=3.9.7
+
+OR to create an environment inside a custom folder outside of the miniconda's default folder: 
+
+    conda create -p [path here/quangis] python=3.9.7
+
+4.Activate the new environment (in this example the env was called INFOMSDASM):
+
     conda activate quangis
 
-After the environment is set up, make sure that you have downloaded 
-relevant data files:
+OR activate an environment from a custom folder outside of the miniconda's default folder
+
+    conda activate [path here/quangis]
+
+5.Move to quangis folder (editable packages from github will be installed here): 
+
+    cd [path here/quangis]
+
+6.Install allennlp package
+    
+    pip install allennlp 
+
+7.Install allennlp-models package
+
+    pip install allennlp-models
+
+8.Install spacy package from conda-forge
+
+    conda install -c conda-forge spacy
+
+9.Install spacy trained pipeline:
 
     python -m spacy download en_core_web_sm
-    python -m nltk.downloader averaged_perceptron_tagger omw-1.4
 
+10.Install other packages from conda-forge: antlr4-python3-runtime=4.9.3, nltk, word2number, django, rdflib, plumbum
 
-#### Setting up JavaScript libraries
+11.Install nltk modules:
 
-We use the [`blockly`][blo], [`cytoscape`][cts] and [`klay`][kly] 
-JavaScript libraries. For now, these are just bundled as static JS 
-files; we will need a maintainable front-end workflow in the future. 
-(Also, `klay` is deprecated.)
+    python -m nltk.downloader averaged_perceptron_tagger
+    python -m nltk.downloader omw-1.4
 
-    npm install
-    cp  node_modules/blockly/blockly.min.js \
-        node_modules/cytoscape/dist/cytoscape.min.js \
-        node_modules/cytoscape-klay/cytoscape-klay.js \
-        node_modules/klay/klay.js \
-        blocklyUI/static/blocklyUI/js/
+12.It may be necessary to install the checklist package:
 
-
+    pip install checklist
+    pip install --editable=git+https://github.com/quangis/transformation-algebra.git@develop#egg=transformation-algebra
+    pip install --editable=git+https://github.com/quangis/cct.git#egg=cct
+    
 #### Loading data
 
 The [`cct`][cct] repository contains example workflows. These can be 

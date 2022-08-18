@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    
+    {% include "blocklyUI/head.html" %}
+   
+    <body onload='init("docs-ccd")'>
+        <div class="pageContainer">
+            {% include "blocklyUI/nav-bar.html" %}
+
+            <div id="docSidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            
+            <div class="docs section" id="main">
+                <!-- [SC][TODO] -->
+                <button class="openbtn" onclick="openNav()">&#9776; Open Nav Menu</button>
+            </div>
+            
+            {% include "blocklyUI/footer.html" %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+
+<!-- [SC] navigation bar -->
+<header class="nav-bar">
+    <div class="w-container headerContainer">
+        <div class="w-row">
+            <!-- [SC] Logo and name -->
+            <div class="brand-column w-col w-col-5-1">
+                <a href="https://erc.europa.eu" target="_blank">
+                    <img class="logo ercLogo" src="{% static 'blocklyUI/media/images/LOGO_ERC-FLAG_EU-NEGATIF_CROPPED.jpg'%}">
+                </a>
+                <a href="https://questionbasedanalysis.com" target="_blank">
+                    <img class="logo mainLogo" src="{% static 'blocklyUI/media/images/QuAnGIS-logo-globe.png'%}">
+                </a>
+                <div class="company">QuAnGIS Demo</div>
+            </div>
+       
+            <!-- [SC] Navigation field-->
+            <nav class="nav-column w-col w-col-6-1">
+                <a class="nav-link" href="{% url 'blocklyUINS:urln_indexPage' %}" id="nav.index">Home</a>
+                <a class="nav-link" href="{% url 'blocklyUINS:urln_demoPage' %}" id="nav.demo">Try Demo</a>
+                <a class="nav-link" href="{% url 'blocklyUINS:urln_tutorialsPage' %}" id="nav.tutorials">Tutorials</a>
+                <div class="dropdown">
+                    <a class="nav-link dropbtn" id="nav.docs">Documentation <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'blocklyUINS:urln_docsToolPage' %}">Tool ontology</a>
+                        <a href="{% url 'blocklyUINS:urln_docsCcdPage' %}">CCD Ontology</a>
+                        <a href="{% url 'blocklyUINS:urln_docsAlgebraPage' %}">Algebra expressions</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="{% url 'blocklyUINS:urln_aboutPage' %}" id="nav.about">About</a>
+            </nav>
+        </div>
+    </div>
+</header>

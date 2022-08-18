@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+    {% include "blocklyUI/head.html" %}
+   
+    <body onload='init("tutorials")'>
+        <div class="pageContainer">
+            {% include "blocklyUI/nav-bar.html" %}
+            
+            <div class="section incomplete" id="mobile">
+                <div class="w-container">
+                    <h2 class="section-title">Under construction.</h2>
+                    <p class="section-subtitle">This page is under construction and will be updated with new content soon.</p>
+                </div>
+            </div>
+            
+            {% include "blocklyUI/footer.html" %}
+        </div>
+    </body>
+</html>

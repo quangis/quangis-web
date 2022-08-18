@@ -1,0 +1,125 @@
+{
+    "question": "What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam",
+    "cleaned_Question": "What are potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam",
+    "placename": [
+        "Amsterdam"
+    ],
+    "quantity": [
+        "30 kilowatt hour"
+    ],
+    "field": [
+        "solar power"
+    ],
+    "object": [
+        "rooftop"
+    ],
+    "conamount": [
+        "potentials"
+    ],
+    "ner_Question": "what are conamount0 era of field0 ratio larger than equantity0 for each object0 in placename0",
+    "parseTreeStr": "(start what are (measure (coreC conamount 0 era) of (coreC field 0 ratio)) (condition (compareR larger than) (quantity equantity 0)) for each (support (coreC object 0)) in (extent placename 0))",
+    "cctrans": {
+        "types": [
+            {
+                "type": "object",
+                "id": "0",
+                "keyword": "rooftop",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "field",
+                "id": "1",
+                "keyword": "solar power",
+                "measureLevel": "ratio",
+                "cct": "R(Loc,Ratio)"
+            },
+            {
+                "type": "conamount",
+                "id": "2",
+                "keyword": "potentials",
+                "measureLevel": "era",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "object",
+                "id": "3",
+                "keyword": "Amsterdam",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "field",
+                "id": "4",
+                "keyword": "solar power",
+                "measureLevel": "ratio",
+                "cct": "R(Loc,Ratio)"
+            }
+        ],
+        "extent": [
+            "3"
+        ],
+        "transformations": [
+            {
+                "before": [
+                    "1"
+                ],
+                "after": [
+                    "4"
+                ]
+            },
+            {
+                "before": [
+                    "4",
+                    "0"
+                ],
+                "after": [
+                    "2"
+                ],
+                "key": "0"
+            }
+        ]
+    },
+    "valid": "T",
+    "query": {
+        "afterId": "2",
+        "after": "R(Obj,Ratio)",
+        "before": [
+            {
+                "afterId": "4",
+                "after": "R(Loc,Ratio)",
+                "before": [
+                    "R(Loc,Ratio)"
+                ]
+            },
+            "R(Obj,_)"
+        ]
+    },
+    "queryEx": {
+        "after": {
+            "id": "2",
+            "cct": "R(Obj,Ratio)",
+            "key": "0"
+        },
+        "before": [
+            {
+                "after": {
+                    "id": "4",
+                    "cct": "R(Loc,Ratio)"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "1",
+                            "cct": "R(Loc,Ratio)"
+                        }
+                    }
+                ]
+            },
+            {
+                "after": {
+                    "id": "0",
+                    "cct": "R(Obj,_)"
+                }
+            }
+        ]
+    }
+}

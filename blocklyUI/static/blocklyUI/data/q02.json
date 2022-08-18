@@ -1,0 +1,220 @@
+{
+    "question": "What is the crime density within the buffer area of the shortest path from home to workplace in Amsterdam",
+    "cleaned_Question": "What is crime density within buffer area of shortest path from home to workplace in Amsterdam",
+    "placename": [
+        "Amsterdam"
+    ],
+    "object": [
+        "home",
+        "workplace"
+    ],
+    "network": [
+        "shortest path"
+    ],
+    "proportion": [
+        "crime density"
+    ],
+    "ner_Question": "what is proportion0 ira within buffer area of network0 from object0 to object1 in placename0",
+    "parseTreeStr": "(start what is (measure (coreC proportion 0 ira)) (condition (boolField (topoR within) (distField buffer area of (networkC network 0) from (origin (objectC object 0)) to (destination (objectC object 1))))) in (extent placename 0))",
+    "cctrans": {
+        "types": [
+            {
+                "type": "object",
+                "id": "0",
+                "keyword": "home",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "object",
+                "id": "1",
+                "keyword": "workplace",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "network",
+                "id": "2",
+                "keyword": "shortest path",
+                "cct": "R(Obj*Obj,Obj)"
+            },
+            {
+                "type": "distfield",
+                "id": "3",
+                "keyword": "",
+                "cct": "R(Loc,Ratio)"
+            },
+            {
+                "type": "boolfield",
+                "id": "4",
+                "keyword": "",
+                "cct": "R(Loc,Bool)"
+            },
+            {
+                "type": "proportion",
+                "id": "5",
+                "keyword": "crime density",
+                "measureLevel": "ira",
+                "cct": "R(_,Ratio)"
+            },
+            {
+                "type": "object",
+                "id": "6",
+                "keyword": "Amsterdam",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "object",
+                "id": "7",
+                "keyword": "shortest path",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "proportion",
+                "id": "8",
+                "keyword": "crime density",
+                "measureLevel": "ira",
+                "cct": "R(Reg,Ratio)"
+            }
+        ],
+        "extent": [
+            "6"
+        ],
+        "transformations": [
+            {
+                "before": [
+                    "0",
+                    "1"
+                ],
+                "after": [
+                    "2"
+                ]
+            },
+            {
+                "before": [
+                    "2"
+                ],
+                "after": [
+                    "7"
+                ]
+            },
+            {
+                "before": [
+                    "7"
+                ],
+                "after": [
+                    "3"
+                ]
+            },
+            {
+                "before": [
+                    "3"
+                ],
+                "after": [
+                    "4"
+                ]
+            },
+            {
+                "before": [
+                    "4",
+                    "5"
+                ],
+                "after": [
+                    "8"
+                ],
+                "key": "7"
+            }
+        ]
+    },
+    "valid": "T",
+    "query": {
+        "afterId": "8",
+        "after": "R(Reg,Ratio)",
+        "before": [
+            {
+                "afterId": "4",
+                "after": "R(Loc,Bool)",
+                "before": [
+                    {
+                        "afterId": "3",
+                        "after": "R(Loc,Ratio)",
+                        "before": [
+                            {
+                                "afterId": "7",
+                                "after": "R(Obj,_)",
+                                "before": [
+                                    {
+                                        "afterId": "2",
+                                        "after": "R(Obj*Obj,Obj)",
+                                        "before": [
+                                            "R(Obj,_)",
+                                            "R(Obj,_)"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "R(_,Ratio)"
+        ]
+    },
+    "queryEx": {
+        "after": {
+            "id": "8",
+            "cct": "R(Reg,Ratio)",
+            "key": "7"
+        },
+        "before": [
+            {
+                "after": {
+                    "id": "4",
+                    "cct": "R(Loc,Bool)"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "3",
+                            "cct": "R(Loc,Ratio)"
+                        },
+                        "before": [
+                            {
+                                "after": {
+                                    "id": "7",
+                                    "cct": "R(Obj,_)"
+                                },
+                                "before": [
+                                    {
+                                        "after": {
+                                            "id": "2",
+                                            "cct": "R(Obj*Obj,Obj)"
+                                        },
+                                        "before": [
+                                            {
+                                                "after": {
+                                                    "id": "0",
+                                                    "cct": "R(Obj,_)"
+                                                }
+                                            },
+                                            {
+                                                "after": {
+                                                    "id": "1",
+                                                    "cct": "R(Obj,_)"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "after": {
+                    "id": "5",
+                    "cct": "R(_,Ratio)"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,193 @@
+{
+    "question": "What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam",
+    "cleaned_Question": "What is proportion of noise larger than 70 db for each neighbourhood in Amsterdam",
+    "placename": [
+        "Amsterdam"
+    ],
+    "quantity": [
+        "70 db"
+    ],
+    "field": [
+        "noise"
+    ],
+    "object": [
+        "neighbourhood"
+    ],
+    "proportion": [
+        "proportion"
+    ],
+    "ner_Question": "what is proportion0 ira of field0 ordinal larger than equantity0 for each object0 in placename0",
+    "parseTreeStr": "(start what is (measure (coreC proportion 0 ira) of (coreC field 0 ordinal)) (condition (compareR larger than) (quantity equantity 0)) for each (support (coreC object 0)) in (extent placename 0))",
+    "cctrans": {
+        "types": [
+            {
+                "type": "object",
+                "id": "0",
+                "keyword": "neighbourhood",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "field",
+                "id": "1",
+                "keyword": "noise",
+                "measureLevel": "ordinal",
+                "cct": "R(Loc,Ord)"
+            },
+            {
+                "type": "proportion",
+                "id": "2",
+                "keyword": "proportion",
+                "measureLevel": "ira",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "object",
+                "id": "3",
+                "keyword": "Amsterdam",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "field",
+                "id": "4",
+                "keyword": "noise",
+                "measureLevel": "ordinal",
+                "cct": "R(Loc,Ord)"
+            },
+            {
+                "type": "covamount",
+                "id": "5",
+                "keyword": "",
+                "measureLevel": "era",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "covamount",
+                "id": "6",
+                "keyword": "",
+                "measureLevel": "era",
+                "cct": "R(Obj,Ratio)"
+            }
+        ],
+        "extent": [
+            "3"
+        ],
+        "transformations": [
+            {
+                "before": [
+                    "1"
+                ],
+                "after": [
+                    "4"
+                ]
+            },
+            {
+                "before": [
+                    "4",
+                    "0"
+                ],
+                "after": [
+                    "5"
+                ],
+                "key": "0"
+            },
+            {
+                "before": [
+                    "0"
+                ],
+                "after": [
+                    "6"
+                ]
+            },
+            {
+                "before": [
+                    "5",
+                    "6"
+                ],
+                "after": [
+                    "2"
+                ],
+                "key": "0"
+            }
+        ]
+    },
+    "valid": "T",
+    "query": {
+        "afterId": "2",
+        "after": "R(Obj,Ratio)",
+        "before": [
+            {
+                "afterId": "5",
+                "after": "R(Obj,Ratio)",
+                "before": [
+                    {
+                        "afterId": "4",
+                        "after": "R(Loc,Ord)",
+                        "before": [
+                            "R(Loc,Ord)"
+                        ]
+                    },
+                    "R(Obj,_)"
+                ]
+            },
+            {
+                "afterId": "6",
+                "after": "R(Obj,Ratio)",
+                "before": [
+                    "R(Obj,_)"
+                ]
+            }
+        ]
+    },
+    "queryEx": {
+        "after": {
+            "id": "2",
+            "cct": "R(Obj,Ratio)",
+            "key": "0"
+        },
+        "before": [
+            {
+                "after": {
+                    "id": "5",
+                    "cct": "R(Obj,Ratio)",
+                    "key": "0"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "4",
+                            "cct": "R(Loc,Ord)"
+                        },
+                        "before": [
+                            {
+                                "after": {
+                                    "id": "1",
+                                    "cct": "R(Loc,Ord)"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "after": {
+                            "id": "0",
+                            "cct": "R(Obj,_)"
+                        }
+                    }
+                ]
+            },
+            {
+                "after": {
+                    "id": "6",
+                    "cct": "R(Obj,Ratio)"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "0",
+                            "cct": "R(Obj,_)"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

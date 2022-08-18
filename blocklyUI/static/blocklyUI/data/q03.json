@@ -1,0 +1,148 @@
+{
+    "question": "What is the total walking time to the nearest waste disposal places from each household in the Amsterdam city centre",
+    "cleaned_Question": "What is total walking time to nearest waste disposal places from each household in Amsterdam city centre",
+    "placename": [
+        "Amsterdam city centre"
+    ],
+    "object": [
+        "waste disposal places",
+        "household"
+    ],
+    "networkquality": [
+        "walking time"
+    ],
+    "ner_Question": "what is total networkquality0 ratio to nearest object0 from each object1 in placename0",
+    "parseTreeStr": "(start what is (measure (aggre total) (networkQ networkquality 0 ratio) to (destination (extreDist nearest) (objectC object 0)) from each (origin (objectC object 1))) in (extent placename 0))",
+    "cctrans": {
+        "types": [
+            {
+                "type": "object",
+                "id": "0",
+                "keyword": "household",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "object",
+                "id": "1",
+                "keyword": "waste disposal places",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "networkquality",
+                "id": "2",
+                "keyword": "walking time",
+                "measureLevel": "ratio",
+                "cct": "R(Obj*Obj,Ratio)"
+            },
+            {
+                "type": "aggre",
+                "id": "3",
+                "keyword": "total",
+                "measureLevel": "ratio",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "object",
+                "id": "4",
+                "keyword": "Amsterdam city centre",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "objectquality",
+                "id": "5",
+                "keyword": "nearest walking time",
+                "measureLevel": "ratio",
+                "cct": "R(Obj,Ratio)"
+            }
+        ],
+        "extent": [
+            "4"
+        ],
+        "transformations": [
+            {
+                "before": [
+                    "0",
+                    "1"
+                ],
+                "after": [
+                    "2"
+                ]
+            },
+            {
+                "before": [
+                    "2"
+                ],
+                "after": [
+                    "5"
+                ]
+            },
+            {
+                "before": [
+                    "5"
+                ],
+                "after": [
+                    "3"
+                ],
+                "key": "4"
+            }
+        ]
+    },
+    "valid": "T",
+    "query": {
+        "afterId": "3",
+        "after": "R(Obj,Ratio)",
+        "before": [
+            {
+                "afterId": "5",
+                "after": "R(Obj,Ratio)",
+                "before": [
+                    {
+                        "afterId": "2",
+                        "after": "R(Obj*Obj,Ratio)",
+                        "before": [
+                            "R(Obj,_)",
+                            "R(Obj,_)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "queryEx": {
+        "after": {
+            "id": "3",
+            "cct": "R(Obj,Ratio)",
+            "key": "4"
+        },
+        "before": [
+            {
+                "after": {
+                    "id": "5",
+                    "cct": "R(Obj,Ratio)"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "2",
+                            "cct": "R(Obj*Obj,Ratio)"
+                        },
+                        "before": [
+                            {
+                                "after": {
+                                    "id": "0",
+                                    "cct": "R(Obj,_)"
+                                }
+                            },
+                            {
+                                "after": {
+                                    "id": "1",
+                                    "cct": "R(Obj,_)"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

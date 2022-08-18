@@ -1,0 +1,42 @@
+{% load static %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+  
+    <title>QuAnGIS Demo: Geo-analytical question formulation and querying</title>
+  
+    <!-- [SC] optimizes css for each browser config -->
+    <link rel="stylesheet" href="{% static 'blocklyUI/css/normalize.css'%}" type="text/css">
+    <!-- [SC] set of fonts -->
+    <link rel="stylesheet" href="{% static 'blocklyUI/css/fonts.css'%}" type="text/css">
+    <!-- [SC] main css file -->
+    <link rel="stylesheet" href="{% static 'blocklyUI/css/template.css'%}" type="text/css">
+    <!-- [SC] CSS styling for blockly -->
+    <link rel="stylesheet" href="{% static 'blocklyUI/css/main.css'%}" type="text/css">
+    <!-- [SC] iconic fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    
+    <script> const datapath = "{% static 'blocklyUI/data/' %}"; </script>
+    
+    <!-- [SC] importing Blockly core code -->
+    <!-- <script type="text/javascript" charset="UTF-8" src="js/blockly/blockly_compressed.js"></script> -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/blockly/blockly.min.js'%}"></script>
+
+    <!-- [SC] include the custom block definitions -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/blocks.js'%}"></script>
+
+    <!-- [SC] custom code for sentence generation -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/generator.js'%}"></script>
+
+    <!-- [SC] code for cytoscape-based workflow visualization -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/cytoscape.min.js'%}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/klay.js'%}"></script> 
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/cytoscape-klay.js'%}"></script>
+    
+    <!-- [SC] for saving files at client's device -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/fileSaver.min.js'%}"></script>
+    
+    <!-- [SC][TODO] -->
+    <link rel="shortcut icon" href="#" />
+</head>

@@ -1,0 +1,270 @@
+{
+    "question": "What is the percentage of households within 2000 metres from the supermarkets for each district in Amsterdam",
+    "cleaned_Question": "What is percentage of households within 2000 metres from supermarkets for each district in Amsterdam",
+    "placename": [
+        "Amsterdam"
+    ],
+    "quantity": [
+        "2000 metres"
+    ],
+    "object": [
+        "households",
+        "supermarkets",
+        "district"
+    ],
+    "proportion": [
+        "percentage"
+    ],
+    "ner_Question": "what is proportion0 ira of object0 within equantity0 from object1 for each object2 in placename0",
+    "parseTreeStr": "(start what is (measure (coreC proportion 0 ira) of (coreC object 0)) (condition (boolField (topoR within) (distField (quantity equantity 0) from (coreC object 1)))) for each (support (coreC object 2)) in (extent placename 0))",
+    "cctrans": {
+        "types": [
+            {
+                "type": "object",
+                "id": "0",
+                "keyword": "district",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "object",
+                "id": "1",
+                "keyword": "supermarkets",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "distfield",
+                "id": "2",
+                "keyword": "",
+                "cct": "R(Loc,Ratio)"
+            },
+            {
+                "type": "boolfield",
+                "id": "3",
+                "keyword": "",
+                "cct": "R(Loc,Bool)"
+            },
+            {
+                "type": "object",
+                "id": "4",
+                "keyword": "households",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "proportion",
+                "id": "5",
+                "keyword": "percentage",
+                "measureLevel": "ira",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "object",
+                "id": "6",
+                "keyword": "Amsterdam",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "object",
+                "id": "7",
+                "keyword": "households",
+                "cct": "R(Obj,_)"
+            },
+            {
+                "type": "amount",
+                "id": "8",
+                "keyword": "",
+                "measureLevel": "era",
+                "cct": "R(Obj,Ratio)"
+            },
+            {
+                "type": "amount",
+                "id": "9",
+                "keyword": "",
+                "measureLevel": "era",
+                "cct": "R(Obj,Ratio)"
+            }
+        ],
+        "extent": [
+            "6"
+        ],
+        "transformations": [
+            {
+                "before": [
+                    "1"
+                ],
+                "after": [
+                    "2"
+                ]
+            },
+            {
+                "before": [
+                    "2"
+                ],
+                "after": [
+                    "3"
+                ]
+            },
+            {
+                "before": [
+                    "3",
+                    "4"
+                ],
+                "after": [
+                    "7"
+                ]
+            },
+            {
+                "before": [
+                    "7",
+                    "0"
+                ],
+                "after": [
+                    "8"
+                ],
+                "key": "0"
+            },
+            {
+                "before": [
+                    "4",
+                    "0"
+                ],
+                "after": [
+                    "9"
+                ],
+                "key": "0"
+            },
+            {
+                "before": [
+                    "8",
+                    "9"
+                ],
+                "after": [
+                    "5"
+                ],
+                "key": "0"
+            }
+        ]
+    },
+    "valid": "T",
+    "query": {
+        "afterId": "5",
+        "after": "R(Obj,Ratio)",
+        "before": [
+            {
+                "afterId": "8",
+                "after": "R(Obj,Ratio)",
+                "before": [
+                    {
+                        "afterId": "7",
+                        "after": "R(Obj,_)",
+                        "before": [
+                            {
+                                "afterId": "3",
+                                "after": "R(Loc,Bool)",
+                                "before": [
+                                    {
+                                        "afterId": "2",
+                                        "after": "R(Loc,Ratio)",
+                                        "before": [
+                                            "R(Obj,_)"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "R(Obj,_)"
+                        ]
+                    },
+                    "R(Obj,_)"
+                ]
+            },
+            {
+                "afterId": "9",
+                "after": "R(Obj,Ratio)",
+                "before": [
+                    "R(Obj,_)",
+                    "R(Obj,_)"
+                ]
+            }
+        ]
+    },
+    "queryEx": {
+        "after": {
+            "id": "5",
+            "cct": "R(Obj,Ratio)",
+            "key": "0"
+        },
+        "before": [
+            {
+                "after": {
+                    "id": "8",
+                    "cct": "R(Obj,Ratio)",
+                    "key": "0"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "7",
+                            "cct": "R(Obj,_)"
+                        },
+                        "before": [
+                            {
+                                "after": {
+                                    "id": "3",
+                                    "cct": "R(Loc,Bool)"
+                                },
+                                "before": [
+                                    {
+                                        "after": {
+                                            "id": "2",
+                                            "cct": "R(Loc,Ratio)"
+                                        },
+                                        "before": [
+                                            {
+                                                "after": {
+                                                    "id": "1",
+                                                    "cct": "R(Obj,_)"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "after": {
+                                    "id": "4",
+                                    "cct": "R(Obj,_)"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "after": {
+                            "id": "0",
+                            "cct": "R(Obj,_)"
+                        }
+                    }
+                ]
+            },
+            {
+                "after": {
+                    "id": "9",
+                    "cct": "R(Obj,Ratio)",
+                    "key": "0"
+                },
+                "before": [
+                    {
+                        "after": {
+                            "id": "4",
+                            "cct": "R(Obj,_)"
+                        }
+                    },
+                    {
+                        "after": {
+                            "id": "0",
+                            "cct": "R(Obj,_)"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
