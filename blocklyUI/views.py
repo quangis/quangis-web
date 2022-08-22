@@ -15,12 +15,14 @@ import json
 from questionParser.models import QuestionParser
 from questionParser.models import TypesToQueryConverter
 
-from rdflib import BNode, RDF
+from rdflib import RDF
+from rdflib.term import BNode
 from transformation_algebra import \
     TransformationGraph, TransformationQuery, TA
 from transformation_algebra.type import Product, TypeOperation
-from transformation_algebra.util.store import MarkLogic
 from cct.language import cct, R3, R2, Obj, Reg
+
+from transformation_algebra.util.store import MarkLogic
 
 wf_store = MarkLogic(
     url=settings.TDB_URL,   
@@ -46,7 +48,7 @@ def question2query(queryEx: dict) -> TransformationQuery:
 
     def f(q: dict) -> BNode:
         node = BNode()
-        t = cct.parse_type(q['after']['cct']).concretize()
+        t = cct.parse_type(q['after']['cct']).concretize(replace=True)
 
         # This is a temporary solution: R(x * z, y) is for now converted to the
         # old-style R3(x, y, z)
