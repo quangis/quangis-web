@@ -92,7 +92,7 @@ def parseQuestion(qStr):
     # Query for matches
     query = question2query(qParsed['queryEx'])
     qParsed['sparql'] = query.sparql()
-    qParsed['matches'] = matches = [str(wf) for wf in query.run(wf_store)]
+    qParsed['matches'] = matches = [str(wf) for wf in wf_store.query(query)]
 
     # Add the first match as JSON-LD
     if matches:
