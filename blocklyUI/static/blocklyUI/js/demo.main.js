@@ -253,10 +253,15 @@ function init(page){
 ////// [SC] blockly code for question parsing
 
 function parseQuestion(qStr) {
-    const newUrl = parsedQAsyncUrl + "?qStr=" + encodeURIComponent(qStr);
+    showDemoLoadScreen();
     
+    resetQueryGraph();
+    resetWfGraph();
+
     const parsedQCont = document.getElementById("parsedQContainer");
     parsedQCont.innerHTML = "";
+    
+    const newUrl = parsedQAsyncUrl + "?qStr=" + encodeURIComponent(qStr);
     
     fetch(newUrl, {
         method: "GET",
@@ -266,38 +271,45 @@ function parseQuestion(qStr) {
     })
     .then(response => response.json())
     .then(data => {
-        resetQueryGraph();
-        resetWfGraph();
-        
         parsedQCont.innerHTML = JSON.stringify(data, null, 4);
         
-        if(data.hasOwnProperty("cctrans")
-            && data["cctrans"].hasOwnProperty("types")
-            && data["cctrans"].hasOwnProperty("transformations")
-            && data["cctrans"]["types"].length > 0
-            && data["cctrans"]["transformations"].length > 0
-        ){
-            visualizezQueryGraph(data);
-        }
-        
-        if(data.hasOwnProperty("matches")
-            && data["matches"] instanceof Array
-            && data["matches"].length > 0){
+        if (!data.hasOwnProperty("error")) {
+            if(data.hasOwnProperty("cctrans")
+                && data["cctrans"].hasOwnProperty("types")
+                && data["cctrans"].hasOwnProperty("transformations")
+                && data["cctrans"]["types"].length > 0
+                && data["cctrans"]["transformations"].length > 0
+            ){
+                visualizezQueryGraph(data);
+            }
             
-            let selectElem = document.getElementById("matchingWfSelector");
+            if(data.hasOwnProperty("matches")
+                && data["matches"] instanceof Array
+                && data["matches"].length > 0){
+                
+                let selectElem = document.getElementById("matchingWfSelector");
+                
+                for(let matchId of data["matches"]){
+                    let selOption = document.createElement("option");
+                    selectElem.appendChild(selOption);
+                    selOption.setAttribute("value", matchId);
+                    selOption.innerHTML = matchId;
+                }
+            }
             
-            for(let matchId of data["matches"]){
-                let selOption = document.createElement("option");
-                selectElem.appendChild(selOption);
-                selOption.setAttribute("value", matchId);
-                selOption.innerHTML = matchId;
+            if(data.hasOwnProperty("workflow") && data["workflow"]){
+                visualizezWfGraph(data["workflow"]);
             }
         }
         
-        if(data.hasOwnProperty("workflow") && data["workflow"]){
-            visualizezWfGraph(data["workflow"]);
-        }
-    });
+        removeDemoLoadScreen();
+    })
+    .catch(error => {
+        parsedQCont.innerHTML = `Query Error: ${error}`;
+        console.error('Error in fetch for query!', error);
+        
+        removeDemoLoadScreen();
+    });;
 }
 
 // [TODO]
@@ -316,7 +328,19 @@ function parseCorpusQ(){
 
 function parseNLQ(){
     let qStr = document.getElementById("nlQuestionStr").value;
-    parseQuestion(qStr); 
+    parseQuestion(qStr);
+}
+
+function showDemoLoadScreen(){
+    let demoLoader = document.getElementById("demoLoader");
+    demoLoader.classList.remove("inactive");
+    demoLoader.classList.add("active");
+}
+
+function removeDemoLoadScreen(){
+    let demoLoader = document.getElementById("demoLoader");
+    demoLoader.classList.remove("active");
+    demoLoader.classList.add("inactive");
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -2043,12 +2067,12 @@ function generateAlgDoc(){
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById("docSidebar").style.width = "400px";
-  document.getElementById("main").style.marginLeft = "400px";
+    document.getElementById("docSidebar").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
-  document.getElementById("docSidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("docSidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
 }

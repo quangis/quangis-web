@@ -3098,7 +3098,7 @@ coreCon_dict = load_ccdict(corePath)
 networkSet = set(l.strip() for l in open(networkPath, encoding="utf-8"))
 
 pos = []
-units = {'db', 'decibel', 'meters'}
+units = {'db', 'dB', 'DB', 'decibel', 'meters'}
 humanWords = {'people', 'population', 'children'}
 amsign = {'have', 'has', 'had', 'no'}
 compR = ['lower than', 'larger than', 'at least', 'less than', 'more than', 'greater than',

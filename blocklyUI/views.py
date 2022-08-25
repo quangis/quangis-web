@@ -78,47 +78,60 @@ def question2query(queryEx: dict) -> TransformationQuery:
 
 
 def parseQuestion(qStr):
-    parser = QuestionParser(None)
-    qParsed = parser.parseQuestion(qStr)
-    
-    cctAnnotator = TypesToQueryConverter()
-    cctAnnotator.algebraToQuery(qParsed, True, True)
-    cctAnnotator.algebraToExpandedQuery(qParsed, False, False)
-    
-    # [SC] the query json object is inside qParsed variable
-    # [SC] you can send the marklogic query from here
-    # [SC] also attach the JSON-LD workflow to qParsed
+    qParsed = None
 
-    # Query for matches
-    query = question2query(qParsed['queryEx'])
-    qParsed['sparql'] = query.sparql()
-    qParsed['matches'] = matches = [str(wf) for wf in wf_store.query(query)]
-
-    # Add the first match as JSON-LD
-    if matches:
-        g = wf_store.get(matches[0])
-        qParsed['workflow'] = json.loads(g.serialize(format="json-ld"))
-    else:
-        # [SC][TODO][REMOVE] for testing purpose only
-        # qParsed['matches'] = [
-        #    'https://example.com/#DeforestationAmazon',
-        #     'https://example.com/#HospitalsUtrecht_Network',
-        #     'https://example.com/#InfrastructureAccessShikoku',
-        #     'https://example.com/#NoisePortionAmsterdam',
-        #     'https://example.com/#NoiseProportionAmsterdam_Vector',
-        #     'https://example.com/#OgallalaAquifer',
-        #     'https://example.com/#TemperatureUtrecht',
-        #     'https://example.com/#MalariaCongo',
-        #     'https://example.com/#NoiseProportionAmsterdam_Raster',
-        #     'https://example.com/#PopulationUtrecht',
-        #     'https://example.com/#FloodsVermont',
-        #     'https://example.com/#HospitalsUtrecht_Near',
-        #     'https://example.com/#SolarPowerPotentialGloverPark'
-        # ]
+    try:
+        parser = QuestionParser(None)
+        qParsed = parser.parseQuestion(qStr)
+    except Exception as e:
+        print("============================ Exception while parsing the question")
+        print(e)
+        return {"error": "Exception while parsing the question."}
         
-        qParsed['workflow'] = None
+    try:
+        cctAnnotator = TypesToQueryConverter()
+        cctAnnotator.algebraToQuery(qParsed, True, True)
+        cctAnnotator.algebraToExpandedQuery(qParsed, False, False)
+    except Exception as e:
+        print("============================ Exception while annotating the question")
+        print(e)
+        return {"error": "Exception while annotating the question."}
 
-    return qParsed
+    try:
+        # Query for matches
+        query = question2query(qParsed['queryEx'])
+        qParsed['sparql'] = query.sparql()
+        qParsed['matches'] = matches = [str(wf) for wf in wf_store.query(query)]
+
+        # Add the first match as JSON-LD
+        if matches:
+            g = wf_store.get(matches[0])
+            qParsed['workflow'] = json.loads(g.serialize(format="json-ld"))
+        else:
+            # [SC][TODO][REMOVE] for testing purpose only
+            # qParsed['matches'] = [
+            #    'https://example.com/#DeforestationAmazon',
+            #     'https://example.com/#HospitalsUtrecht_Network',
+            #     'https://example.com/#InfrastructureAccessShikoku',
+            #     'https://example.com/#NoisePortionAmsterdam',
+            #     'https://example.com/#NoiseProportionAmsterdam_Vector',
+            #     'https://example.com/#OgallalaAquifer',
+            #     'https://example.com/#TemperatureUtrecht',
+            #     'https://example.com/#MalariaCongo',
+            #     'https://example.com/#NoiseProportionAmsterdam_Raster',
+            #     'https://example.com/#PopulationUtrecht',
+            #     'https://example.com/#FloodsVermont',
+            #     'https://example.com/#HospitalsUtrecht_Near',
+            #     'https://example.com/#SolarPowerPotentialGloverPark'
+            # ]
+            
+            qParsed['workflow'] = None
+
+        return qParsed
+    except Exception as e:
+        print("============================ Exception while querying for workflows:")
+        print(e)
+        return {"error": "Exception while querying for workflows."}
 
 
 # [SC] for retrieving by URI a workflow graph on demand from the client

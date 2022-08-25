@@ -147,6 +147,10 @@
             <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script>
             <script> const getWfGraphUrl = "{% url 'blocklyUINS:urln_getWfGraphAsync' %}"; </script>
             
+            <div class="loaderContainer inactive" id="demoLoader">
+                <div class="loader"></div>
+            </div>
+            
             <div class="tabContainer">
                 <div class="tab">
                     <button class="tablinks active" id="blocklyTabBtn" onclick="openTab(event, 'blocklyTab')">Question generator</button>
@@ -197,7 +201,7 @@
                                 6aTask: What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam
                             </option>
                             
-                            <option value="What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam">
+                            <!--<option value="What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam">
                                 1bWf: What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam
                             </option>
                             <option value="What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam">
@@ -211,7 +215,7 @@
                             </option>
                             <option value="How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year">
                                 6aWf: How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year
-                            </option>
+                            </option>-->
                         </select><br>
                         <input type="button" value="Parse corpus question" onclick="parseCorpusQ();" />
                     </div>
