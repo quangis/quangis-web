@@ -27,7 +27,15 @@ TDB_URL = "https://qanda.soliscom.uu.nl:8000"
 TDB_USER = os.environ['TDB_USER']
 TDB_PASS = os.environ['TDB_PASS']
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# [SC][TODO] validate values before assigning
+# [SC] address of question parser service (e.g., localhost, 127.0.0.1, etc)
+QPARSE_IP=os.environ['QPARSE_IP']
+# [SC] port of question parser service
+QPARSE_PORT=os.environ['QPARSE_PORT']
+# [SC] how long to wait for a response from the question parser service (in milliseconds)
+QPARSE_WAIT=int(os.environ['QPARSE_WAIT'])
+
+# [SC][TODO] make sure to set DEBUG=False for the production server!!!!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -36,7 +44,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    #'questionParser.apps.QuestionparserConfig',
     'blocklyUI.apps.BlocklyuiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -157,6 +164,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# [SC][TODO] For the production server, uncomment this variable and 
+# set to an absolute path of folder containing all aggregated static files!!!!
+# STATIC_ROOT = "allStatics/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -12,8 +12,8 @@ from django.http import HttpResponseBadRequest, JsonResponse
 
 import json
 
-from questionParser.models import QuestionParser
-from questionParser.models import TypesToQueryConverter
+import zmq
+import uuid
 
 from rdflib import RDF
 from rdflib.term import BNode
@@ -77,30 +77,65 @@ def question2query(queryEx: dict) -> TransformationQuery:
     return TransformationQuery(cct, g)
 
 
-def parseQuestion(qStr):
-    qParsed = None
+def question2parsetree(qStr):
+    # [SC][TODO] exception handling
+    # [SC] make sure client has a unique id otherwise client request may be ignored
+    identity = f"client-{uuid.uuid1()}"
+    
+    # [SC] opening a connection to the service
+    print("Starting the question parser client")
+    context = zmq.Context()
+    socket = context.socket(zmq.DEALER)
+    socket.setsockopt_string(zmq.IDENTITY, identity)
+    socket.connect(f"tcp://{settings.QPARSE_IP}:{settings.QPARSE_PORT}")
+    
+    print("Setting the question parser client poller")
+    poller = zmq.Poller()
+    poller.register(socket, zmq.POLLIN)
 
-    try:
-        parser = QuestionParser(None)
-        qParsed = parser.parseQuestion(qStr)
-    except Exception as e:
-        print("============================ Exception while parsing the question")
-        print(e)
-        return {"error": "Exception while parsing the question."}
-        
-    try:
-        cctAnnotator = TypesToQueryConverter()
-        cctAnnotator.algebraToQuery(qParsed, True, True)
-        cctAnnotator.algebraToExpandedQuery(qParsed, False, False)
-    except Exception as e:
-        print("============================ Exception while annotating the question")
-        print(e)
-        return {"error": "Exception while annotating the question."}
+    # [SC] send a request
+    print("Sending a request to the remote question parser service")
+    socket.send_string(qStr)
+
+    # [SC] wait for a reply
+    print("Waiting for a reply ...")
+    msg = None
+    while True:
+        # [SC] wait for 60 seconds for a message to arrive, otherwise terminate
+        sockets = dict(poller.poll(settings.QPARSE_WAIT))
+        if sockets:
+            if sockets.get(socket) == zmq.POLLIN:
+                msg = socket.recv_string()
+                print(f"Question parser client received a reply: {msg}")
+                break
+        else:
+            break
+
+    socket.close()
+    context.term()
+    
+    return msg
+
+
+def parseQuestion(qStr):
+    print(f"Processing a new request with question '{qStr}'")
+
+    response = question2parsetree(qStr)
+    
+    if not response:
+        return {"error": "No response from the question parsing service."}
+
+    qParsed = json.loads(response)
+    
+    if "error" in qParsed:
+        return qParsed
 
     try:
         # Query for matches
+        print("Generating a SPARQL query")
         query = question2query(qParsed['queryEx'])
         qParsed['sparql'] = query.sparql()
+        print("Querying the triple database")
         qParsed['matches'] = matches = [str(wf) for wf in wf_store.query(query)]
 
         # Add the first match as JSON-LD
@@ -108,23 +143,6 @@ def parseQuestion(qStr):
             g = wf_store.get(matches[0])
             qParsed['workflow'] = json.loads(g.serialize(format="json-ld"))
         else:
-            # [SC][TODO][REMOVE] for testing purpose only
-            # qParsed['matches'] = [
-            #    'https://example.com/#DeforestationAmazon',
-            #     'https://example.com/#HospitalsUtrecht_Network',
-            #     'https://example.com/#InfrastructureAccessShikoku',
-            #     'https://example.com/#NoisePortionAmsterdam',
-            #     'https://example.com/#NoiseProportionAmsterdam_Vector',
-            #     'https://example.com/#OgallalaAquifer',
-            #     'https://example.com/#TemperatureUtrecht',
-            #     'https://example.com/#MalariaCongo',
-            #     'https://example.com/#NoiseProportionAmsterdam_Raster',
-            #     'https://example.com/#PopulationUtrecht',
-            #     'https://example.com/#FloodsVermont',
-            #     'https://example.com/#HospitalsUtrecht_Near',
-            #     'https://example.com/#SolarPowerPotentialGloverPark'
-            # ]
-            
             qParsed['workflow'] = None
 
         return qParsed
