@@ -10,10 +10,15 @@ QuAnGIS project together into a single pipeline.
     -   [Query translator](#query-translator)
     -   [Query executor](#query-executor)
     -   [Data reifier](#data-reifier)
-2.  [Usage](#usage)
-    -   [Setting up the environment](#setting-up-the-environment)
-    -   [Loading data](#loading-data)
-
+2.  [Setting up the web application (for Windows)](#setting-up-the-web-application-(for-windows))
+    -   [Setup question parser server](#setup-question-parser-server)
+        -   [Configuring a conda environment to run the question parser server](#configuring-a-conda-environment-to-run-the-question-parser-server)
+        -   [Running the question parser server](#running-the-question-parser-server)
+    -   [Setup Django server](#setup-django-server)
+        -   [Configuring a conda environment for the Django server](#configuring-a-conda-environment-for-the-django-server)
+        -   [Running the Django server in a test mode](#running-the-django-server-in-a-test-mode)
+        -   [Django server production deployment](#django-server-production-deployment)
+    -   [Loading data to MarkLogic](#loading-data-to-marklogic)
 
 ## Overview
 
@@ -83,7 +88,9 @@ or automatically annotated with text descriptions and
 [CCD][ccd]/[CCT][cct] types.
 
 
-## Setup question parser server (for Windows)
+# Setting up the web application (for Windows)
+
+## Setup question parser server
 
 #### Configuring a conda environment to run the question parser server
     
@@ -165,7 +172,7 @@ or automatically annotated with text descriptions and
 19.Two parameters can be changed in the batch file “*runAsyncWorker.bat*”. “*FRONT_PORT*” sets to which port server should be bound to. “*INST_COUNT*” sets the number of concurrent worker threads. In other words, it is the number of requests the server can handle simultaneously without requests blocking each other. For example, if “*INST_COUNT*” is set to 1 then only one request is processed at the time, and all other incoming requests are queued until the current request is handled.  “*INST_COUNT*” can be any integer number above 0.
 
 
-## Setup Django server (for Windows)
+## Setup Django server
 
 #### Configuring a conda environment for the Django server
 
