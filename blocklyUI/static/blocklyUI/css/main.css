@@ -415,18 +415,29 @@ input:checked + .slider:before {
     margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+/* floating buttons */
+.floatBtn {
+    position: fixed; /* Fixed/sticky position */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    min-width: 60px;
 }
 
-.openbtn:hover {
-    background-color: #444;
+/* The button used to open the sidebar */
+#openbtn {
+    background-color: #2c9986; /* Set a background color */
+    bottom: 205px; /* Place the button at the bottom of the page */
+}
+
+#openbtn:hover {
+    background-color: orange;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -525,6 +536,19 @@ input:checked + .slider:before {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/************************************************************************
+    To top button
+************************************************************************/
+
+#toTopBtn {
+    bottom: 140px; /* Place the button at the bottom of the page */
+    background-color: #2c9986; /* Set a background color */
+}
+
+#toTopBtn:hover {
+    background-color: orange; /* Add a dark-grey background on hover */
 }

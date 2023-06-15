@@ -8,10 +8,198 @@
         <div class="pageContainer">
             {% include "blocklyUI/nav-bar.html" %}
             
-            <div class="section incomplete" id="mobile">
+            <!-- [SC] tag to inject dummy Blockly workspace -->
+            <div id="docWsCont"></div>
+            
+            <!-- [SC] add side navigation menu -->
+            <div id="docSidebar" class="sidebar">
+                <!-- [SC] button to close the sidebar --> 
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                <a href="#tocContElem">Table of Content</a>
+                <a href="#usingDemo">How to Use the Demo (video)</a>
+                <a href="#demoDetail">How the Demo Works</a>
+                <div class="subbar">
+                    <a href="#whatProblem">What Problem does the Demo Address?</a>
+                    <a href="#understandQ">How does the AI Understand a Geo-analytical Question?</a>
+                    <a href="#understandWF">How does the AI Understand a GIS Workflow?</a>
+                    <a href="#howMatch">How does the AI Match a Question to a Workflow?</a>
+                    <a href="#refList">References</a>
+                </div>
+                <a href="#whyBlockly">Why Use the Blockly Interface</a>
+                <a href="#usingBlockly">How to Use the Blockly Interface (video)</a>
+                <a href="#blocklyDocElem">Block Definitions</a>
+            </div>
+            
+            <div class="docs section" id="main">
+                <!-- [SC] navigation button -->
+                <button onclick="openNav()" class="floatBtn" id="openbtn" title="Open side nav menu">&#9776;</button>
+                
+                <!-- [SC] floating button to the top -->
+                <button onclick="topFunction()" class="floatBtn" id="toTopBtn" title="Go to top">&#8593;</button>
+                
+                <!-- [SC] table of content section -->
                 <div class="w-container">
-                    <h2 class="section-title">Under construction.</h2>
-                    <p class="section-subtitle">This page is under construction and will be updated with new content soon.</p>
+                    <h2 class="section-title">Table of Content</h2>
+                    <section class="toolL" id="tocContElem">
+                        <ul class="toc" id="tocElem">
+                            <li><a href="#usingDemo">How to Use the Demo (video)</a></li>
+                            <li><a href="#demoDetail">How the Demo Works</a>
+                                <ul class="toc">
+                                    <li><a href="#whatProblem">What Problem does the Demo Address?</a></li>
+                                    <li><a href="#understandQ">How does the AI Understand a Geo-analytical Question?</a></li>
+                                    <li><a href="#understandWF">How does the AI Understand a GIS Workflow?</a></li>
+                                    <li><a href="#howMatch">How does the AI Match a Question to a Workflow?</a></li>
+                                    <li><a href="#refList">References</a></li>
+                                </ul>
+                            </li>
+                            <!-- [SC][TODO] <li><a href="#whyBlockly">Why Use the Blockly Interface</a></li> -->
+                            <li><a href="#usingBlockly">How to Use the Blockly Interface (video)</a></li>
+                            <li><a href="#blocklyDocElem">Block Definitions</a></li>
+                        </ul>
+                    </section>
+                </div>
+            
+                <div class="w-container" id="usingDemo">
+                    <h2 class="section-title">How to Use the Demo</h2>
+                    <section class="toolL">
+                        <center><iframe width="720" height="530" src="https://video.uu.nl/permalink/v12640765a936fwrbfqy/iframe/" 
+                                    allowfullscreen="allowfullscreen" allow="autoplay"></iframe></center>
+                    </section>
+                </div>
+                
+                <div class="w-container" id="demoDetail">
+                    <h2 class="section-title">How the Demo Works</h2>
+                    <section class="toolL">
+                        <p class="section-subtitle" id="whatProblem">What Problem does the Demo Address?</p>
+                        <section class="featureL">
+                            <p>
+                                Let's suppose that we want to answer a geo-analytical question:
+                                <blockquote>What is the average Euclidean distance to parks for each PC4 area in Amsterdam?</blockquote>
+                            </p><br />
+                            
+                            <p>
+                                The customary way to generate an answer for such question is to use a GIS workflows as shown in <a href="#fig1">Figure 1</a>. 
+                                <figure id="fig1" class="tutFigure">
+                                    <img alt="Example GIS workflow" width="50%" src="{% static 'blocklyUI/media/images/tut/workflow.png'%}">
+                                    <figcaption><strong>Figure 1.</strong> The yellow nodes represent tools. The input and output datasets are shown by blue and green nodes. Given a dataset of parks within the extent of Amsterdam, <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/euclidean-distance.htm" target="_blank"><i>Euclidean Distance</i></a> calculates the straight-line distance to the closest park for each cell within the extent. <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.htm" target="_blank"><i>Zonal Statistics As Table</i></a> aggregates these distances by 4-digit postcode areas (PC4) and calculates averages. <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/join-field.htm" target="_blank"><i>Join Field</i></a> merges the two datasets.</figcaption>
+                                </figure>
+                            </p>
+                            
+                            <p>
+                                The output of such workflow is usually shown as a map as shown in <a href="#fig2">Figure 2</a>.
+                                <figure id="fig2" class="tutFigure">
+                                    <img alt="A map produced from the workflow's output." width="50%" src="{% static 'blocklyUI/media/images/tut/distanceMap.png'%}">
+                                    <figcaption><strong>Figure 2.</strong> A map produced from the workflow's output.</figcaption>
+                                </figure>
+                            </p>
+                            
+                            <p>
+                                Generating a map from workflow's output is a relatively simple task. The biggest challenge is generating a workflow that is suitable for answering a given question. This usually requires a manual labor of a human GIS expert. The AI technology underlying the demo attempts to automate this manual step of generating a workflow for a geo-analytical question.
+                            </p>
+                        </section>
+                        
+                        <p class="section-subtitle" id="understandQ">How does the AI Understand a Geo-analytical Question?</p>
+                        <section class="featureL">
+                            <p>
+                                First of all, an AI should be able to understand what the question means and what the question is asking for. Our AI employ a specialized parser [<a href="#ref1">1</a>] to annotate core concepts in a question. For example, in the question below, <i><q>Euclidean distance</q></i> is an instance of the concept <i><q>field</q></i> with a measurement level of <i><q>ratio</q></i>:
+                                
+                                <blockquote>
+                                    What is the <span style="color:#3399ff">average<sup>(<i>aggre, ratio</i>)</sup></span> 
+                                    <span style="color:#66ff66">Euclidean distance<sup>(<i>field, ratio</i>)</sup></span> to 
+                                    <span style="color:#ff33cc">parks<sup>(<i>object</i>)</sup></span> for each 
+                                    <span style="color:#ff33cc">PC4 area<sup>(<i>object</i>)</sup></span> in 
+                                    <span style="color:orange">Amsterdam<sup>(<i>extent</i>)</sup></span>?
+                                </blockquote>
+                                
+                                These concepts help our AI to understand the question at the analytical level that usually human experts do to generate corresponding workflows.
+                            </p><br />
+                            
+                            <p>
+                                As the next step, the parser also infers the order of transformations of these concepts as shown in <a href="#fig3">Figure 3</a>. That is it tries to understand which concepts can be derived from the other concepts via a some form of a transformation operation.
+                                <figure id="fig3" class="tutFigure">
+                                    <img alt="Transformations inferred from the question." width="45%" src="{% static 'blocklyUI/media/images/tut/qTrans.png'%}">
+                                    <figcaption><strong>Figure 3.</strong> Transformations of the concepts from the questions.</figcaption>
+                                </figure>
+                                The Blockly interface was designed to facilitate this process.
+                            </p>
+                        </section>
+                        
+                        <p class="section-subtitle" id="understandWF">How does the AI Understand a GIS Workflow?</p>
+                        <section class="featureL">
+                            <p>
+                                Any GIS workflow consists of a set of GIS operations, and any GIS operation takes some data as input and generates another data as output. These input and output data types can also be annotated with the core concepts [<a href="#ref2">2</a>] as shown in <a href="#fig4">Figure 4</a>.
+                                <figure id="fig4" class="tutFigure">
+                                    <img alt="Annotating GIS operations with the core concepts." width="70%" src="{% static 'blocklyUI/media/images/tut/toolA.png'%}">
+                                    <figcaption><strong>Figure 4.</strong> Transformations of the concepts from the questions.</figcaption>
+                                </figure>
+                            </p>
+                            
+                            <p>
+                                Furthermore, if an output concept of one GIS operation matches an input concept of another operation then the AI can reasonably assume that these two operations can form a workflow [<a href="#ref3">3</a>] as shown in <a href="#fig5">Figure 5</a>.
+                                <figure id="fig5" class="tutFigure">
+                                    <img alt="Assembling GIS operations into a workflow via core concept signatures." width="60%" src="{% static 'blocklyUI/media/images/tut/aworkflow.png'%}">
+                                    <figcaption><strong>Figure 5.</strong> Assembling GIS operations into a workflow via core concept signatures.</figcaption>
+                                </figure>
+                            </p>
+                            
+                            <p>
+                                Finally, the AI can also reduce the workflow in <a href="#fig5">Figure 5</a> into a series of transformations of core concepts as shown in <a href="#fig6">Figure 6</a>.
+                                <figure id="fig6" class="tutFigure">
+                                    <img alt="Reducing a workflow into concept transformations." width="30%" src="{% static 'blocklyUI/media/images/tut/wfTrans.png'%}">
+                                    <figcaption><strong>Figure 6.</strong> Reducing a workflow into concept transformations.</figcaption>
+                                </figure>
+                            <p>
+                        </section>
+                        
+                        <p class="section-subtitle" id="howMatch">How does the AI Match a Question to a Workflow?</p>
+                        <section class="featureL">
+                            <p>
+                                Given a series of transformations derived from a question (<a href="#fig3">Figure 3</a>) and a set of workflows with its own transformations (<a href="#fig6">Figure 6</a>), the AI tries to find a workflow with the best matching transformation [<a href="#ref4">4</a>] as shown in <a href="#fig7">Figure 7</a>.
+                                <figure id="fig7" class="tutFigure">
+                                    <img alt="Matching transformation from a question to workflow transformations." width="80%" src="{% static 'blocklyUI/media/images/tut/matching.png'%}">
+                                    <figcaption><strong>Figure 7.</strong> Matching transformation from a question to workflow transformations.</figcaption>
+                                </figure>
+                            </p>
+                        </section>
+                        
+                        <p class="section-subtitle" id="refList">References</p>
+                        <section class="featureL">
+                            <ol>
+                                <li id="ref1">Xu, H., Nyamsuren, E., Scheider, S., and Top, E. (2023). A grammar for interpreting geo-analytical questions as concept transformations. <i>International Journal of Geographical Information Science</i>, 37(2), 276-306. doi: <a href="https://doi.org/10.1080/13658816.2022.2077947" target="_blank">https://doi.org/10.1080/13658816.2022.2077947</a></li>
+                                <li id="ref2">Scheider, S., Meerlo, R., Kasalica, V., and Lamprecht, A. L. (2020). Ontology of core concept data types for answering geo-analytical questions. <i>Journal of Spatial Information Science</i>, (20), 167-201. doi: <a href="https://doi.org/10.5311/JOSIS.2020.20.555" target="_blank">https://doi.org/10.5311/JOSIS.2020.20.555</a></li>
+                                <li id="ref3">Kruiger, J. F., Kasalica, V., Meerlo, R., Lamprecht, A. L., Nyamsuren, E., and Scheider, S. (2021). Loose programming of GIS workflows with geo‐analytical concepts. <i>Transactions in GIS</i>, 25(1), 424-449. doi: <a href="https://doi.org/10.1111/tgis.12692" target="_blank">https://doi.org/10.1111/tgis.12692</a></li>
+                                <li id="ref4">Steenbergen, N., Top, E., Scheider, S., and Nyamsuren, E. (2022). Algebra of core concept transformations: Procedural meta-data for geographic information. <i>OSFPREPRINTS.</i> [<a href="https://dspace.library.uu.nl/bitstream/handle/1874/426009/Algebra_of_core_concept_transformations.pdf?sequence=1" target="_blank">pdf</a>]</li>
+                            <ol>
+                        </section>
+                    </section>
+                </div>
+            
+                <!-- [SC][TODO] <div class="w-container" id="whyBlockly">
+                    <h2 class="section-title">Why Use the Blockly Interface</h2>
+                    <section class="toolL">
+                          
+                    </section>
+                </div> -->
+            
+                <div class="w-container" id="usingBlockly">
+                    <h2 class="section-title">How to Use the Blockly Interface</h2>
+                    
+                    <section class="toolL">
+                        <center>
+                            <iframe width="720" height="530" src="https://video.uu.nl/permalink/v12663c9f38fee0n7flc/iframe/" 
+                                    allowfullscreen="allowfullscreen" allow="autoplay"></iframe>
+                        </center>
+                    </section>
+                </div>
+            
+            
+                <div class="w-container" id="blocklyDocElem">
+                    <h2 class="section-title">Block definitions</h2>
+                    
+                    <section class="toolL" id="blockOverviewSec">
+                        <p class="section-subtitle">Overview of All Blocks</p>
+                    </section>
                 </div>
             </div>
             
