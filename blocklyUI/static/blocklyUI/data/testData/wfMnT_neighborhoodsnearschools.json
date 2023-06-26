@@ -1,0 +1,111 @@
+[
+    {
+        "@id": "_:ub6bL3C1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub6bL4C13"
+            },
+            {
+                "@id": "_:ub6bL7C9"
+            },
+            {
+                "@id": "_:ub6bL11C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b3"
+            },
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#target": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b5"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub6bL4C13",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectNeighborhoodsByAttributeTessObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b2"
+            }
+        ]
+    },
+    {
+        "@id": "_:f17b6171f21cc448daa77f83d4bb76153b1"
+    },
+    {
+        "@id": "_:f17b6171f21cc448daa77f83d4bb76153b2"
+    },
+    {
+        "@id": "_:ub6bL7C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectSchoolsByLocationPointObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b4"
+            }
+        ]
+    },
+    {
+        "@id": "_:f17b6171f21cc448daa77f83d4bb76153b3"
+    },
+    {
+        "@id": "_:f17b6171f21cc448daa77f83d4bb76153b4"
+    },
+    {
+        "@id": "_:ub6bL11C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectNeighborhoodsByLocationDistPointObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f17b6171f21cc448daa77f83d4bb76153b5"
+            }
+        ]
+    },
+    {
+        "@id": "_:f17b6171f21cc448daa77f83d4bb76153b5"
+    }
+]

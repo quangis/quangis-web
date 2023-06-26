@@ -1,0 +1,117 @@
+[
+    {
+        "@id": "https://example.com/#solution1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub142bL4C14"
+            },
+            {
+                "@id": "_:ub142bL8C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb2"
+            },
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub142bL4C14",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SummarizeWithin"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb3"
+            }
+        ]
+    },
+    {
+        "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, VectorTessellationA, BooleanA"
+            }
+        ]
+    },
+    {
+        "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb2",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PointA, PlainNominalA"
+            }
+        ]
+    },
+    {
+        "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb3",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, VectorTessellationA, CountA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub142bL8C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ComputeCountDensityonObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f64eeccb320dd423d83fd5dfdede2d47fb3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ub142bL10C24"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub142bL10C24",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IRA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, VectorTessellationA, IRA"
+            }
+        ]
+    }
+]

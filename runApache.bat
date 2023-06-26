@@ -1,8 +1,10 @@
 :: [SC] A private key for Django server. Any string. Make it as complex as possible
 set DJANGO_KEY=
-:: [SC] A username for the marklogic server
+:: [SC] URL with a port number to the MarkLogic server (e.g., http://localhost:8000, http://127.0.0.1:8000, etc)
+set TDB_URL=
+:: [SC] A username for the MarkLogic server
 set TDB_USER=
-:: [SC] A password for the marklogic server
+:: [SC] A password for the MarkLogic server
 set TDB_PASS=
 
 :: [SC] address of the question parser service (e.g., localhost, 127.0.0.1, etc)

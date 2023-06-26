@@ -1,0 +1,384 @@
+[
+    {
+        "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#planned",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A planned road in the Amazon Forest Region"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Planned road"
+            }
+        ]
+    },
+    {
+        "@id": "https://example.com/#DeforestationAmazon",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b1"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b2"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b3"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b4"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b5"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b6"
+            },
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#roads"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#planned"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#deforested"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@value": "Out: Ratio, In: R(Obj, Reg), In: R(Obj, Reg), In: R(Loc, Bool)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "What area is potentially deforested within 5.5 km of a planned road in the Amazon rainforest?"
+            }
+        ],
+        "https://dbpedia.org/ontology/abstract": [
+            {
+                "@value": "The Amazon rain forest spans nine countries and millions of square kilometers. Due to deforestation, current estimates indicate only about 80 percent of the original rain forest remains. In this lesson, you'll use ArcGIS Pro to create a map of deforestation in the Brazilian state of Rondonia. Then, you'll predict how much deforestation would be caused by a road proposed to be built across the state. Your workflow requires a wide variety of data, feature editing, and analysis tools. You'll also learn how to share your results as an informative print map."
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b1",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectObjectbyExtent"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#roads"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b8"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select existing roads within window"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b8",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A selection of the roads by a user's view extent (all roads visible on screen)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Roads selection"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b2",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ObjectBuffer"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b9"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "generate buffers for existing roads"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector polygon representing area within 5.5km of roads in the Amazon Forest area"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Roads area"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b3",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ClipBoolFieldVector2Extent"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#deforested"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b10"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "clip deforested area with roads buffer"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b10",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector polygon data representing area that is both deforested and within 5.5km of roads in the Amazon Forest area"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Deforested road area"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b4",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculateVectorFieldAreaPercentage"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b10"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b11"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "area percentage of current deforestation (summary of nominal field areas)"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b11",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector polygon representing the area within 5.5km of roads with a percentage of the area that has been deforested"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Road area (% deforested)"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b5",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ObjectBuffer"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#planned"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b12"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b12",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector polygon representing area within 5.5km of the planned road in the Amazon Forest area"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Planned road area"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b6",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#EraseFieldExtentfromFieldVector"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b12"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#deforested"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b13"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "erase features"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b13",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector multipart polygon representing area within 5.5km of the planned road in the Amazon Forest area with existing deforestation erased"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Planned road area (No deforestation)"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b7",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculateVectorFieldPartialArea"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b13"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b11"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b14"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "area of predicted deforestation from buffers in deforested area"
+            }
+        ]
+    },
+    {
+        "@id": "_:f93e18fb4e9e74691aeaee19b467723d4b14",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector multipart polygon representing area within 5.5km of the planned road in the Amazon Forest area with an expected total of deforestation as an attribute"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Planned road area (% Deforestation)"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#roads",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Road network in the Amazon Forest Region"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Current roads"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/predict-deforestation-in-the-amazon-rain-forest/#deforested",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Actual deforested area in the Amazon Forest Region"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Deforested areas"
+            }
+        ]
+    }
+]

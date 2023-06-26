@@ -1,0 +1,194 @@
+[
+    {
+        "@id": "_:ub8bL3C1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub8bL4C13"
+            },
+            {
+                "@id": "_:ub8bL8C9"
+            },
+            {
+                "@id": "_:ub8bL11C9"
+            },
+            {
+                "@id": "_:ub8bL15C9"
+            },
+            {
+                "@id": "_:ub8bL18C9"
+            },
+            {
+                "@id": "_:ub8bL21C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b2"
+            },
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b7"
+            },
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#target": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b6"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub8bL4C13",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationDistTessObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b3"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b1"
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b2"
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b3"
+    },
+    {
+        "@id": "_:ub8bL8C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#BufferDissolve"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b4"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b4"
+    },
+    {
+        "@id": "_:ub8bL11C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#DerivePartsOfPopCenters"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b6"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b5"
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b6"
+    },
+    {
+        "@id": "_:ub8bL15C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ExportFeatures"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b7"
+    },
+    {
+        "@id": "_:ub8bL18C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculateDensityonObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b5"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b8"
+    },
+    {
+        "@id": "_:ub8bL21C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationTessObject"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b8"
+            }
+        ]
+    },
+    {
+        "@id": "_:fe8049779a87a4ad29d2fc06383d8cc59b9"
+    }
+]

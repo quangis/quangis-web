@@ -1,0 +1,194 @@
+[
+    {
+        "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Municipalities"
+            }
+        ]
+    },
+    {
+        "@id": "https://www.pdok.nl/introductie/-/article/cbs-vierkantstatistieken",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "People counts"
+            }
+        ]
+    },
+    {
+        "@id": "https://example.com/#PopulationUtrecht",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb1"
+            },
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb2"
+            },
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen"
+            },
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-wijken-en-buurten"
+            },
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-vierkantstatistieken"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "What is the number of people for each neighborhood in Utrecht?"
+            },
+            {
+                "@language": "en",
+                "@value": "What is the distribution of people across neighborhoods in Utrecht?"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb1",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByObjectTessObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb4"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb4",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "utrecht"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb2",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationTessObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-wijken-en-buurten"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb5"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb5",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "neighborhoodsutrecht"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb3",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SpatialJoinAmountSumTessCount"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-vierkantstatistieken"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4c725fe7aa4b467fb47efec42a726addb6"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4c725fe7aa4b467fb47efec42a726addb6",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "countneighborhoodsutrecht"
+            }
+        ]
+    },
+    {
+        "@id": "https://www.pdok.nl/introductie/-/article/cbs-wijken-en-buurten",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Neighborhood regions"
+            }
+        ]
+    }
+]

@@ -5,146 +5,145 @@
     {% include "blocklyUI/head.html" %}
     
     <xml id="toolbox">
-        <category name="Question words" colour="150" toolboxitemid="queCate">
-            <block type="where">
-                <value name = "where_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "where_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what">
-                <value name = "what_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "what_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="which">
-                <value name = "which_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "which_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what_area1">
-                <value name = "wharea_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "wharea_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what_area2">
-                <value name = "wharea_rel_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-                <value name = "wharea_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="how_many">
-                <value name = "howmany_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "howmany_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="from_where">
-                <value name = "fromwh_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name = "fromwh_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <!--for which, how many-->
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
-            <block type="noun_phrase1_1">
-                <value name = "coreCAux_shadow1">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="noun_phrase1_2">
-                <value name = "coreCAux_shadow2">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <!--for where, what, what_area, from where and noun_phrase1-->
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
-            <block type="noun_phrase2">
-                <value name = "adjcoreC_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-            <block type="noun_phrase3">
-                <value name = "coreCOfCoreC_shadow1">
-                    <block type="noun_phrase3_connect">
-                        <value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
-                    </block>
-                    <!-- <shadow type="np_reminder"></shadow>-->
-                </value>
-            </block>
-            <block type="noun_phrase4">
-                <value name = "distCoreC">
-                    <block type="noun_phrase4_from">
-                        <value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
-                    </block>
-                </value>
-                <value name = "distCoreC_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
-        </category>
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
-            <block type="noun_phrase2">
-                <value name = "adjcoreC_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
-            <block type="relationship1">
-                <value name = "rel1_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="relationship2">
-                <value name = "rel3_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="relationship3"></block>
-            <block type="relationship4">
-                <value name = "rel4_np">
-                    <block type="rel4_np"></block>
-                </value>
-            </block>
-            <block type="relationship5">
-                <value name = "rel5_np">
-                    <block type="rel5_np"></block>
-                </value>
-            </block>
-            <block type="relationship6"></block>
-        </category>
-        <category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
-        </category>
-    </xml>
+		<category name="Question words" colour="150" toolboxitemid="queCate">
+			<block type="where">
+				<value name = "where_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "where_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="what">
+				<value name = "what_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "what_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="which">
+				<value name = "which_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "which_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="what_area1">
+				<value name = "wharea_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "wharea_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="what_area2">
+				<value name = "wharea_rel_shadow">
+					<shadow type="rel_reminder"></shadow>
+				</value>
+				<value name = "wharea_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="how_many">
+				<value name = "howmany_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "howmany_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+			<block type="from_where">
+				<value name = "fromwh_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+				<value name = "fromwh_extent_shadow">
+					<shadow type="extent_reminder"></shadow>
+				</value>
+			</block>
+		</category>
+		<category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
+			<block type="noun_phrase1_1">
+				<value name = "coreCAux_shadow1">
+					<shadow type="np_reminder"></shadow>
+				</value>
+			</block>
+			<block type="noun_phrase1_2">
+				<value name = "coreCAux_shadow2">
+					<shadow type="rel_reminder"></shadow>
+				</value>
+			</block>
+		</category>
+		<category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
+			<block type="noun_phrase2">
+				<value name = "adjcoreC_shadow">
+					<shadow type="rel_reminder"></shadow>
+				</value>
+			</block>
+			<block type="noun_phrase3">
+				<value name = "coreCOfCoreC_shadow1">
+					<block type="noun_phrase3_connect">
+						<value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
+					</block>
+				</value>
+			</block>
+			<block type="noun_phrase4">
+				<value name = "distCoreC1">
+					<block type="noun_phrase4_from">
+						<value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
+					</block>
+				</value>
+				<value name = "distCoreC_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+			</block>
+		</category>
+		<category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
+		</category>
+		<category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
+			<block type="noun_phrase2">
+				<value name = "adjcoreC_shadow">
+					<shadow type="rel_reminder"></shadow>
+				</value>
+			</block>
+		</category>
+		<category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
+			<block type="relationship1">
+				<value name = "rel1_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+			</block>
+			<block type="relationship2">
+				<value name = "rel3_np_shadow">
+					<shadow type="np_reminder"></shadow>
+				</value>
+			</block>
+			<block type="relationship3"></block>
+			<block type="relationship4">
+				<value name = "rel4_np">
+					<block type="rel4_np"></block>
+				</value>
+			</block>
+			<block type="relationship5">
+				<value name = "rel5_np">
+					<block type="rel5_np"></block>
+				</value>
+			</block>
+			<block type="relationship6"></block>
+		</category>
+		<category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
+		</category>
+	</xml>
     
     <body onload='init("demo")'>
         <div class="pageContainer">
             {% include "blocklyUI/nav-bar.html" %}
             
-            <!-- [SC][TODO] django does not seem to parse embedded code within static files; so added this js code in html file -->
-            <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script>
+            <!-- [SC] django does not seem to parse embedded code within static files; so added this js code in html file -->
+            <!-- [SC] URL for a request to parse blockly JSON output -->
+            <script> const parsedBJAsyncUrl = "{% url 'blocklyUINS:urln_blocklyJsonAsync' %}"; </script>
+            <!-- [SC] URL for getting a workflow graph -->
             <script> const getWfGraphUrl = "{% url 'blocklyUINS:urln_getWfGraphAsync' %}"; </script>
             
             <div class="loaderContainer inactive" id="demoLoader">
@@ -169,24 +168,183 @@
                         <section id="blocklyContainer">
                             <div id="blocklyDiv"></div>
                         </section>
-                    
-                        <!-- [SC][TODO]remove the code; form-based GET request to parse blockly question
-                        <form action="{% url 'blocklyUINS:urln_parsedQ' %}" method="get">
-                            <input type="hidden" name="qStr" value="" id="qStrParam"/>
-                            <input type="submit" value="Parse blockly question" />
-                        </form>
-                        -->
-                        <!-- [SC][TODO] AJAX based alternative to the form above -->
-                        <input type="button" value="Parse blockly question" onclick="parseBlocklyQ();" />
+                        
+                        <input type="button" value="Parse blockly question" onclick="parseOutputBlocklyJson();" />
                     </div>
-                    
-                    <!-- [SC][TODO] django does not seem to parse embedded code within static files; so added this js code in html file -->
-                    <!-- <script> const parsedQAsyncUrl = "{% url 'blocklyUINS:urln_parsedQAsync' %}"; </script> -->
-                    <!-- [SC][TODO] This is temporary code for loading datafiles from the server -->
-                    <!-- <script> const datapath = "{% static 'blocklyUI/data/' %}"; </script> -->
+                
                 
                     <!-- [SC][TODO] remove this test code -->
                     <div class="qInputMode">
+                        <select name="qStr" id="bJsonList" style="width:100%;" ></select><br>
+                        <input type="button" value="Parse custom blockly json" onclick="parseCustomBlocklyJson();" />
+                    </div>
+                    <script>
+                        let testBlocklyJson = [
+                            {
+                                'question': 'Which neighborhoods are  within 100 meters from a  school in Utrecht',
+                                'topoRel': [
+                                    'within'
+                                ],
+                                'quantity': [
+                                    '100 meters'
+                                ],
+                                'placename': [
+                                    'Utrecht'
+                                ],
+                                'replaceQ': 'Which neighborhoods are  within 100 meters from a  school extent'
+                            },
+                            {
+                                'question': 'Which neighborhoods have an average WOZ value  less than 200  in Utrecht',
+                                'aggregate': [
+                                    'average'
+                                ],
+                                'comparison': [
+                                    'less than'
+                                ],
+                                'quantity': [
+                                    '200 '
+                                ],
+                                'placename': [
+                                    'Utrecht'
+                                ],
+                                'replaceQ': 'Which neighborhoods have an average WOZ value  less than 200  extent'
+                            },
+                            {
+                                'question': 'What is the  number of people  within 1000 meters of the  A2 highway in the Netherlands',
+                                'topoRel': [
+                                    'within'
+                                ],
+                                'quantity': [
+                                    '1000 meters'
+                                ],
+                                'placename': [
+                                    'Netherlands'
+                                ],
+                                'replaceQ': 'What is the  number of people  within 1000 meters of the  A2 highway extent'
+                            },
+                            {
+                                'question': 'What is the  proportion of rural population  within 2 kilometers of   all-season roads in Shikoku, Japan',
+                                'topoRel': [
+                                    'within'
+                                ],
+                                'quantity': [
+                                    '2 kilometers'
+                                ],
+                                'placename': [
+                                    'Shikoku',
+                                    'Japan'
+                                ],
+                                'replaceQ': 'What is the  proportion of rural population  within 2 kilometers of   all-season roads extent'
+                            },
+                            {
+                                'question': 'What is the  crime density  along the  shortest path from my home to my workplace in Amsterdam',
+                                'placename': [
+                                    'Amsterdam'
+                                ],
+                                'replaceQ': 'What is the  crime density  along the  shortest path from my home to my workplace extent'
+                            },
+                            {
+                                'question': 'What are the  supermarkets, sport facilities and offices in Amsterdam',
+                                'placename': [
+                                    'Amsterdam'
+                                ],
+                                'replaceQ': 'What are the  supermarkets, sport facilities and offices extent'
+                            },
+                            {
+                                'question': 'What is the  shortest path through my workplace, a gym and a supermarket from my home in Amsterdam',
+                                'placename': [
+                                    'Amsterdam'
+                                ],
+                                'replaceQ': 'What is the  shortest path through my workplace, a gym and a supermarket from my home extent'
+                            },
+                            {
+                                'question': 'What is the average network distance from households to the nearest supermarket in centrum district in Amsterdam',
+                                'aggregate': [
+                                    'average'
+                                ],
+                                'extrema': [
+                                    'nearest'
+                                ],
+                                'placename': [
+                                    'centrum district',
+                                    'Amsterdam'
+                                ],
+                                'replaceQ': 'What is the average network distance from households to the nearest supermarket extent'
+                            },
+                            {
+                                'question': 'What is the  proportion of residential area for each neighborhood in Amsterdam',
+                                'sup_object': [
+                                    'neighborhood'
+                                ],
+                                'replaceQ': 'What is the  proportion of residential area support extent',
+                                'placename': [
+                                    'Amsterdam'
+                                ]
+                            },
+                            {
+                                'question': 'What is the  density of street intersections for each neighborhood in Amsterdam',
+                                'sup_object': [
+                                    'neighborhood'
+                                ],
+                                'replaceQ': 'What is the  density of street intersections support extent',
+                                'placename': [
+                                    'Amsterdam'
+                                ]
+                            },
+                            {
+                                'question': 'What is the  diversity of land use for each neighborhood in Amsterdam',
+                                'sup_object': [
+                                    'neighborhood'
+                                ],
+                                'replaceQ': 'What is the  diversity of land use support extent',
+                                'placename': [
+                                    'Amsterdam'
+                                ]
+                            },
+                            {
+                                'question': 'What is the  shortest travel route from the AEB incineration plant through  every waste disposal place along waterways in Amsterdam',
+                                'placename': [
+                                    'Amsterdam'
+                                ],
+                                'replaceQ': 'What is the  shortest travel route from the AEB incineration plant through  every waste disposal place along waterways extent'
+                            },
+                            {
+                                'question': 'What is the total walking time from each  household to the nearest waste disposal place in the Amsterdam city center',
+                                'aggregate': [
+                                    'total'
+                                ],
+                                'extrema': [
+                                    'nearest'
+                                ],
+                                'placename': [
+                                    'Amsterdam city center'
+                                ],
+                                'replaceQ': 'What is the total walking time from each  household to the nearest waste disposal place extent'
+                            },
+                            {
+                                'question': 'What is the total kernel density of waste disposal places in the Amsterdam city center',
+                                'aggregate': [
+                                    'total'
+                                ],
+                                'placename': [
+                                    'Amsterdam city center'
+                                ],
+                                'replaceQ': 'What is the total kernel density of waste disposal places extent'
+                            }
+                        ];
+                        
+                        let bJsonListElem = document.getElementById("bJsonList");
+                        for (let jsonObj of testBlocklyJson){
+                            var option = document.createElement("option");
+                            option.value = JSON.stringify(jsonObj);
+                            option.text = jsonObj.question;
+                            bJsonListElem.appendChild(option);
+                        }
+                    </script>
+                    
+                
+                    <!-- [SC][TODO] remove this test code -->
+                    <!--<div class="qInputMode">
                         <select name="qStr" id="qCorpusList" style="width:100%;" >
                             <option value="What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam">
                                 1bTask: What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam
@@ -200,34 +358,18 @@
                             <option value="What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam">
                                 6aTask: What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam
                             </option>
-                            
-                            <!--<option value="What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam">
-                                1bWf: What  is  the  proportion  of  the  region  where  noise  is  greater  than  70  dB  in Amsterdam
-                            </option>
-                            <option value="What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam">
-                                1bWf: What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam
-                            </option>
-                            <option value="What three hospitals are closest to 2350 Pine St, San Francisco, at most within a two minutes drive">
-                                4aWf: What three hospitals are closest to 2350 Pine St, San Francisco, at most within a two minutes drive
-                            </option>
-                            <option value="Which hospital is closest to the incidents within a two minutes drive">
-                                4aWf: Which hospital is closest to the incidents within a two minutes drive
-                            </option>
-                            <option value="How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year">
-                                6aWf: How much solar radiation does each rooftop in Glover Park, Washington, D.C., receive throughout the year
-                            </option>-->
                         </select><br>
                         <input type="button" value="Parse corpus question" onclick="parseCorpusQ();" />
-                    </div>
+                    </div>-->
                 
                     <!-- [SC][TODO] remove this test code -->
-                    <div class="qInputMode">
+                    <!--<div class="qInputMode">
                         <input type="text" id="nlQuestionStr" name="qStr" placeholder="Custom question in NL" style="width:100%;" ><br>
                         <input type="button" value="Parse NL question" onclick="parseNLQ();" />
-                    </div>
+                    </div>-->
                     
                     <!-- [SC] this textarea contains the output of the question parser -->
-                    <!-- [SC][TODO] remove this test code -->
+                    <!-- [SC][TODO] refine the UI for the output -->
                     <textarea readonly id="parsedQContainer" style="width:100%;height:300px;" placeholder="Result of question sentence parsing"></textarea>
                 </div>
 
@@ -312,7 +454,20 @@
                     </select>
                     
                     <select id="wfFileSelector">
-                        <option disabled selected value> -- select an option -- </option>
+                        <option value="wfaccess.json">wfaccess</option>
+                        <option value="wfcrime_exposure.json">wfcrime_exposure</option>
+                        <option value="wfcrime_prep.json">wfcrime_prep</option>
+                        <option value="wfcrime_route.json">wfcrime_route</option>
+                        <option value="wffood.json">wffood</option>
+                        <option value="wfMnT_neighborhoodsnearschools.json">wfMnT_neighborhoodsnearschools</option>
+                        <option value="wfMnT_neighborhoodsWOZ.json">wfMnT_neighborhoodsWOZ</option>
+                        <option value="wfMnT_population.json">wfMnT_population</option>
+                        <option value="wfwalk_intersectiondensity.json">wfwalk_intersectiondensity</option>
+                        <option value="wfwalk_landusemix.json">wfwalk_landusemix</option>
+                        <option value="wfwalk_residentialdensity.json">wfwalk_residentialdensity</option>
+                        <option value="wfwaste_disposal.json">wfwaste_disposal</option>
+                        <option value="wfwaste_near.json">wfwaste_near</option>
+                        <option value="wfwaste_odour.json">wfwaste_odour</option>
                         <option value="01a-NoisePortionAmsterdam.json">01a-NoisePortionAmsterdam</option>
                         <option value="01b-NoiseProportionAmsterdam_Raster.json">01b-NoiseProportionAmsterdam_Raster</option>
                         <option value="01b-NoiseProportionAmsterdam_Vector.json">01b-NoiseProportionAmsterdam_Vector</option>
@@ -326,6 +481,174 @@
                         <option value="08a-OgallalaAquifer.json">08a-OgallalaAquifer</option>
                         <option value="09a-FloodsVermont.json">09a-FloodsVermont</option>
                         <option value="10a-MalariaCongo.json">10a-MalariaCongo</option>
+                        <option value="solution1.json">solution1</option>
+                        <option value="solution10.json">solution10</option>
+                        <option value="solution100.json">solution100</option>
+                        <option value="solution101.json">solution101</option>
+                        <option value="solution102.json">solution102</option>
+                        <option value="solution103.json">solution103</option>
+                        <option value="solution104.json">solution104</option>
+                        <option value="solution105.json">solution105</option>
+                        <option value="solution106.json">solution106</option>
+                        <option value="solution107.json">solution107</option>
+                        <option value="solution108.json">solution108</option>
+                        <option value="solution109.json">solution109</option>
+                        <option value="solution11.json">solution11</option>
+                        <option value="solution110.json">solution110</option>
+                        <option value="solution111.json">solution111</option>
+                        <option value="solution112.json">solution112</option>
+                        <option value="solution113.json">solution113</option>
+                        <option value="solution114.json">solution114</option>
+                        <option value="solution115.json">solution115</option>
+                        <option value="solution116.json">solution116</option>
+                        <option value="solution117.json">solution117</option>
+                        <option value="solution118.json">solution118</option>
+                        <option value="solution119.json">solution119</option>
+                        <option value="solution12.json">solution12</option>
+                        <option value="solution120.json">solution120</option>
+                        <option value="solution121.json">solution121</option>
+                        <option value="solution122.json">solution122</option>
+                        <option value="solution123.json">solution123</option>
+                        <option value="solution124.json">solution124</option>
+                        <option value="solution125.json">solution125</option>
+                        <option value="solution126.json">solution126</option>
+                        <option value="solution127.json">solution127</option>
+                        <option value="solution128.json">solution128</option>
+                        <option value="solution129.json">solution129</option>
+                        <option value="solution13.json">solution13</option>
+                        <option value="solution130.json">solution130</option>
+                        <option value="solution131.json">solution131</option>
+                        <option value="solution132.json">solution132</option>
+                        <option value="solution133.json">solution133</option>
+                        <option value="solution134.json">solution134</option>
+                        <option value="solution135.json">solution135</option>
+                        <option value="solution136.json">solution136</option>
+                        <option value="solution137.json">solution137</option>
+                        <option value="solution138.json">solution138</option>
+                        <option value="solution139.json">solution139</option>
+                        <option value="solution14.json">solution14</option>
+                        <option value="solution140.json">solution140</option>
+                        <option value="solution141.json">solution141</option>
+                        <option value="solution142.json">solution142</option>
+                        <option value="solution143.json">solution143</option>
+                        <option value="solution144.json">solution144</option>
+                        <option value="solution145.json">solution145</option>
+                        <option value="solution146.json">solution146</option>
+                        <option value="solution147.json">solution147</option>
+                        <option value="solution148.json">solution148</option>
+                        <option value="solution149.json">solution149</option>
+                        <option value="solution15.json">solution15</option>
+                        <option value="solution150.json">solution150</option>
+                        <option value="solution151.json">solution151</option>
+                        <option value="solution152.json">solution152</option>
+                        <option value="solution153.json">solution153</option>
+                        <option value="solution154.json">solution154</option>
+                        <option value="solution155.json">solution155</option>
+                        <option value="solution156.json">solution156</option>
+                        <option value="solution157.json">solution157</option>
+                        <option value="solution158.json">solution158</option>
+                        <option value="solution159.json">solution159</option>
+                        <option value="solution16.json">solution16</option>
+                        <option value="solution160.json">solution160</option>
+                        <option value="solution161.json">solution161</option>
+                        <option value="solution162.json">solution162</option>
+                        <option value="solution163.json">solution163</option>
+                        <option value="solution164.json">solution164</option>
+                        <option value="solution165.json">solution165</option>
+                        <option value="solution166.json">solution166</option>
+                        <option value="solution167.json">solution167</option>
+                        <option value="solution168.json">solution168</option>
+                        <option value="solution17.json">solution17</option>
+                        <option value="solution18.json">solution18</option>
+                        <option value="solution19.json">solution19</option>
+                        <option value="solution2.json">solution2</option>
+                        <option value="solution20.json">solution20</option>
+                        <option value="solution21.json">solution21</option>
+                        <option value="solution22.json">solution22</option>
+                        <option value="solution23.json">solution23</option>
+                        <option value="solution24.json">solution24</option>
+                        <option value="solution25.json">solution25</option>
+                        <option value="solution26.json">solution26</option>
+                        <option value="solution27.json">solution27</option>
+                        <option value="solution28.json">solution28</option>
+                        <option value="solution29.json">solution29</option>
+                        <option value="solution3.json">solution3</option>
+                        <option value="solution30.json">solution30</option>
+                        <option value="solution31.json">solution31</option>
+                        <option value="solution32.json">solution32</option>
+                        <option value="solution33.json">solution33</option>
+                        <option value="solution34.json">solution34</option>
+                        <option value="solution35.json">solution35</option>
+                        <option value="solution36.json">solution36</option>
+                        <option value="solution37.json">solution37</option>
+                        <option value="solution38.json">solution38</option>
+                        <option value="solution39.json">solution39</option>
+                        <option value="solution4.json">solution4</option>
+                        <option value="solution40.json">solution40</option>
+                        <option value="solution41.json">solution41</option>
+                        <option value="solution42.json">solution42</option>
+                        <option value="solution43.json">solution43</option>
+                        <option value="solution44.json">solution44</option>
+                        <option value="solution45.json">solution45</option>
+                        <option value="solution46.json">solution46</option>
+                        <option value="solution47.json">solution47</option>
+                        <option value="solution48.json">solution48</option>
+                        <option value="solution49.json">solution49</option>
+                        <option value="solution5.json">solution5</option>
+                        <option value="solution50.json">solution50</option>
+                        <option value="solution51.json">solution51</option>
+                        <option value="solution52.json">solution52</option>
+                        <option value="solution53.json">solution53</option>
+                        <option value="solution54.json">solution54</option>
+                        <option value="solution55.json">solution55</option>
+                        <option value="solution56.json">solution56</option>
+                        <option value="solution57.json">solution57</option>
+                        <option value="solution58.json">solution58</option>
+                        <option value="solution59.json">solution59</option>
+                        <option value="solution6.json">solution6</option>
+                        <option value="solution60.json">solution60</option>
+                        <option value="solution61.json">solution61</option>
+                        <option value="solution62.json">solution62</option>
+                        <option value="solution63.json">solution63</option>
+                        <option value="solution64.json">solution64</option>
+                        <option value="solution65.json">solution65</option>
+                        <option value="solution66.json">solution66</option>
+                        <option value="solution67.json">solution67</option>
+                        <option value="solution68.json">solution68</option>
+                        <option value="solution69.json">solution69</option>
+                        <option value="solution7.json">solution7</option>
+                        <option value="solution70.json">solution70</option>
+                        <option value="solution71.json">solution71</option>
+                        <option value="solution72.json">solution72</option>
+                        <option value="solution73.json">solution73</option>
+                        <option value="solution74.json">solution74</option>
+                        <option value="solution75.json">solution75</option>
+                        <option value="solution76.json">solution76</option>
+                        <option value="solution77.json">solution77</option>
+                        <option value="solution78.json">solution78</option>
+                        <option value="solution79.json">solution79</option>
+                        <option value="solution8.json">solution8</option>
+                        <option value="solution80.json">solution80</option>
+                        <option value="solution81.json">solution81</option>
+                        <option value="solution82.json">solution82</option>
+                        <option value="solution83.json">solution83</option>
+                        <option value="solution84.json">solution84</option>
+                        <option value="solution85.json">solution85</option>
+                        <option value="solution86.json">solution86</option>
+                        <option value="solution87.json">solution87</option>
+                        <option value="solution88.json">solution88</option>
+                        <option value="solution89.json">solution89</option>
+                        <option value="solution9.json">solution9</option>
+                        <option value="solution90.json">solution90</option>
+                        <option value="solution91.json">solution91</option>
+                        <option value="solution92.json">solution92</option>
+                        <option value="solution93.json">solution93</option>
+                        <option value="solution94.json">solution94</option>
+                        <option value="solution95.json">solution95</option>
+                        <option value="solution96.json">solution96</option>
+                        <option value="solution97.json">solution97</option>
+                        <option value="solution98.json">solution98</option>
+                        <option value="solution99.json">solution99</option>
                     </select>
                     
                     <input type="button" value="Reset" onclick="resetWfGraph();" />
@@ -345,11 +668,12 @@
                         scaleSpeed: 1.2
                     }
                 });
-              
+                
                 function refresh(){
-                    setCategory()
-                    ques_generator()
-                    disable_sup_grid()
+                    setCategory();
+                    ques_generator();
+                    disable_sup_grid();
+                    getAllBlocksList();
                 }
                 
                 workspace.addChangeListener(refresh);

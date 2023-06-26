@@ -1,0 +1,122 @@
+[
+    {
+        "@id": "https://example.com/#solution1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub75bL4C14"
+            },
+            {
+                "@id": "_:ub75bL11C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b1"
+            },
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b3"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub75bL4C14",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ClipObject2Object"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ub75bL7C24"
+            }
+        ]
+    },
+    {
+        "@id": "_:fabade4104d12404b97787171aca1b971b1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, CountA"
+            }
+        ]
+    },
+    {
+        "@id": "_:fabade4104d12404b97787171aca1b971b2",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, PlainNominalA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub75bL7C24",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, CountA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub75bL11C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationPlainRegionObjectsFieldDist"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:fabade4104d12404b97787171aca1b971b2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fabade4104d12404b97787171aca1b971b3",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "FieldQ, VectorTessellationA, PlainNominalA"
+            }
+        ]
+    }
+]

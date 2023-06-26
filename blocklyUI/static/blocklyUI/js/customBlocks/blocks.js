@@ -8,55 +8,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "where_AuxVerb",
                 "options": [
-                    [
-                        "is",
-                        "is"
-                    ],
-                    [
-                        "are",
-                        "are"
-                    ],
-                    [
-                        "was",
-                        "was"
-                    ],
-                    [
-                        "were",
-                        "were"
-                    ],
-                    [
-                        "has",
-                        "has"
-                    ],
-                    [
-                        "do have",
-                        "dohave"
-                    ],
-                    [
-                        "is not",
-                        "isnot"
-                    ],
-                    [
-                        "are not",
-                        "arenot"
-                    ],
-                    [
-                        "was not",
-                        "wasnot"
-                    ],
-                    [
-                        "were not",
-                        "werenot"
-                    ],
-                    [
-                        "does not have",
-                        "doesnothave"
-                    ],
-                    [
-                        "do not have",
-                        "donothave"
-                    ]
-                ],
+                    ["is","is"],
+                    ["are","are"],
+                    ["was","was"],
+                    ["were","were"],
+                    ["is not","isnot"],
+                    ["are not","arenot"],
+                    ["was not","wasnot"],
+                    ["were not","werenot"]
+                ]
             },
             {
                 "type": "input_value",
@@ -71,7 +31,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "This is Where tooltip.",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'Where'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -88,55 +48,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "what_AuxVerb",
                 "options": [
-                    [
-                        "is",
-                        "is"
-                    ],
-                    [
-                        "are",
-                        "are"
-                    ],
-                    [
-                        "was",
-                        "was"
-                    ],
-                    [
-                        "were",
-                        "were"
-                    ],
-                    [
-                        "has",
-                        "has"
-                    ],
-                    [
-                        "do have",
-                        "dohave"
-                    ],
-                    [
-                        "is not",
-                        "isnot"
-                    ],
-                    [
-                        "are not",
-                        "arenot"
-                    ],
-                    [
-                        "was not",
-                        "wasnot"
-                    ],
-                    [
-                        "were not",
-                        "werenot"
-                    ],
-                    [
-                        "does not have",
-                        "doesnothave"
-                    ],
-                    [
-                        "do not have",
-                        "donothave"
-                    ]
-                ],
+                    ["is","is"],
+                    ["are","are"],
+                    ["was","was"],
+                    ["were","were"],
+                    ["is not","isnot"],
+                    ["are not","arenot"],
+                    ["was not","wasnot"],
+                    ["were not","werenot"]
+                ]
             },
             {
                 "type": "input_value",
@@ -151,7 +71,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "This is What tooltip.",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'What'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -177,7 +97,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Formulate a question that starts with 'Which'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -194,15 +114,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "wharea_AuxVerb",
                 "options": [
-                    [
-                        "have",
-                        "dohave"
-                    ],
-                    [
-                        "do not have",
-                        "donothave"
-                    ]
-                ],
+                    ["have","dohave"],
+                    ["do not have","donothave"]
+                ]
             },
             {
                 "type": "input_value",
@@ -216,7 +130,7 @@ qBlocks = [
             }
         ],
         "colour": 150,
-        "tooltip": "This is Which tooltip.",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'What areas'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -233,23 +147,11 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "wharea_AuxVerb",
                 "options": [
-                    [
-                        "are",
-                        "are"
-                    ],
-                    [
-                        "were",
-                        "were"
-                    ],
-                    [
-                        "are not",
-                        "arenot"
-                    ],
-                    [
-                        "were not",
-                        "werenot"
-                    ]
-                ],
+                    ["are","are"],
+                    ["were","were"],
+                    ["are not","arenot"],
+                    ["were not","werenot"]
+                ]
             },
             {
                 "type": "input_statement",
@@ -264,7 +166,7 @@ qBlocks = [
         ],
         "colour": 150,
         "tooltip": "",
-        "helpUrl": "",
+        "helpUrl": "Select a linking verb to formulate a question that starts with 'What areas'.",
         "custom": {
             "category": ["Question words"],
             "type": "Wh-word blocks",
@@ -289,7 +191,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Formulate a question that starts with 'How many'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -306,55 +208,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "fromwh_AuxVerb",
                 "options": [
-                    [
-                        "is",
-                        "is"
-                    ],
-                    [
-                        "are",
-                        "are"
-                    ],
-                    [
-                        "was",
-                        "was"
-                    ],
-                    [
-                        "were",
-                        "were"
-                    ],
-                    [
-                        "has",
-                        "has"
-                    ],
-                    [
-                        "do have",
-                        "dohave"
-                    ],
-                    [
-                        "is not",
-                        "isnot"
-                    ],
-                    [
-                        "are not",
-                        "arenot"
-                    ],
-                    [
-                        "was not",
-                        "wasnot"
-                    ],
-                    [
-                        "were not",
-                        "werenot"
-                    ],
-                    [
-                        "does not have",
-                        "doesnothave"
-                    ],
-                    [
-                        "do not have",
-                        "donothave"
-                    ]
-                ],
+                    ["is","is"],
+                    ["are","are"],
+                    ["was","was"],
+                    ["were","were"],
+                    ["is not","isnot"],
+                    ["are not","arenot"],
+                    ["was not","wasnot"],
+                    ["were not","werenot"]
+                ]
             },
             {
                 "type": "input_value",
@@ -369,7 +231,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'From where'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -392,11 +254,11 @@ qBlocks = [
                 "name": "where_AuxVerb",
                 "options": [
                     ["have","have"], 
-                    ["","null"], 
+                    ["",""], 
                     ["has","has"], 
                     ["do not have","donothave"], 
                     ["does not have","donothave"]
-                ],
+                ]
             },
             {
                 "type": "input_value",
@@ -407,7 +269,7 @@ qBlocks = [
         "inputsInline": false,
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Input a noun or noun phrase and then select an auxiliary verb.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -429,38 +291,14 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "AuxVerb1",
                 "options": [
-                    [
-                        "are",
-                        "are"
-                    ],
-                    [
-                        "is",
-                        "is"
-                    ],
-                    [
-                        "were",
-                        "were"
-                    ],
-                    [
-                        "was",
-                        "was"
-                    ],
-                    [
-                        "are not",
-                        "arenot"
-                    ],
-                    [
-                        "is not",
-                        "isnot"
-                    ],
-                    [
-                        "were not",
-                        "werenot"
-                    ],
-                    [
-                        "was not",
-                        "wasnot"
-                    ]
+                    ["are","are"],
+                    ["is","is"],
+                    ["were","were"],
+                    ["was","was"],
+                    ["are not","arenot"],
+                    ["is not","isnot"],
+                    ["were not","werenot"],
+                    ["was not","wasnot"]
                 ]
             },
             {
@@ -469,9 +307,10 @@ qBlocks = [
                 "check": "rel_type"
             }
         ],
+        //"output": "coreC_is",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Input a noun or noun phrase and then select a linking verb.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -482,17 +321,49 @@ qBlocks = [
     },
     {
         "type": "noun_phrase2",
-        "message0": "the %1 %2 %3",
+        "message0": "%1 %2 %3 %4",
         "args0": [
             {
-                "type": "field_input",
-                "name": "adj_num",
-                "text": "longest"
+                "type": "field_dropdown",
+                "name": "ar_the",
+                "options": [
+                    ["the","the"],
+                    ["",""],
+                    ["a", "a"],
+                    ["an","an"],
+                    ["each","each"]
+                ]
             },
+            {
+                "type": "field_dropdown",
+                "name": "adj_num",
+                "options": [
+                    ["",""], 
+                    ["average","average"], 
+                    ["median","median"], 
+                    ["total","total"], 
+                    ["similar", "similar"], 
+                    ["nearest", "nearest"], 
+                    ["fewest", "fewest"], 
+                    ["lowest","lowest"], 
+                    ["smallest","smallest"], 
+                    ["highest", "highest"], 
+                    ["largest","largest"], 
+                    ["fastest", "fastest"], 
+                    ["longest","longest"],
+                    ["most popular", "most popular"], 
+                    ["most intense", "most intense"]
+                ]
+            },
+            // {
+            //   "type": "field_input",
+            //   "name": "adj_num",
+            //   "text": ""
+            // },
             {
                 "type": "field_input",
                 "name": "np2_coreC",
-                "text": "ski piste",
+                "text": "ski piste"
             },
             {
                 "type": "input_statement",
@@ -502,7 +373,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a single noun phrase. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -513,17 +384,35 @@ qBlocks = [
     },
     {
         "type": "noun_phrase3",
-        "message0": "the %1 %2 %3 %4",
+        "message0": "%1 %2 %3 %4 %5",
         "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "ar_the",
+                "options": [
+                    ["the","the"], 
+                    ["",""], 
+                    ["a", "a"], 
+                    ["an","an"]
+                ]
+            },
             {
                 "type": "field_dropdown",
                 "name": "adj_aggre",
                 "options": [
-                    ["","null"], 
-                    ["nearest", "nearest"], 
-                    ["total","total"], 
+                    ["",""], 
+                    ["average","average"], 
                     ["median","median"], 
-                    ["average","average"]
+                    ["total","total"], 
+                    ["nearest", "nearest"], 
+                    ["fewest", "fewest"], 
+                    ["lowest","lowest"], 
+                    ["smallest","smallest"],
+                    ["most", "most"], 
+                    ["highest", "highest"], 
+                    ["largest","largest"], 
+                    ["fastest", "fastest"], 
+                    ["longest","longest"]
                 ]
             },
             {
@@ -539,17 +428,31 @@ qBlocks = [
                     ["to","to"], 
                     ["for","for"], 
                     ["by","by"]
-                ],
+                ]
             },
             {
                 "type": "input_value",
                 "name": "coreCOfCoreC_shadow1",
                 "check": "np_type"
             }
+            // {
+            //   "type": "field_dropdown",
+            //   "name": "preposition",
+            //   "options": [
+            //     ["","null"], ["to","to"]
+            //   ],
+            // },
+            // {
+            //   "type": "input_value",
+            //   "name": "coreCOfCoreC_shadow2",
+            //   "check": "np_type",
+            //   "align": "RIGHT"
+            // }
         ],
+        //"output": "coreC_of_coreC",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a noun phrase that can connect another noun phrase block. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase and select a preposition to connect another noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -565,7 +468,7 @@ qBlocks = [
             {
                 "type": "field_input",
                 "name": "np3_connect_coreC",
-                "text": "fire calls",
+                "text": "fire calls"
             },
             {
                 "type": "input_statement",
@@ -575,7 +478,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -586,17 +489,35 @@ qBlocks = [
     },
     {
         "type": "noun_phrase4",
-        "message0": "the %1 %2 %3 %4 %5 %6",
+        "message0": "%1 %2 %3 %4 %5 %6 %7",
         "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "ar_the",
+                "options": [
+                    ["the","the"], 
+                    ["",""], 
+                    ["a", "a"], 
+                    ["an","an"]
+                ]
+            },
             {
                 "type": "field_dropdown",
                 "name": "aggregate",
                 "options": [
-                    ["","null"], 
+                    ["",""], 
                     ["average","average"], 
                     ["median","median"], 
                     ["total","total"], 
-                    ["highest","highest"]
+                    ["nearest", "nearest"], 
+                    ["fewest", "fewest"], 
+                    ["lowest","lowest"], 
+                    ["smallest","smallest"],
+                    ["most", "most"], 
+                    ["highest", "highest"], 
+                    ["largest","largest"], 
+                    ["fastest", "fastest"], 
+                    ["longest","longest"]
                 ]
             },
             {
@@ -604,6 +525,10 @@ qBlocks = [
                 "name": "np4_coreC",
                 "text": "shortest route"
             },
+            // {
+            //   "type": "input_dummy",
+            //   "align": "CENTRE"
+            // },
             {
                 "type": "field_dropdown",
                 "name": "preposition",
@@ -616,7 +541,7 @@ qBlocks = [
             },
             {
                 "type": "input_value",
-                "name": "distCoreC",
+                "name": "distCoreC1",
                 "check": "np_type",
                 "align": "RIGHT"
             },
@@ -624,12 +549,19 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "preposition1",
                 "options": [
-                    ["","null"], 
+                    ["",""], 
                     ["to","to"], 
                     ["from","from"],
-                    ["for","for"]
+                    ["for","for"], 
+                    ["through", "through"]
                 ]
             },
+            // {
+            //   "type": "input_value",
+            //   "name": "distCoreC2",
+            //   "check": "np_type",
+            //   "align": "RIGHT"
+            // }
             {
                 "type": "input_value",
                 "name": "distCoreC_shadow",
@@ -637,9 +569,10 @@ qBlocks = [
                 "align": "RIGHT"
             }
         ],
+        //"output": "distancecoreC",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a noun phrase that can connect a maximum of another two noun phrase blocks. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase and select at least one preposition to connect another noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -650,17 +583,12 @@ qBlocks = [
     },
     {
         "type": "noun_phrase4_from",
-        "message0": "%1 %2 %3",
+        "message0": "%1 %2",
         "args0": [
             {
                 "type": "field_input",
-                "name": "adjective",
-                "text": "the nearest",
-            },
-            {
-                "type": "field_input",
                 "name": "np4_from_coreC",
-                "text": "hospitals",
+                "text": "car accidents"
             },
             {
                 "type": "input_statement",
@@ -670,7 +598,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase. ",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -679,6 +607,56 @@ qBlocks = [
             "text": ""
         }
     },
+    //"the centroids of 2 by 2 km grid cells"
+    {
+        "type": "noun_phrase4_from2", // [SC][TODO] identify category, type, and order
+        "message0": "%1 %2 %3 %4",
+        "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "ar_the",
+                "options": [
+                    ["the","the"], 
+                    ["",""], 
+                    ["a", "a"], 
+                    ["an","an"]
+                ]
+            },
+            {
+                "type": "field_input",
+                "name": "np3_coreC",
+                "text": "centers"
+            },
+            {
+                "type": "field_dropdown",
+                "name": "preposition",
+                "options": [
+                    ["of","of"], 
+                    ["to","to"], 
+                    ["for","for"], 
+                    ["by","by"], 
+                    ["along","along"]
+                ]
+            },
+            {
+                "type": "input_value",
+                "name": "noun_phrase4_from2_shadow1",
+                "check": "np_type"
+            }
+        ],
+        //"output": "coreC_of_coreC",
+        "output": "np_type",
+        "colour": 240,
+        "tooltip": "Select an article word if needed. Then enter a noun or noun phrase and select a preposition to connect another noun phrase block.",
+        "helpUrl": "",
+        "custom": {
+            "category": ["Noun phrases"],
+            "type": "Noun phrase blocks",
+            "order": 2,
+            "text": ""
+        }
+    },
+    //grids
     {
         "type": "grid1",
         "message0": "%1 by %2 %3 grid cells",
@@ -686,44 +664,31 @@ qBlocks = [
             {
                 "type": "field_number",
                 "name": "num1",
-                "value": 2,
-                "min": 0,
-                "precision": 0.1
+                "value": 2
             },
             {
                 "type": "field_number",
                 "name": "num2",
-                "value": 2,
-                "min": 0,
-                "precision": 0.1
+                "value": 2
             },
             {
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    [
-                        "kilometers",
-                        "km"
-                    ],
-                    [
-                        "meters",
-                        "meters"
-                    ],
-                    [
-                        "feet",
-                        "feet"
-                    ],
-                    [
-                        "miles",
-                        "miles"
-                    ]
+                    ["kilometers", "kilometers"], 
+                    ["kilometer", "kilometer"], 
+                    ["meters", "meters"], 
+                    ["meter", "meter"], 
+                    ["miles", "miles"], 
+                    ["mile", "mile"], 
+                    ["feet", "feet"], 
+                    ["foot", "foot"]
                 ]
             }
         ],
-        "inputsInline": true,
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of square grid cells by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -734,52 +699,38 @@ qBlocks = [
     },
     {
         "type": "grid2",
-        "message0": "%1 with diameter of %2 %3",
+        "message0": "%1 with a diameter of %2 %3",
         "args0": [
             {
                 "type": "field_dropdown",
                 "name": "hexgrid",
                 "options": [
-                    [
-                        "hexagonal grid",
-                        "hexgrid"
-                    ]
+                    ["hexagonal grids","hexagonal grids"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "num1",
-                "value": 2,
-                "min": 0,
-                "precision": 0.1
+                "name": "g2num1",
+                "value": 2
             },
             {
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    [
-                        "kilometers",
-                        "km"
-                    ],
-                    [
-                        "meters",
-                        "meters"
-                    ],
-                    [
-                        "feet",
-                        "feet"
-                    ],
-                    [
-                        "miles",
-                        "miles"
-                    ]
+                    ["kilometers","kilometers"], 
+                    ["kilometer","kilometer"],
+                    ["meters","meters"],
+                    ["meter","meter"], 
+                    ["miles","miles"], 
+                    ["mile","mile"], 
+                    ["feet","feet"], 
+                    ["foot","foot"]
                 ]
             }
         ],
-        "inputsInline": true,
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of hexagonal grids by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -797,29 +748,39 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["","null"], 
-                    ["and","and"], 
-                    ["but not","butnot"], 
-                    ["that is","thatis"], 
-                    ["that are","thatare"]
+                    ["",""], 
+                    ["but not","but not"], 
+                    ["that", "that"], 
+                    ["that is","that is"], 
+                    ["that are","that are"], 
+                    ["that is not","that is not"], 
+                    ["that are not","that are not"], 
+                    ["that was","that was"], 
+                    ["that were","that were"], 
+                    ["that was not","that was not"], 
+                    ["that were not","that were not"]
                 ]
             },
             {
                 "type": "field_dropdown",
                 "name": "topology",
                 "options": [
-                    ["inside","inside"], 
+                    ["in","in"], 
                     ["within","within"], 
                     ["contain","contain"], 
-                    ["covered by","coveredby"], 
-                    ["overlap with","overlap"], 
-                    ["intersected with","intersectedwith"], 
+                    ["covered by","covered by"], 
+                    ["overlap with","overlap with"], 
+                    ["intersected with","intersected with"], 
                     ["outside","outside"], 
-                    ["away from","away"],  
-                    ["closest to","closeto"], 
-                    ["affected by","affected"], 
+                    ["away from","away from"],  
+                    ["closest to","closest to"], 
+                    ["on top of","on top of"], 
+                    ["affected by","affected by"], 
                     ["with","with"], 
-                    ["weighted by","weighted"]
+                    ["weighted by","weighted by"], 
+                    ["answered by", "answered by"], 
+                    ["along", "along"], 
+                    ["maximize", "maximize"]
                 ]
             },
             {
@@ -831,7 +792,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a relationship using a prepostion or prepositional phrase or a verb. Select a conjunction if needed. Select a relationship word.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -848,38 +809,41 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["","null"], 
-                    ["and","and"], 
-                    ["but not","butnot"], 
-                    ["that is","thatis"], 
-                    ["that are","thatare"]
+                    ["",""], 
+                    ["but not","but not"], 
+                    ["that is","that is"], 
+                    ["that are","that are"], 
+                    ["that is not","that is not"], 
+                    ["that are not","that are not"], 
+                    ["that was","that was"], 
+                    ["that were","that were"], 
+                    ["that was not","that was not"], 
+                    ["that were not","that were not"]
                 ]
             },
             {
                 "type": "field_dropdown",
-                "name": "topology",
+                "name": "r2_topology",
                 "options": [
                     ["within","within"], 
                     ["outside","outside"], 
-                    ["at least","least"], 
-                    ["more than","more"], 
-                    ["minimum","minimum"], 
-                    ["maximum","maximum"]
+                    ["more than","more than"], 
+                    ["less than","less than"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "number",
+                "name": "r2_number",
                 "value": 0
             },
             {
                 "type": "field_dropdown",
-                "name": "buffer_unit",
+                "name": "r2_buffer_unit",
                 "options": [
-                    ["meters","ms"], 
-                    ["meter","m"], 
-                    ["kilometers","kms"], 
-                    ["kilometer","km"], 
+                    ["meters","meters"], 
+                    ["meter","meter"], 
+                    ["kilometers","kilometers"], 
+                    ["kilometer","kilometer"], 
                     ["feet","feet"], 
                     ["foot","foot"], 
                     ["miles","miles"], 
@@ -896,30 +860,21 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "prepostion",
                 "options": [
-                    [
-                        "of",
-                        "of"
-                    ],
-                    [
-                        "",
-                        "null"
-                    ],
-                    [
-                        "from",
-                        "from"
-                    ]
+                    ["of","of"],
+                    ["",""],
+                    ["from","from"]
                 ]
             },
             {
                 "type": "input_value",
                 "name": "rel3_np_shadow",
-                "check": "np_type",
+                "check": "np_type"
             }
         ],
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a distance relationship. Select a conjunction if needed. Select a relationship word, and then enter a number and select a unit to define distance. Select a preposition to connect one noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -936,62 +891,72 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["","null"], 
-                    ["and","and"], 
-                    ["but not","butnot"], 
-                    ["that is","thatis"], 
-                    ["that are","thatare"]
+                    ["",""], 
+                    ["but nt","but not"], 
+                    ["that is","that is"], 
+                    ["that are","that are"], 
+                    ["that is not","that is not"], 
+                    ["that are not","that are not"], 
+                    ["that was","that was"], 
+                    ["that were","that were"], 
+                    ["that was not","that was not"], 
+                    ["that were not","that were not"]
                 ]
             },
             {
                 "type": "field_dropdown",
-                "name": "comparison",
+                "name": "r3_comparison",
                 "options": [
-                    ["equal to","equal"], 
-                    ["larger than","larger"], 
-                    ["smaller than","smaller"], 
-                    ["higher than","higher"], 
-                    ["lower than","lower"], 
-                    ["more than","more"],
-                    ["less than","less"], 
-                    ["at least","least"], 
-                    ["older than", "older"], 
-                    ["younger than", "younger"]
+                    ["equal to","equal to"], 
+                    ["larger than","larger than"], 
+                    ["smaller than","smaller than"], 
+                    ["higher than","higher than"], 
+                    ["lower than","lower than"], 
+                    ["more than","more than"],
+                    ["less than","less than"], 
+                    ["more than or equal to","more than or equal to"], 
+                    ["less than or equal to", "less than or equal to"], 
+                    ["older than", "older than"], 
+                    ["younger than", "younger than"], 
+                    ["before", "before"],
+                    ["after", "after"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "number",
+                "name": "r3_number",
                 "value": 0
             },
             {
                 "type": "field_dropdown",
-                "name": "comp_unit",
+                "name": "UNIT",
                 "options": [
                     ["unit","unit"], 
+                    ["",""], 
                     ["percent","percent"], 
                     ["degrees","degrees"], 
-                    ["dB", "Decibel"], 
-                    ["kilowatt hour","kwh"], 
-                    ["millimeters","mm"], 
-                    ["meters", "m"], 
-                    ["kilometers", "km"], 
-                    ["square meters", "m2"], 
-                    ["square meter", "m2"], 
-                    ["square kilometers", "km2"], 
-                    ["square kilometer", "km2"], 
-                    ["per square kilometer", "perkm2"]
+                    ["decibels", "decibels "], 
+                    ["dollars", "dollars"], 
+                    ["kilowatt hours","kilowatt hours"], 
+                    ["inches of rain per year","inches of rain per year"], 
+                    ["millimeters","millimeters"], 
+                    ["millimeter","millimeter"], 
+                    ["meters", "meters"], 
+                    ["meter", "meter"], 
+                    ["kilometers", "kilometers"], 
+                    ["kilometer", "kilometer"], 
+                    ["square meters", "square meters"], 
+                    ["square meter", "square meter"], 
+                    ["square kilometers", "square kilometers"],
+                    ["square kilometer", "square kilometer"],
+                    ["per square kilometer", "per square kilometer"]
                 ]
             }
         ],
-        "previousStatement": [
-            "coreC_is",
-            "adj_coreC",
-            "rel_type"
-        ],
+        "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship. Select a comparative phrase. Then enter a number and select a unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1011,44 +976,55 @@ qBlocks = [
             },
             {
                 "type": "field_dropdown",
-                "name": "comparision",
+                "name": "r4_comparision",
                 "options": [
-                    ["equal to","equal"], 
-                    ["larger than","larger"], 
-                    ["smaller than","smaller"], 
-                    ["higher than","higher"], 
-                    ["lower than","lower"], 
-                    ["more than","more"],
-                    ["less than","less"], 
-                    ["at least","least"]
+                    ["equal to","equal to"], 
+                    ["larger than","larger than"], 
+                    ["smaller than","smaller than"], 
+                    ["higher than","higher than"], 
+                    ["lower than","lower than"], 
+                    ["more than","more than"],
+                    ["less than","less than"], 
+                    ["at least","at least"], 
+                    ["older than", "older than"], 
+                    ["younger than", "younger than"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "number",
+                "name": "r4_number",
                 "value": 0
             },
             {
                 "type": "field_dropdown",
-                "name": "unit",
+                "name": "r4_unit",
                 "options": [
                     ["unit","unit"], 
+                    ["",""], 
                     ["percent","percent"], 
+                    ["per 1000 people","per 1000 people"], 
                     ["degrees","degrees"], 
-                    ["dB", "Decibel"], 
-                    ["millimeters","mm"], 
-                    ["meters", "m"], 
-                    ["kilometers", "km"], 
-                    ["square meters", "m2"], 
-                    ["square kilometers", "km2"],
-                    ["per square kilometer", "perkm2"]
+                    ["decibels", "decibels"], 
+                    ["dollars", "dollars"], 
+                    ["kilowatt hours","kilowatt hours"], 
+                    ["millimeters","millimeters"], 
+                    ["millimeter","millimeter"], 
+                    ["meters", "meters"], 
+                    ["meter", "meter"], 
+                    ["kilometers", "kilometers"], 
+                    ["kilometer", "kilometer"], 
+                    ["square meters", "square meters"], 
+                    ["square meter", "square meter"], 
+                    ["square kilometers", "square kilometers"],
+                    ["square kilometer", "square kilometer"],
+                    ["per square kilometer", "per square kilometer"]
                 ]
             }
         ],
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship with a noun phrase. Enter a noun or noun phrase in the blue block. Then select a comparative phrase, enter a number and select a unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1069,7 +1045,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1084,22 +1060,18 @@ qBlocks = [
         "args0": [
             {
                 "type": "field_dropdown",
-                "name": "comparision",
+                "name": "r5_comparison",
                 "options": [
-                    ["", "null"], 
-                    ["no", "no"], 
+                    ["", ""], 
                     ["more than","more"], 
                     ["less than","less"], 
-                    ["larger than","larger"], 
-                    ["smaller than","smaller"], 
-                    ["higher than","higher"], 
-                    ["lower than","lower"], 
-                    ["at least","least"]
+                    ["more than or equal to","more than or equal to"], 
+                    ["less than or or equal to","less than or equal to"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "number",
+                "name": "r5_number",
                 "value": 0
             },
             {
@@ -1111,7 +1083,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship with a quantity. Select a comparative phrase. Then enter a number and a noun phrase to define quantity.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1132,7 +1104,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1149,30 +1121,33 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["","null"], 
-                    ["and","and"], 
-                    ["but not","butnot"], 
-                    ["that is","thatis"], 
-                    ["that are","thatare"]
+                    ["",""], 
+                    ["but not","but not"], 
+                    ["that is","that is"], 
+                    ["that are","that are"], 
+                    ["that is not","that is not"], 
+                    ["that are not","that are not"], 
+                    ["that was","that was"], 
+                    ["that were","that were"], 
+                    ["that was not","that was not"], 
+                    ["that were not","that were not"]
                 ]
             },
             {
                 "type": "field_dropdown",
-                "name": "boolean",
+                "name": "rel6_adj",
                 "options": [
-                    ["for sale","forsale"], 
-                    ["visible","visible"]
+                    ["for sale","for sale"], 
+                    ["visible","visible"], 
+                    ["longest","longest"], 
+                    ["biggest","biggest"]
                 ]
             }
         ],
-        "previousStatement": [
-            "coreC_is",
-            "adj_coreC",
-            "rel_type"
-        ],
+        "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a relationship using an adjective. Select a conjunction if needed. Then select an adjective.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1200,7 +1175,7 @@ qBlocks = [
         "inputsInline": false,
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Declare regions to aggregate information.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1215,8 +1190,8 @@ qBlocks = [
         "args0": [
             {
                 "type": "field_input",
-                "name": "np2_coreC",
-                "text": "neighborhood",
+                "name": "np_sup_coreC",
+                "text": "neighborhood"
             },
             {
                 "type": "input_statement",
@@ -1226,11 +1201,94 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a place type.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
             "type": "Noun phrase blocks",
+            "order": 2,
+            "text": ""
+        }
+    },
+    //for each grid
+    {
+        "type": "sup_grid1", // [SC][TODO] identify category, type, and order
+        "message0": "%1 by %2 %3 grid cells",
+        "args0": [
+            {
+                "type": "field_number",
+                "name": "num1",
+                "value": 2
+            },
+            {
+                "type": "field_number",
+                "name": "num2",
+                "value": 2
+            },
+            {
+                "type": "field_dropdown",
+                "name": "unit",
+                "options": [
+                    ["kilometers", "kilometers"], 
+                    ["kilometer", "kilometer"], 
+                    ["meters", "meters"], 
+                    ["meter", "meter"], 
+                    ["miles", "miles"], 
+                    ["mile", "mile"], 
+                    ["feet", "feet"], 
+                    ["foot", "foot"]
+                ]
+            }
+        ],
+        "output": "np_type",
+        "colour": 210,
+        "tooltip": "Define the size of square grid cells by entering a number and selecting a length unit.",
+        "helpUrl": "",
+        "custom": {
+            "category": ["Extent"],
+            "type": "Support blocks",
+            "order": 2,
+            "text": ""
+        }
+    },
+    {
+        "type": "sup_grid2", // [SC][TODO] identify category, type, and order
+        "message0": "%1 with a diameter of %2 %3",
+        "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "hexgrid",
+                "options": [
+                    ["hexagonal grids", "hexagonal grids"]
+                ]
+            },
+            {
+                "type": "field_number",
+                "name": "g2num1",
+                "value": 2
+            },
+            {
+                "type": "field_dropdown",
+                "name": "unit",
+                "options": [
+                    ["kilometers", "kilometers"], 
+                    ["kilometer", "kilometer"], 
+                    ["meters", "meters"], 
+                    ["meter", "meter"], 
+                    ["miles", "miles"], 
+                    ["mile", "mile"], 
+                    ["feet", "feet"], 
+                    ["foot", "foot"]
+                ]
+            }
+        ],
+        "output": "np_type",
+        "colour": 210,
+        "tooltip": "Define the size of hexagonal grids by entering a number and selecting a length unit.",
+        "helpUrl": "",
+        "custom": {
+            "category": ["Extent"],
+            "type": "Support blocks",
             "order": 2,
             "text": ""
         }
@@ -1248,32 +1306,31 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["meters","ms"], 
-                    ["meter","m"], 
-                    ["kilometers","kms"], 
-                    ["kilometer","km"], 
-                    ["feet","feet"], 
-                    ["foot","foot"], 
+                    ["kilometers","kilometers"], 
+                    ["kilometer","kilometer"], 
+                    ["meters","meters"], 
+                    ["meter","meter"], 
                     ["miles","miles"], 
                     ["mile","mile"], 
-                    ["square meters", "m2"], 
-                    ["square meter", "m2"], 
-                    ["square kilometers", "km2"], 
-                    ["square kilometer", "km2"]
+                    ["feet","feet"],
+                    ["foot","foot"], 
+                    ["square kilometers", "square kilometers"], 
+                    ["square kilometer", "square kilometer"], 
+                    ["square meters", "square meters"], 
+                    ["square meter", "square meter"]
                 ]
             },
             {
                 "type": "field_dropdown",
                 "name": "distanceband",
                 "options": [
-                    ["distance band","distband"], 
-                    ["circle","circle"]
+                    ["distance band","distband"], ["circle","circle"]
                 ]
             }
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of distance windows by entering a number and selecting a length unit. Usually used in geographic distribution questions.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1284,8 +1341,13 @@ qBlocks = [
     },
     {
         "type": "extent",
-        "message0": "in %1 %2",
+        "message0": "%1 %2 %3",
         "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "ext_in",
+                "options": [["in","in"],["of","of"]]
+            },
             {
                 "type": "field_input",
                 "name": "toponymy",
@@ -1299,7 +1361,7 @@ qBlocks = [
         ],
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a spatial extent for a question. Select a preposition and enter a place name.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1316,33 +1378,31 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "month",
                 "options": [
-                    ["","null"], 
-                    ["January","January"], 
-                    ["February","February"], 
-                    ["March","March"], 
-                    ["April","April"], 
-                    ["May","May"], 
-                    ["June","June"], 
-                    ["July","July"], 
-                    ["August","August"], 
-                    ["September","September"], 
-                    ["October","October"], 
-                    ["November","November"], 
-                    ["December","December"], 
-                    ["December","December"], 
-                    ["December","December"]
+                    ["", ""], 
+                    ["January", "January"], 
+                    ["February", "February"], 
+                    ["March", "March"], 
+                    ["April", "April"], 
+                    ["May", "May"], 
+                    ["June", "June"], 
+                    ["July", "July"], 
+                    ["August", "August"], 
+                    ["September", "September"], 
+                    ["October", "October"], 
+                    ["November", "November"], 
+                    ["December", "December"]
                 ]
             },
             {
                 "type": "field_number",
-                "name": "year",
-                "value": 2022,
+                "name": "year1",
+                "value": 2023,
                 "min": 0
             }
         ],
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a temporal extent for a question. Select a month and enter a year. Only allow numeric input for the input box.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1357,62 +1417,58 @@ qBlocks = [
         "args0": [
             {
                 "type": "field_dropdown",
-                "name": "month",
-                "options": [
-                    ["","null"], 
-                    ["January","January"], 
-                    ["February","February"], 
-                    ["March","March"], 
-                    ["April","April"], 
-                    ["May","May"], 
-                    ["June","June"], 
-                    ["July","July"], 
-                    ["August","August"], 
-                    ["September","September"], 
-                    ["October","October"], 
-                    ["November","November"], 
-                    ["December","December"], 
-                    ["December","December"], 
-                    ["December","December"]
-                ]
-            },
-            {
-                "type": "field_number",
-                "name": "year",
-                "value": 2010,
-                "min": 0
-            },
-            {
-                "type": "field_dropdown",
                 "name": "month1",
                 "options": [
-                    ["","null"], 
-                    ["January","January"], 
-                    ["February","February"], 
-                    ["March","March"], 
-                    ["April","April"], 
-                    ["May","May"], 
-                    ["June","June"], 
-                    ["July","July"], 
-                    ["August","August"], 
-                    ["September","September"], 
-                    ["October","October"], 
-                    ["November","November"], 
-                    ["December","December"], 
-                    ["December","December"], 
-                    ["December","December"]
+                    ["", ""], 
+                    ["January", "January"], 
+                    ["February", "February"], 
+                    ["March", "March"], 
+                    ["April", "April"], 
+                    ["May", "May"], 
+                    ["June", "June"], 
+                    ["July", "July"], 
+                    ["August", "August"], 
+                    ["September", "September"], 
+                    ["October", "October"], 
+                    ["November", "November"], 
+                    ["December", "December"]
                 ]
             },
             {
                 "type": "field_number",
                 "name": "year1",
-                "value": 2022,
+                "value": 2019,
+                "min": 0
+            },
+            {
+                "type": "field_dropdown",
+                "name": "month2",
+                "options": [
+                    ["", ""], 
+                    ["January", "January"], 
+                    ["February", "February"], 
+                    ["March", "March"], 
+                    ["April", "April"], 
+                    ["May", "May"], 
+                    ["June", "June"], 
+                    ["July", "July"], 
+                    ["August", "August"], 
+                    ["September", "September"], 
+                    ["October", "October"], 
+                    ["November", "November"], 
+                    ["December", "December"]
+                ]
+            },
+            {
+                "type": "field_number",
+                "name": "year2",
+                "value": 2023,
                 "min": 0
             }
         ],
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a temporal extent for a question. Select a month and enter a year. Only allow numeric input for the input box.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1427,7 +1483,7 @@ qBlocks = [
         "message0": "noun_phrases",
         "output": "np_type",
         "colour": 230,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one block from the Noun phrases category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1441,7 +1497,7 @@ qBlocks = [
         "message0": "relationships_",
         "previousStatement": "rel_type",
         "colour": 285,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one block from the Relationships category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1455,7 +1511,7 @@ qBlocks = [
         "message0": "extent_",
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one spatial extent block from the Extent category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1469,7 +1525,7 @@ qBlocks = [
         "message0": "temporal_extent",
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one temporal extent block from the Extent category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1496,32 +1552,38 @@ Blockly.gridFlyout={};
 Blockly.GRIDFLYOUT_CATEGORY_NAME="flyout_grid";
 Blockly.gridFlyout.Blocks=[];
 
-function disable_sup_grid(){
-  let elelist=[];
+function getAllBlocksList(){
+  let blocklist=[];
   workspace.getAllBlocks(true).forEach(element =>{
-    elelist.push(element.type);
+    blocklist.push(element.type);
   });
+  return blocklist;
+}
 
-  console.log(elelist)
+// version after 9.3.0 using Blockly.utils.xml.textToDom
+// version before 9.3.0 using Blockly.Xml.textToDom
+function disable_sup_grid(){
 
-  if (elelist.includes('support')) {
+  let elelist = getAllBlocksList();
+
+  if (elelist.includes('support')||elelist.includes('extent')) {
     Blockly.myFlyout.Blocks=[];
+    let label1DOM= Blockly.Xml.textToDom('<label text="Spatial extent:"></label>');
+    Blockly.myFlyout.Blocks.push(label1DOM);
+    let extDOM = Blockly.Xml.textToDom('<block type="extent" disabled="true"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block>');
+    Blockly.myFlyout.Blocks.push(extDOM);
     let sup1Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="noun_phrase_sup"><value name = "np_sup_shadow"><shadow type="rel_reminder"></shadow></value></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup1DOM = Blockly.Xml.textToDom(sup1Text);
     Blockly.myFlyout.Blocks.push(sup1DOM);
-    let sup2Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup2Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="sup_grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup2DOM = Blockly.Xml.textToDom(sup2Text);
     Blockly.myFlyout.Blocks.push(sup2DOM);
-    let sup3Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup3Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="sup_grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup3DOM = Blockly.Xml.textToDom(sup3Text);
     Blockly.myFlyout.Blocks.push(sup3DOM);
     let sup4Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="dist_band"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup4DOM = Blockly.Xml.textToDom(sup4Text);
     Blockly.myFlyout.Blocks.push(sup4DOM);
-    let label1DOM= Blockly.Xml.textToDom('<label text="Spatial extent:"></label>');
-    Blockly.myFlyout.Blocks.push(label1DOM);
-    let extDOM = Blockly.Xml.textToDom('<block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block>');
-    Blockly.myFlyout.Blocks.push(extDOM);
     let label2DOM = Blockly.Xml.textToDom('<label text="Temporal extent:"></label>');
     Blockly.myFlyout.Blocks.push(label2DOM);
     let temDOM1 = Blockly.Xml.textToDom('<block type="temporalextent1"></block>');
@@ -1530,22 +1592,22 @@ function disable_sup_grid(){
     Blockly.myFlyout.Blocks.push(temDOM2);
   }else{
     Blockly.myFlyout.Blocks=[];
+    let label1DOM= Blockly.Xml.textToDom('<label text="Spatial extent:"></label>');
+    Blockly.myFlyout.Blocks.push(label1DOM);
+    let extDOM = Blockly.Xml.textToDom('<block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block>');
+    Blockly.myFlyout.Blocks.push(extDOM);
     let sup1Text = '<block type="support"><value name = "sup_np"><block type="noun_phrase_sup"><value name = "np_sup_shadow"><shadow type="rel_reminder"></shadow></value></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup1DOM = Blockly.Xml.textToDom(sup1Text);
     Blockly.myFlyout.Blocks.push(sup1DOM);
-    let sup2Text = '<block type="support"><value name = "sup_np"><block type="grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup2Text = '<block type="support"><value name = "sup_np"><block type="sup_grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup2DOM = Blockly.Xml.textToDom(sup2Text);
     Blockly.myFlyout.Blocks.push(sup2DOM);
-    let sup3Text = '<block type="support"><value name = "sup_np"><block type="grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup3Text = '<block type="support"><value name = "sup_np"><block type="sup_grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup3DOM = Blockly.Xml.textToDom(sup3Text);
     Blockly.myFlyout.Blocks.push(sup3DOM);
     let sup4Text = '<block type="support"><value name = "sup_np"><block type="dist_band"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup4DOM = Blockly.Xml.textToDom(sup4Text);
     Blockly.myFlyout.Blocks.push(sup4DOM);
-    let label1DOM= Blockly.Xml.textToDom('<label text="Spatial extent:"></label>');
-    Blockly.myFlyout.Blocks.push(label1DOM);
-    let extDOM = Blockly.Xml.textToDom('<block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block>');
-    Blockly.myFlyout.Blocks.push(extDOM);
     let label2DOM = Blockly.Xml.textToDom('<label text="Temporal extent:"></label>');
     Blockly.myFlyout.Blocks.push(label2DOM);
     let temDOM1 = Blockly.Xml.textToDom('<block type="temporalextent1"></block>');
@@ -1558,6 +1620,8 @@ function disable_sup_grid(){
     Blockly.gridFlyout.Blocks=[];
     let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1" disabled="true"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
     let grid2DOM = Blockly.Xml.textToDom('<block type="grid2" disabled="true"></block>');
@@ -1566,6 +1630,8 @@ function disable_sup_grid(){
       Blockly.gridFlyout.Blocks=[];
       let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
       Blockly.gridFlyout.Blocks.push(np2DOM);
+      let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+      Blockly.gridFlyout.Blocks.push(np3DOM);
       let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
       Blockly.gridFlyout.Blocks.push(grid1DOM);
       let grid2DOM = Blockly.Xml.textToDom('<block type="grid2"></block>');
@@ -1575,6 +1641,8 @@ function disable_sup_grid(){
     Blockly.gridFlyout.Blocks=[];
     let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
     let grid2DOM = Blockly.Xml.textToDom('<block type="grid2"></block>');
@@ -1611,6 +1679,7 @@ function hideCategory(){
   document.getElementById('relCate').style.display = 'none'
   document.getElementById('extCate').style.display = 'none'
 }
+
 function np2Category(){
   document.getElementById('npWhichCate').style.display = 'none'
   document.getElementById('npCate').style.display = 'none'
@@ -1651,9 +1720,9 @@ function setCategory() {
   const np3 = workspace.getBlocksByType("noun_phrase3");
   const np4 = workspace.getBlocksByType("noun_phrase4");
   const np4_from = workspace.getBlocksByType("noun_phrase4_from");
+  const np4_from2 = workspace.getBlocksByType("noun_phrase4_from2");
   const rel1 = workspace.getBlocksByType("relationship1");
   const rel2 = workspace.getBlocksByType("relationship2");
-  const rel3 = workspace.getBlocksByType("relationship3");
   const rel4 = workspace.getBlocksByType("relationship4");
 
   if(where.length == 1) {
@@ -1749,102 +1818,19 @@ function setCategory() {
     hideCategory()
   }
 
-  if(np4.length == 1 & (np2.length >= 1 | np4_from.length >= 1)){
-    np4Category()
+  //& (np2.length >= 1 | np4_from2.length >=1 |np4_from.length >= 1)
+  if(np4.length == 1){
+    np4Category();
   }else if (np3.length == 1) {
-    np2Category()
+    np2Category();
   }else if (np2.length >= 1) {
-    np2Category()
+    np2Category();
   }
 
   if (rel1.length >= 1 | rel2.length >= 1) {
-    rel1Category()
+    rel1Category();
     if (np4.length == 1){
-      np4Category()
+      np4Category();
     }
   }
 }
-
-/*
-Blockly.Blocks['grid1'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
-        .appendField("by")
-        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num2")
-        .appendField(new Blockly.FieldDropdown([["kilometers","km"], ["meters","meters"],["feet","feet"], ["miles","miles"]]), "unit")
-        .appendField("grid cells");
-    this.setInputsInline(true);
-    this.setOutput(true, "np_type");
-    this.setColour(210);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['grid2'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["hexagonal grid","hexgrid"]]), "hexgrid")
-        .appendField("with diameter of")
-        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
-        .appendField(new Blockly.FieldDropdown([["kilometers","km"], ["meters","meters"],["feet","feet"], ["miles","miles"]]), "unit");
-    this.setInputsInline(true);
-    this.setOutput(true, "np_type");
-    this.setColour(210);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['relationship3'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["","null"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]]), "subcon_aux")
-        .appendField(new Blockly.FieldDropdown([["equal to","equal"], ["larger than","larger"], ["smaller than","smaller"], ["higher than","higher"], ["lower than","lower"], ["more than","more"],["less than","less"], ["at least","least"], ["older than", "older"], ["younger than", "younger"]]), "comparison")
-        .appendField(new Blockly.FieldNumber(0), "number")
-        .appendField(new Blockly.FieldDropdown([["unit","unit"], ["percent","percent"], ["degrees","degrees"], ["dB", "Decibel"], ["kilowatt hour","kwh"], ["millimeters","mm"], ["meters", "m"], ["kilometers", "km"], ["square meters", "m2"], ["square meter", "m2"], ["square kilometers", "km2"], ["square kilometer", "km2"], ["per square kilometer", "perkm2"]]), "comp_unit");
-    this.setPreviousStatement(true, ["coreC_is", "adj_coreC", "rel_type"]);
-    this.setNextStatement(true, "rel_type");
-    this.setColour(300);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['relationship6'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["","null"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]]), "subcon_aux")
-        .appendField(new Blockly.FieldDropdown([["for sale","forsale"], ["visible","visible"]]), "boolean");
-    this.setPreviousStatement(true, ["coreC_is", "adj_coreC", "rel_type"]);
-    this.setNextStatement(true, "rel_type");
-    this.setColour(300);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['temporalextent1'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("in")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month")
-        .appendField(new Blockly.FieldNumber(2022, 0), "year");
-    this.setOutput(true, ["temext_type"]);
-    this.setColour(50);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['temporalextent2'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("from")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month")
-        .appendField(new Blockly.FieldNumber(2010, 0), "year")
-        .appendField("to")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month1")
-        .appendField(new Blockly.FieldNumber(2022, 0), "year1");
-    this.setOutput(true, ["temext_type"]);
-    this.setColour(50);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};*/

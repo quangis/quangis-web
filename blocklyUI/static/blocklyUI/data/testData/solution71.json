@@ -1,0 +1,83 @@
+[
+    {
+        "@id": "https://example.com/#solution1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub165bL4C14"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb2"
+            },
+            {
+                "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub165bL4C14",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SpatialJoinCountTess"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ub165bL7C24"
+            }
+        ]
+    },
+    {
+        "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CyclicA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, VectorTessellationA, CyclicA"
+            }
+        ]
+    },
+    {
+        "@id": "_:f6fcfad9ef3b8482a9c88f7d7b5af403eb2",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, PlainNominalA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub165bL7C24",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, VectorTessellationA, CountA"
+            }
+        ]
+    }
+]

@@ -1,0 +1,244 @@
+[
+    {
+        "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Municipalities"
+            }
+        ]
+    },
+    {
+        "@id": "https://example.com/#NoiseProportionAmsterdam_Vector",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab1"
+            },
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab2"
+            },
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab3"
+            },
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab4"
+            },
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen"
+            },
+            {
+                "@id": "https://data.amsterdam.nl/datasets/WO-7loNDBtEcWg"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "What  is  the  proportion of the area of noise  greater  than  70  dB  in Amsterdam?"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab1",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerContourToExistenceVector"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://data.amsterdam.nl/datasets/WO-7loNDBtEcWg"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab6"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab6",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "noisy_vector"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab2",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByObjectTessObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://www.pdok.nl/introductie/-/article/cbs-gebiedsindelingen"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab7"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab7",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "amsterdam_shp"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab3",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#IntersectDissolveField2Object"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab6"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab9"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab8",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "amsterdam_area_shp"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "amsterdam_area_area_shp"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab4",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#AddObjectVectorRegionArea"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab8"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab5",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculateObjectAttrRatio"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f42d0721c31394f82bab87d8e210a34dab10"
+            }
+        ]
+    },
+    {
+        "@id": "_:f42d0721c31394f82bab87d8e210a34dab10",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "amsterdam_final_shp"
+            }
+        ]
+    },
+    {
+        "@id": "https://data.amsterdam.nl/datasets/WO-7loNDBtEcWg",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Amsterdam noise contour"
+            }
+        ]
+    }
+]

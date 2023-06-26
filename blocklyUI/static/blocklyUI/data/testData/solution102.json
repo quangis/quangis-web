@@ -1,0 +1,185 @@
+[
+    {
+        "@id": "https://example.com/#solution1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub32bL4C14"
+            },
+            {
+                "@id": "_:ub32bL7C9"
+            },
+            {
+                "@id": "_:ub32bL14C9"
+            },
+            {
+                "@id": "_:ub32bL17C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b1"
+            },
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b3"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub32bL4C14",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#makePointObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b2"
+            }
+        ]
+    },
+    {
+        "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, NominalA"
+            }
+        ]
+    },
+    {
+        "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b2",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PointA, PlainNominalA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub32bL7C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ZonalStatisticsSumField"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ub32bL10C24"
+            }
+        ]
+    },
+    {
+        "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b3",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ERA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, ERA"
+            }
+        ]
+    },
+    {
+        "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b4",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "FieldQ, RasterA, PlainRatioA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub32bL10C24",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ERA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PlainVectorRegionA, ERA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub32bL14C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#addObjectCapacity"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b5"
+            }
+        ]
+    },
+    {
+        "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b5",
+        "@type": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ERA",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ObjectQ, PointA, ERA"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub32bL17C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#KernelDensity"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f328ed2da36e946008a72c66f01f1c3f9b4"
+            }
+        ]
+    }
+]

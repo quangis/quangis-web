@@ -77,7 +77,7 @@ def question2query(queryEx: dict) -> TransformationQuery:
     return TransformationQuery(cct, g)
 
 
-def question2parsetree(qStr):
+def qBlock2parsetree(qBlock):
     # [SC][TODO] exception handling
     # [SC] make sure client has a unique id otherwise client request may be ignored
     identity = f"client-{uuid.uuid1()}"
@@ -95,7 +95,7 @@ def question2parsetree(qStr):
 
     # [SC] send a request
     print("Sending a request to the remote question parser service")
-    socket.send_string(qStr)
+    socket.send_string(json.dumps(qBlock))
 
     # [SC] wait for a reply
     print("Waiting for a reply ...")
@@ -117,10 +117,10 @@ def question2parsetree(qStr):
     return msg
 
 
-def parseQuestion(qStr):
-    print(f"Processing a new request with question '{qStr}'")
+def parseQuestionBlock(qBlock):
+    print(f"Processing a new request with question '{qBlock}'")
 
-    response = question2parsetree(qStr)
+    response = qBlock2parsetree(qBlock)
     
     if not response:
         return {"error": "No response from the question parsing service."}
@@ -214,40 +214,23 @@ def loadAbout(request):
     context = {}
     return render(request, 'blocklyUI/about.html', context)
 
-
-
-# [SC][TODO] remove the function    
-def processNlpQuestion(request):
-    print("========================= request from " + get_client_ip(request))
-    
-    qStr = request.GET['qStr']
-    qParsed = parseQuestion(qStr)
-
-    return HttpResponse(json.dumps(qParsed) + "<br><br><a href='/'>Go back</a>")
-    
-    # [SC][DELETE] for testing
-    #return HttpResponse("Received and sent back this question: %s." % request.GET['qStr']) # [SC][DELETE]
-
-    
-def processNlpQuestionAsync(request):
+def processBlocklyJsonAsync(request):
     print("========================= request from " + get_client_ip(request))
 
     is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
     
     if is_ajax:
-        if request.method == 'GET':
-            qStr = request.GET.get('qStr', '')
-            qParsed = parseQuestion(qStr)
+        if request.method == 'POST':
+            # [SC] extract the json payload
+            qBlock = json.load(request)
+            
+            # [SC] parse the question block and send a query to the triple store
+            qParsed = parseQuestionBlock(qBlock)
             
             return JsonResponse(qParsed) # [SC][TODO] remove the array form in the output of parse_Question
         return JsonResponse({'status': 'Invalid request'}, status=400)
     else:
         return HttpResponseBadRequest('Invalid request')
-    
-    # [SC][DELETE] for testing
-    #myModel = apps.get_model('questionParser', 'parseQuestion')
-    #return HttpResponse("Received and sent back this question: %s." % request.GET['qStr']) # [SC][DELETE]
-        
 
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')

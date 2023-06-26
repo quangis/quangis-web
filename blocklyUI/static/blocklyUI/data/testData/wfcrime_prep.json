@@ -1,0 +1,165 @@
+[
+    {
+        "@id": "_:ub3bL3C1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub3bL4C13"
+            },
+            {
+                "@id": "_:ub3bL7C9"
+            },
+            {
+                "@id": "_:ub3bL10C9"
+            },
+            {
+                "@id": "_:ub3bL13C9"
+            },
+            {
+                "@id": "_:ub3bL16C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb6"
+            },
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb3"
+            },
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#target": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb8"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL4C13",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#makePointObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb2"
+            }
+        ]
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb1"
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb2"
+    },
+    {
+        "@id": "_:ub3bL7C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CreateRandomPoints"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb4"
+            }
+        ]
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb3"
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb4"
+    },
+    {
+        "@id": "_:ub3bL10C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#FeatureClassToFeatureClass"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb5"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb1"
+            }
+        ]
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb5"
+    },
+    {
+        "@id": "_:ub3bL13C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CreateRandomPoints"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb6"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb7"
+            }
+        ]
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb6"
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb7"
+    },
+    {
+        "@id": "_:ub3bL16C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#Merge"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input3": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb8"
+            }
+        ]
+    },
+    {
+        "@id": "_:f11104461e5d14cdeb9f4b47115b6256bb8"
+    }
+]

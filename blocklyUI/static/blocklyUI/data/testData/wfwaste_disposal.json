@@ -1,0 +1,93 @@
+[
+    {
+        "@id": "_:ub12bL3C1",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ub12bL4C13"
+            },
+            {
+                "@id": "_:ub12bL7C9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb4"
+            },
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb3"
+            },
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#target": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb5"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub12bL4C13",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CreateNetwork"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb1"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb2"
+            }
+        ]
+    },
+    {
+        "@id": "_:f5082a6606e7745f8aec331a86f88f53cb1"
+    },
+    {
+        "@id": "_:f5082a6606e7745f8aec331a86f88f53cb2"
+    },
+    {
+        "@id": "_:ub12bL7C9",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#TSPRouting"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb2"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb3"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input3": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb4"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f5082a6606e7745f8aec331a86f88f53cb5"
+            }
+        ]
+    },
+    {
+        "@id": "_:f5082a6606e7745f8aec331a86f88f53cb3"
+    },
+    {
+        "@id": "_:f5082a6606e7745f8aec331a86f88f53cb4"
+    },
+    {
+        "@id": "_:f5082a6606e7745f8aec331a86f88f53cb5"
+    }
+]

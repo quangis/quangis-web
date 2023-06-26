@@ -17,17 +17,21 @@
     <!-- [SC] iconic fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     
+    <!-- [SC][TODO][REMOVE] test only -->
+    <script> const datapathTest = "{% static 'blocklyUI/data/testData/' %}"; </script>
+    
     <script> const datapath = "{% static 'blocklyUI/data/' %}"; </script>
     
     <!-- [SC] importing Blockly core code -->
     <!-- <script type="text/javascript" charset="UTF-8" src="js/blockly/blockly_compressed.js"></script> -->
-    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/blockly/blockly.min.js'%}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/blockly/blockly-9.2.1.min.js'%}"></script>
 
-    <!-- [SC] include the custom block definitions -->
+    <!-- [SC] include the custom Blockly block definitions -->
     <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/blocks.js'%}"></script>
-
-    <!-- [SC] custom code for sentence generation -->
+    <!-- [SC] custom Blockly code for parse tree json generation -->
     <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/generator.js'%}"></script>
+    <!-- [SC] Blockly NER code -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/blockly_ner.js'%}"></script>
 
     <!-- [SC] code for cytoscape-based workflow visualization -->
     <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/visualizers/cytoscape.min.js'%}"></script>
@@ -39,4 +43,7 @@
     
     <!-- [SC][TODO] -->
     <link rel="shortcut icon" href="#" />
+    
+    <!-- [SC] enables CSRF cookies necessary for POST requests -->
+    {% csrf_token %}
 </head>

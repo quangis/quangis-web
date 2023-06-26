@@ -255,7 +255,7 @@ function init(page){
 ///////////////////////////////////////////////////////////////////////////////////////////
 ////// [SC] blockly code for question parsing
 
-function parseQuestion(qStr) {
+function parseBlocklyJson(blocklyJsonObj) {
     showDemoLoadScreen();
     
     resetQueryGraph();
@@ -264,14 +264,25 @@ function parseQuestion(qStr) {
     const parsedQCont = document.getElementById("parsedQContainer");
     parsedQCont.innerHTML = "";
     
-    const newUrl = parsedQAsyncUrl + "?qStr=" + encodeURIComponent(qStr);
+    const newUrl = parsedBJAsyncUrl;
     
-    fetch(newUrl, {
-        method: "GET",
-        headers: {
-            "X-Requested-With": "XMLHttpRequest",
+    // [SC][TODO] make sure "blocklyJsonObj" has a proper structure
+    
+    let csrfTokenVal = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+    fetch(newUrl, 
+        {
+            method: "POST",
+            credentials: "same-origin",
+            body: JSON.stringify(blocklyJsonObj),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRFToken": csrfTokenVal,
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
         }
-    })
+    )
     .then(response => response.json())
     .then(data => {
         parsedQCont.innerHTML = JSON.stringify(data, null, 4);
@@ -315,16 +326,27 @@ function parseQuestion(qStr) {
     });;
 }
 
-// [TODO]
+// [SC][TODO]
 // function checkQuestionStringValidity(){}
 
-function parseBlocklyQ(){
-    let qStr = document.getElementById("questionDiv").innerHTML;
-    // [TODO] check question string validity
-    parseQuestion(qStr);
+function parseOutputBlocklyJson(){
+    let outputBlocklyJson = block_ner();
+    
+    console.log("============================= parseOutputBlocklyJson");
+    console.log(outputBlocklyJson);
+    
+    parseBlocklyJson(outputBlocklyJson);
 }
 
-function parseCorpusQ(){
+// [SC][TODO]
+function parseCustomBlocklyJson(){
+    let customBlocklyJson = document.getElementById("bJsonList").value;
+    customBlocklyJson = JSON.parse(customBlocklyJson);    
+    parseBlocklyJson(customBlocklyJson);
+}
+
+// [SC][TODO]
+/*function parseCorpusQ(){
     let qStr = document.getElementById("qCorpusList").value;
     parseQuestion(qStr);
 }
@@ -332,7 +354,7 @@ function parseCorpusQ(){
 function parseNLQ(){
     let qStr = document.getElementById("nlQuestionStr").value;
     parseQuestion(qStr);
-}
+}*/
 
 function showDemoLoadScreen(){
     let demoLoader = document.getElementById("demoLoader");
@@ -1244,7 +1266,7 @@ function visualizezWfGraphRemote(graphId){
 }
 
 function visualizezWfGraphFilename(filename){
-    loadFile(datapath + filename).then(function(results){
+    loadFile(datapathTest + filename).then(function(results){
         let jsonObj = JSON.parse(results);
         visualizezWfGraph(jsonObj);
     });
@@ -1261,11 +1283,10 @@ function visualizezWfGraph(jsonObj){
     wfObj = results['obj'];
     wfCyElems = results['elems'];
     
-    wfObjExp = JSON.parse(JSON.stringify(results['obj']));
-    
-    wfObjExp = expandWf(wfObjExp);
-    
-    expWfCyElems = expandedJsonLdToCytoscapeJson();
+    // [SC][TODO] concretize workflow
+    //wfObjExp = JSON.parse(JSON.stringify(results['obj']));
+    //wfObjExp = expandWf(wfObjExp);
+    //expWfCyElems = expandedJsonLdToCytoscapeJson();
     
     createWfCanvas(results['elems'], document.getElementById('cy'));
     
@@ -1361,7 +1382,7 @@ function queryToCytoscapeJson(queryJson){
 }
 
 function visualizezQueryGraphFile(filename){    
-    loadFile(datapath + filename).then(function(results){
+    loadFile(datapathTest + filename).then(function(results){
         let jsonObj = JSON.parse(results);
         visualizezQueryGraph(jsonObj);
     });

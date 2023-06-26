@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'customMiddlewares.customLogs.RequestLogMiddleware', # [SC] custom middleware for logging
 ]
 
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+
 # [SC] custom logging settings
 # Log file configuration
 LOGGING = {

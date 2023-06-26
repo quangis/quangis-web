@@ -19,9 +19,8 @@ urlpatterns = [
     
     path(route='about', view=views.loadAbout, name='urln_aboutPage'),
     
-    # [SC][TODO][UPDATE]
-    path(route='parsedQ', view=views.processNlpQuestion, name='urln_parsedQ'),
-    path(route='parsedQAsync', view=views.processNlpQuestionAsync, name='urln_parsedQAsync'),
+    # [SC] URL pattern to parse Blockly json output
+    path(route='parsedBJAsync', view=views.processBlocklyJsonAsync, name='urln_blocklyJsonAsync'),
     
     path(route='retrievWfGraph', view=views.retrieveWfGraphAsync, name='urln_getWfGraphAsync'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # [SC][TODO] not sure what this for

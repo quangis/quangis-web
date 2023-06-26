@@ -1,0 +1,361 @@
+[
+    {
+        "@id": "https://example.com/#OgallalaAquifer",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b1"
+            },
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b2"
+            },
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b3"
+            },
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b4"
+            },
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b5"
+            },
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b6"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#UrbanAreas"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#precipitation"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#aquifer"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#irrigation"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@value": "Out: Ratio, In: R(Obj, Reg), In: R(Obj, Reg), In: R(Loc, Bool)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "What areas of the Ogallala Aquifer in the United States are at risk from water depletion?"
+            }
+        ],
+        "https://dbpedia.org/ontology/abstract": [
+            {
+                "@value": "Water from underground aquifers can help create rich farmland and prosperous cities in places that would otherwise not provide enough water. However, many aquifers are being emptied far faster than they can be recharged by rainwater. The Ogallala (High Plains) Aquifer in the United States is one of the largest in the world, spanning 450,000 square kilometers and eight states. It is also at risk of depletion. In this lesson, you'll locate areas where agricultural irrigation, urbanization, and low precipitation place the heaviest burden on the Ogallala Aquifer."
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b1",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectFeaturesByObjectPlainRegionObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#aquifer"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b7"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select Oogallala aquifer"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b7",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector polygon representing the oogallala aquifer"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Oogallala aquifer"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b2",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectFeaturesCoverageToExistenceVector"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#precipitation"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b8"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select areas with low precipitation"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b8",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Areas with a low precipitation (<=20 inches of rain per year)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Low precipitation areas"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b3",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectFeaturesCoverageToExistenceVector"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#irrigation"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b9"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select areas with high irrigation"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Areas with a high irrigation (>=20% of land being irrigated)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "High irrigation areas"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b4",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationPlainRegionObjectsDist"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#UrbanAreas"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b10"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select urban areas within 150 miles (geodesic) of the aquifer"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b10",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Urban areas that are within 150 miles of the Oogallala aquifer"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Urban areas near Oogallala"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b5",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationPlainRegionObjectsFieldDist"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b10"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b11"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "further select urban areas within the area with low precipitation"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b11",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Urban areas that are within 150 miles of the Oogallala aquifer and have low precipitation (<=20 inches of rain per year)."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Low precipitation urban areas"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b6",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByLocationPlainRegionObjectsFieldDist"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b11"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b12"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "further select urban areas that intersect with the irrigation region dataset"
+            }
+        ]
+    },
+    {
+        "@id": "_:ffa98248fc72041b5b5eca1b026ccdb87b12",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Urban areas that are within 150 miles of the Oogallala aquifer and have low precipitation (<=20 inches of rain per year) and high irrigation (>=20% of land being irrigated), thereby causing a risk of aquifer depletion."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Drought-risk urban areas"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#aquifer",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector polygons representing principal aquifers in the USA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "USA Aquifers"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#irrigation",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Counties of the United States with area of irrigated land by acreage and percent."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Irrigated land"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#UrbanAreas",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "U.S. Census Urban Areas provides information about the locations, names, population, and codes of urban areas primarily for national planning applications."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Urban areas"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/find-areas-at-risk-from-aquifer-depletion/#precipitation",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Polygons of average annual precipitation in the contiguous United States, for the climatological period 1990-2009"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Average annual precipitation"
+            }
+        ]
+    }
+]

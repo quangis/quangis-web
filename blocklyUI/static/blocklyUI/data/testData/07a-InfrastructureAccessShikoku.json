@@ -1,0 +1,384 @@
+[
+    {
+        "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#urbanization",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Metropolitan Employment Areas (MEAs): Urbanization levels in Shikoku, Japan (Polygon)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Metro employment areas"
+            }
+        ]
+    },
+    {
+        "@id": "https://example.com/#InfrastructureAccessShikoku",
+        "@type": [
+            "http://geographicknowledge.de/vocab/Workflow.rdf#Workflow"
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#edge": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b1"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b2"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b3"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b4"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b5"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b6"
+            },
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b7"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#source": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#urbanization"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#chochomoku"
+            },
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#roads"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@value": "Out: IntV, In: OS, In: OS, In: OS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "How much of the rural population in Shikoku, Japan, can reach all-season roads?"
+            }
+        ],
+        "https://dbpedia.org/ontology/abstract": [
+            {
+                "@value": "In this lesson, you'll act as an analyst in Japan's National Statistical Office. To promote sustainable development in the nation's rural areas, you'll estimate access to all-season roads. First, you'll add population and road data and limit your study area to rural regions. Then, you'll create a 2-kilometer buffer around all-season roads and calculate the percentage of the rural population within that buffer."
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b1",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SelectLayerByAttributeTessObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#urbanization"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b8"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "select rural from different urbanization grade areas and create new layer from them"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b8",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector polygons representing non-MEAs, i.e., areas with a 'rural' classification in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Rural regions"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b2",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ClipObject2Object"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#chochomoku"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b8"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b9"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "clip SCCM regions by rural areas"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "All municipalities in rural areas in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Rural municipalities"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b3",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ObjectSummaryStatisticsAmount"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b10"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "sum the total population (2015)"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b10",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A standalone table with the total amount of population in rural municipalities in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Total rural population"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b4",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculateCountAmountRatio"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b10"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b13"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b14"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "calculate the percentage of population living within 2km of infrastructure"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b13",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A sum of all population estimates in areas near roads in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Pop. sum near roads"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b14",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A percentage of all population living near roads in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Pop. % near roads"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b5",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#ObjectBuffer"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#roads"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b11"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "buffer roads within 2km distance"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b11",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector polygon representing all area within 2 kilometers of all-season roads in Shikoku"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Area within 2km of roads"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b6",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#CalculatePartialAmountsfromObjects"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b9"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input2": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b11"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b12"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "clip rural areas with the roads buffer and estimate the total population that is within the buffer of 2km"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b12",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Rural municipalities in Shikoku clipped by road proximity region and with estimated populations for partitioned municipalities"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Rural mun. area near roads"
+            }
+        ]
+    },
+    {
+        "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b7",
+        "http://geographicknowledge.de/vocab/Workflow.rdf#applicationOf": [
+            {
+                "@id": "https://quangis.github.io/tool/abstract#SummaryStatisticsAmount"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#input1": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b12"
+            }
+        ],
+        "http://geographicknowledge.de/vocab/Workflow.rdf#output": [
+            {
+                "@id": "_:f4cafebf9a3ed411592c15cf14fa74f22b13"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "sum the total population that is within the buffer of 2km (i.e. has access to infrastructure)"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#chochomoku",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Cho-cho-moku ((SCCM, small administrative regions) in Shikoku, Japan (Polygon) with population number"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Administrative regions"
+            }
+        ]
+    },
+    {
+        "@id": "https://learn.arcgis.com/en/projects/estimate-access-to-infrastructure/#roads",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "All-season roads in Shikoku, Japan (Line)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Roads"
+            }
+        ]
+    }
+]
