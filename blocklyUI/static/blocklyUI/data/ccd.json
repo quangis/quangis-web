@@ -1,0 +1,3941 @@
+[
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#QualityValue",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A single value of some quality"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "QualityValue"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of a vector region layer that is not a tessellation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainVectorRegionA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL240C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL240C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+                    },
+                    {
+                        "@id": "_:ub1bL241C52"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL241C52",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An interval scaled attribute"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "IntervalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of a dataset that represents some quantified relation between other core concepts. For example a network is relation between objects."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RelationalQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL487C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL487C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Line data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LineDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#disjointWith": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL563C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL563C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+                    },
+                    {
+                        "@id": "_:ub1bL564C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL564C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#allValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#hasElement"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointData",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Point data"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PointData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL385C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL385C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialData"
+                    },
+                    {
+                        "@id": "_:ub1bL386C101"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL386C101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/GISConcepts.rdf#hasAttribute"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attribute of some point data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PointA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL478C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL478C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL479C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL479C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Lattice",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A lattice is a spatial tessellation that represents objects and their qualities. For example, a set of municipalities with average income."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Lattice"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL455C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL455C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+                    },
+                    {
+                        "@id": "_:ub1bL456C43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL456C43",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectPoint",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of an object point dataset"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectPoint"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL162C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL162C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+                    },
+                    {
+                        "@id": "_:ub1bL163C43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL163C43",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectRegion",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute that represents an object that has a region"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectRegion"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL172C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL172C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+                    },
+                    {
+                        "@id": "_:ub1bL173C43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL173C43",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector data sets are spatial data sets that are not raster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Vector"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL654C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL654C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"
+                    },
+                    {
+                        "@id": "_:ub1bL655C104"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL655C104",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A raster data set where each cell represents an amount of objects"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "AmountRasterDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL49C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL49C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This is a vector data set which is tessellated (and no raster)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "VectorTessellation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegion"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL282C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL282C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ZeroExistenceRaster",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A raster dataset where 0 is interpreted as boolean \"false\""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ZeroExistenceRaster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceRaster"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute that represents the quality of an object (core concept)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL647C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL647C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Attribute",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExtLattice",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This type of lattice has an extensive attribute. For example, a spatial dataset about the population number of municipalities"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ExtLattice"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Lattice"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL86C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL86C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Lattice"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "an attribute of a matrix. For example, distance in an origin-destination matrix."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "MatrixQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL130C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL130C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/GISConcepts.rdf#hasAttribute",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Patch",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of some dataset representing homogeneous patches of a field as regions."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Patch"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL182C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL182C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL183C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL183C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attribute of some Line data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LineA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL469C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL469C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL470C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL470C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Dataset of amounts of objects"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "AmountDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#measureConnect",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "ofDataSet o hasElement o hasMeasure o valueOf"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Extensive region attribute. Since attributes are extensive, their values increase with the size of their support regions. Zero size regions are zero then defined to be zero, which implies a ratio scale level."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ERA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventVector",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Events represented in terms of an attribute of a vector data set. For example, the magnitude of earthquakes represented as an attribute of a point data set."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "EventVector"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL328C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL328C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ"
+                    },
+                    {
+                        "@id": "_:ub1bL329C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL329C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset representing a field using contours, which denote the boundaries of value intervals. For example, a terrain contour map."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ContourDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset where each geometry denotes an amount of objects"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "AmountVectorDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL56C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL56C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of a region vector layer"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "VectorRegionA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL496C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL496C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IRA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Intensive region attribute. An attribute that is independent from the size of its support region."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "IRA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegion",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Dataset with vector regions as geometry"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "VectorRegion"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL538C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL538C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#hasElement",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial attribute on nominal scale level"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "NominalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Track",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A type for a spatial track. A spatial track is a vector representation of \"fix\" events of some moving object. For example, a GPS track of points of a person moving."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Track"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventVector"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial dataset representing events"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "EventDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute that represents a (quantified) amount, which is a quantity defined by an arbitrary part of space. This can be either an amount of objects or an amount of some field."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "AmountQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL41C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL41C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attribute of some vector data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "VectorA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL679C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL679C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL680C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL680C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset that represents some quantified realtionb between other concepts. For example, a network (being a relation between objects)."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RelationalDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A generalized geometry, including 2D and 3D extended regions. In 2D, this might be a Polygon."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Region"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of a tesselation data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "TessellationA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL611C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL611C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL612C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL612C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#supportConnect",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "ofDataSet o hasElement o hasSupport o valueOf"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceVector",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector layer attribute that satisfies a boolean expression and thus denotes the 'existence' of some attribute encoded phenomenon across space. Example is a layer of polygons of ''forest'' landuse or a layer of \"parks\"."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ExistenceVector"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldVector"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL340C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL340C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldVector"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasures",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Point measures are point-like representations of fields. For example, point data sets denoting the locations of measured temperature values."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PointMeasures"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL249C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL249C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL250C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL250C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An ordinal attribute that is plain/proper (not interval)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainOrdinalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL214C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL214C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+                    },
+                    {
+                        "@id": "_:ub1bL215C44"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL215C44",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Point data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PointDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#disjointWith": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL602C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL602C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+                    },
+                    {
+                        "@id": "_:ub1bL603C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL603C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#allValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#hasElement"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A generalized notion of a line in 2D and 3D"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Line"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset representing a field using (possibly irregular) patches of homogeneous values. For example, a landuse map or a soil map."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "CoverageDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL320C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL320C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This is a spatial attribute which denotes a bounded phenomenon. Can be either a object vector or an existence raster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "BoundedPhen"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL511C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL511C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#unionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceRaster"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceVector"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectVector"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectLine",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of an object line dataset"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectLine"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL152C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL152C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+                    },
+                    {
+                        "@id": "_:ub1bL153C43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL153C43",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A representation of a field as a line of homogeneous values"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LineMeasuresDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL123C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL123C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineDS"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialData",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Ontology"
+        ],
+        "http://purl.org/dc/elements/1.1/abstract": [
+            {
+                "@language": "en",
+                "@value": "This ontology pattern describes geodata types representing core concepts of spatial information (Kuhn 2012) as well as further semantic distinctions relevant for geocomputation and geo-analysis. This includes measurement levels of attributes, in particular extensive and intensive attributes, as well as basic geometric models (raster and vector geometry, tessellations). The ontology can be used to automate wporkflow synthesis by using its classes as signature (input/output) types for GIS tools. The ontology was introduced and is explained in: Scheider et la. (2020): Ontology of core concept data types for answering geo-analytical questions. Journal of Spatial Information Science 20 (2020): 167-201. https://josis.org/index.php/josis/article/view/125"
+            }
+        ],
+        "http://purl.org/dc/elements/1.1/creator": [
+            {
+                "@value": "Simon Scheider"
+            }
+        ],
+        "http://purl.org/dc/elements/1.1/description": [
+            {
+                "@language": "en",
+                "@value": "This ontology pattern describes geodata types representing core concepts of spatial information (Kuhn 2012) we well as further semantic attribute distinctions relevant for geocomputation and geo-analysis."
+            }
+        ],
+        "http://purl.org/dc/elements/1.1/title": [
+            {
+                "@value": "Core Concept Data Ontology"
+            }
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "Scheider et la. (2020): Ontology of core concept data types for answering geo-analytical questions. Journal of Spatial Information Science 20 (2020): 167-201."
+            }
+        ],
+        "http://purl.org/dc/terms/created": [
+            {
+                "@value": "2020-06-30"
+            }
+        ],
+        "http://purl.org/dc/terms/license": [
+            {
+                "@value": "https://creativecommons.org/licenses/by/3.0/"
+            }
+        ],
+        "http://purl.org/ontology/bibo/doi": [
+            {
+                "@value": "10.5311/JOSIS.2020.20.55"
+            }
+        ],
+        "http://purl.org/ontology/bibo/status": [
+            {
+                "@value": "Draft"
+            }
+        ],
+        "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+            {
+                "@value": "ccd"
+            }
+        ],
+        "http://purl.org/vocab/vann/preferredNamespaceUri": [
+            {
+                "@value": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This ontology pattern describes geodata types representing core concepts of spatial information (Kuhn 2012) we well as further semantic attribute distinctions relevant for geocomputation and geo-analysis. The ontology was introduced in: Scheider et la. (2020): Ontology of core concept data types for answering geo-analytical questions. Journal of Spatial Information Science 20 (2020): 167-201. https://josis.org/index.php/josis/article/view/125 "
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "http://spatial.ucsb.edu/core-concepts-of-spatial-information/"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#versionIRI": [
+            {
+                "@value": "http://geographicknowledge.de/vocab/CoreConceptDatav1.rdf"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#versionInfo": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A data set which represents a core concept of spatial information. The attributes of this dataset are assumed to be of corresponding types."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "CoreConceptDataSet"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceRaster",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Existence rasters are rasters representing boolean fields (fields denoting whether something is present at a cell location or not)."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ExistenceRaster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRaster"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL520C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL520C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRaster"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CyclicA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute that denotes a cyclical measure, like an angle. Note that cyclical measures don't have a natural ordering and thus are not ordinal scaled. (compare Chrisman 1998)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "CyclicA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Contour",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Contour layers are coverages that denote intervals of the reprepresented continuous field. For example, temperature intervals, represented as regions bounded by isolines of a temperature field."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Contour"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Coverage"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A raster data set is a special kind of tessellation, where regions are regular squares."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Raster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This attribute represents the quality of a network edge. Note that spatial networks (as core concepts) are regarded as quantified relations between objects. So O-IRA-O would be an intensive quality measured between two objects, such as their distance from each other."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "NetworkQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL138C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL138C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Superclass of of attribute types that characterize a geometric layer property"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LayerA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Region data set"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RegionDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL633C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL633C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"
+                    },
+                    {
+                        "@id": "_:ub1bL634C104"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL634C104",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#allValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#hasElement"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasures",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Linear representations of fields. Examples are isoline maps"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LineMeasures"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL114C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL114C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL115C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL115C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Coverage",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Coverages are tessellated layers that represent a continuous field. For example, landuse polygons."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Coverage"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL311C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL311C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL312C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL312C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A ratio attribute that is plain/proper"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainRatioA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL222C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL222C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+                    },
+                    {
+                        "@id": "_:ub1bL223C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL223C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A generalized notion of a point in 2D or 3D"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Point"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attributes of a tabular dataset. Each attribute corresponds to a column in the table."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Attribute"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldVector",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A vector representation of a field. Can be a point or line measure, or a coverage, or a Patch"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "FieldVector"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL445C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL445C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL446C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL446C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute that denotes counts of discrete entities (compare Chrisman 1998)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "CountA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An interval attribute that is plain/proper"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainIntervalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL198C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL198C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"
+                    },
+                    {
+                        "@id": "_:ub1bL199C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL199C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial attribute on ordinal scale level"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "OrdinalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Intensive region attribute. An attribute that is independent from the size of its support region."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "IRA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRaster",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Field rasters are raster representations of continuous fields. For example, raster layers representing a terrain height (DTM)."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "FieldRaster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL435C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL435C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+                    },
+                    {
+                        "@id": "_:ub1bL436C42"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL436C42",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Superclass of all core concept qualities."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attribute of some Raster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RasterA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL394C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL394C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL395C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL395C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ERA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Extensive region attribute. Since attributes are extensive, their values increase with the size of their support regions. Zero size regions are zero then defined to be zero, which implies a ratio scale level."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ERA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A network relation where the complete cross-product of an object domain forms the key. Examples would be origin-destination matrices."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "MatrixDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A nominal attribute that is plain/proper (not ordinal or boolean)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainNominalA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL206C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL206C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+                    },
+                    {
+                        "@id": "_:ub1bL207C44"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL207C44",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset representing tracks, i.e. point wise events (fixes) of the trajectory of some objects."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "TrackDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegion",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Vector regions that are not tessellated"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PlainVectorRegion"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegion"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL230C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL230C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegion"
+                    },
+                    {
+                        "@id": "_:ub1bL231C48"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL231C48",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#complementOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Attribute on ratio scale level"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RatioA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Atrribute of some region data sets"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RegionA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL620C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL620C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"
+                    },
+                    {
+                        "@id": "_:ub1bL621C45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL621C45",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A region data set where spatial regions are tessellated (jointly covering and mutually non-overlapping) within a spatial extent"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "Tessellation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#ObjectProperty"
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute which represents the quality of a field (core concept). This implies that the spatial data items in this data set are self-similar (their parts have the same attribute)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "FieldQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL671C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL671C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "This attribute represents a quality of an event (core concept). For example, the duration."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "EventQ"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL426C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL426C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial dataset representing a spatial network. Note thate a network in the sense of a core concept is a quantified relation between objects. For example, the traffic flow between municipalities or between two intersections. Streets themselves can also be seen as objects if they do not encode such relations"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "NetworkDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset representing a field in terms of point-wise measures. For example, temperature sensor measurements."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PointMeasuresDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL258C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL258C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDS"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial dataset representing a field"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "FieldDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectVector",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Object vectors are vector representation of a set of objecs and their quality. For example, a point layer denoting points of Interest (POI) or buildings in a city together with their quality, e.g. the building height."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectVector"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL372C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL372C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+                    },
+                    {
+                        "@id": "_:ub1bL373C43"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL373C43",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Vector"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset which represents a field in terms patches of homogeneous values. Not necessarily tessellated"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "PatchDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL191C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL191C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDS"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineData",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Line data"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LineData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL351C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL351C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialData"
+                    },
+                    {
+                        "@id": "_:ub1bL352C101"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL352C101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/GISConcepts.rdf#hasAttribute"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "An attribute of a vector tessellation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "VectorTessellationA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+            },
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL291C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL291C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NoDataExistenceRaster",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A raster dataset where  NoData is interpreted as boolean \"false\"."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "NoDataExistenceRaster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ExistenceRaster"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset of objects which tesselate space and contain statistical summaries. For example, the municipalities of the Netherlands"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "LatticeDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL106C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL106C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionData",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Region data"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "RegionData"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL407C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL407C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialData"
+                    },
+                    {
+                        "@id": "_:ub1bL408C101"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL408C101",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Restriction"
+        ],
+        "http://www.w3.org/2002/07/owl#onProperty": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/GISConcepts.rdf#hasAttribute"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#someValuesFrom": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A dataset representing a field by homogeneous values using raster cells"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "FieldRasterDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#equivalentClass": [
+            {
+                "@id": "_:ub1bL93C25"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub1bL93C25",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2002/07/owl#intersectionOf": [
+            {
+                "@list": [
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"
+                    },
+                    {
+                        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "A spatial data set representing objects"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "ObjectDS"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"
+            }
+        ]
+    },
+    {
+        "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@language": "en",
+                "@value": "Boolean attributes are spatial attributes within the range of True/False. They are special types of (bi)nominal attributes"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@language": "en",
+                "@value": "BooleanA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+            }
+        ]
+    }
+]

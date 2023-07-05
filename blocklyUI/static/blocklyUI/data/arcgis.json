@@ -1,0 +1,749 @@
+[
+    {
+        "@id": "https://quangis.github.io/tool#AddGeometryAttributes",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/add-geometry-attributes.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#NearPointObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Near tool, to seach for the closest objects using Euclidean distance"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/generate-near-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Buffer",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#KernelDensity",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/kernel-density.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ZonalStatisticsAsTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#MakeClosestFacilityAnalysisLayer",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/make-closest-facility-analysis-layer.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FlowLength",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-length.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Intersect",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/intersect.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Watershed",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/watershed.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CreateNetworkDataset",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/create-network-dataset.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AddFields",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/add-fields.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SelectLayerByLocation",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/select-layer-by-location.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AddObjectVectorRegionArea",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/add-geometry-attributes.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AddField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/add-field.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#PolygonToRaster",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/polygon-to-raster.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Slope",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/slope.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FC2FCObjectTess",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/feature-class-to-feature-class.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CalculateField2",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-field.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Solve",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/solve.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Dissolve",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Merge object parts into single object"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/dissolve.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#RasterToIsoRaster",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#TableToTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/table-to-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AddJoin",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/add-join.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CreateRandomPoints",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/create-random-points.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ObjectBuffer",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Buffer (interpreted as vector representation of boolean field)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#RegionFromRasterExtent",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/raster-to-polygon.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FeatureVerticesToPoints",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/feature-vertices-to-points.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#BuildNetwork",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Builds ratio network from line objects"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/build-network.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SpatialJoin",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/spatial-join.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FeatureClassToFeatureClass",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/feature-class-to-feature-class.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SummaryStatistics",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/summary-statistics.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AlterField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/alter-field-properties.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SelectLayerByAttribute",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/select-layer-by-attribute.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#AddLocations",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/add-locations.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FlowDirection",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Flow direction raster"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-direction.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ExportFeatures",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/export-features.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Erase",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Erase Vector fields"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/erase.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#MakeXyEventLayer",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/make-xy-event-layer.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#KrigingInterval",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/kriging.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#RasterCalculator1",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ExcelToTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/excel-to-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#MakeRouteAnalysisLayer",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/network-analyst/make-route-analysis-layer.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CalculateGeometryAttributes",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-geometry-attributes.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#RasterCalculator",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ExportTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/export-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SelectObjectByExtent",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/select.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#JoinField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/join-field.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Merge",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/merge.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Clip",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/clip.htm"
+            },
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/clip.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FeatureToPoint",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/feature-to-point.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Aspect",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/aspect.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#GenerateNearTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/generate-near-table.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Project",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/project.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#MergeObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/merge.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FlowAccumulation",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Flow direction accumulation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-accumulation.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#IDWInterval",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/idw.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#Con",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/con-.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SnapPourPoint",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/snap-pour-point.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#SummarizeWithin",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/summarize-within.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#ExtractByMask",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/extract-by-mask.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CalculateField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-field.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CopyFeatures",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/copy-features.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#FC2FC",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Feature class to feature class (=Select)"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/feature-class-to-feature-class.htm"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool#CollectEvents",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Unit"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+            {
+                "@id": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/collect-events.htm"
+            }
+        ]
+    }
+]

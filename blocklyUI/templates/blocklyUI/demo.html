@@ -146,6 +146,7 @@
             <!-- [SC] URL for getting a workflow graph -->
             <script> const getWfGraphUrl = "{% url 'blocklyUINS:urln_getWfGraphAsync' %}"; </script>
             
+            <!-- [SC] loading screen shown during a query processing -->
             <div class="loaderContainer inactive" id="demoLoader">
                 <div class="loader"></div>
             </div>
@@ -158,218 +159,23 @@
                 </div>
 
                 <div id="blocklyTab" class="tabcontent">
-                    <h3>Generate your geo-analytical question</h3>
+                    <h3>Generate custom geo-analytical question or select a present from below</h3>
                     
-                    <div class="qInputMode">
-                        <section id="quesContainer">
-                            <div id="questionDiv"></div>
-                        </section>
+                    <select name="qStr" id="bJsonList" class="w-select">
+                        <option disabled selected value> -- select a preset -- </option>
+                    </select>
+                    
+                    <div class="questionStrFlat" id="questionDiv"></div>
 
-                        <section id="blocklyContainer">
-                            <div id="blocklyDiv"></div>
-                        </section>
-                        
-                        <input type="button" value="Parse blockly question" onclick="parseOutputBlocklyJson();" />
-                    </div>
-                
-                
-                    <!-- [SC][TODO] remove this test code -->
-                    <div class="qInputMode">
-                        <select name="qStr" id="bJsonList" style="width:100%;" ></select><br>
-                        <input type="button" value="Parse custom blockly json" onclick="parseCustomBlocklyJson();" />
-                    </div>
-                    <script>
-                        let testBlocklyJson = [
-                            {
-                                'question': 'Which neighborhoods are  within 100 meters from a  school in Utrecht',
-                                'topoRel': [
-                                    'within'
-                                ],
-                                'quantity': [
-                                    '100 meters'
-                                ],
-                                'placename': [
-                                    'Utrecht'
-                                ],
-                                'replaceQ': 'Which neighborhoods are  within 100 meters from a  school extent'
-                            },
-                            {
-                                'question': 'Which neighborhoods have an average WOZ value  less than 200  in Utrecht',
-                                'aggregate': [
-                                    'average'
-                                ],
-                                'comparison': [
-                                    'less than'
-                                ],
-                                'quantity': [
-                                    '200 '
-                                ],
-                                'placename': [
-                                    'Utrecht'
-                                ],
-                                'replaceQ': 'Which neighborhoods have an average WOZ value  less than 200  extent'
-                            },
-                            {
-                                'question': 'What is the  number of people  within 1000 meters of the  A2 highway in the Netherlands',
-                                'topoRel': [
-                                    'within'
-                                ],
-                                'quantity': [
-                                    '1000 meters'
-                                ],
-                                'placename': [
-                                    'Netherlands'
-                                ],
-                                'replaceQ': 'What is the  number of people  within 1000 meters of the  A2 highway extent'
-                            },
-                            {
-                                'question': 'What is the  proportion of rural population  within 2 kilometers of   all-season roads in Shikoku, Japan',
-                                'topoRel': [
-                                    'within'
-                                ],
-                                'quantity': [
-                                    '2 kilometers'
-                                ],
-                                'placename': [
-                                    'Shikoku',
-                                    'Japan'
-                                ],
-                                'replaceQ': 'What is the  proportion of rural population  within 2 kilometers of   all-season roads extent'
-                            },
-                            {
-                                'question': 'What is the  crime density  along the  shortest path from my home to my workplace in Amsterdam',
-                                'placename': [
-                                    'Amsterdam'
-                                ],
-                                'replaceQ': 'What is the  crime density  along the  shortest path from my home to my workplace extent'
-                            },
-                            {
-                                'question': 'What are the  supermarkets, sport facilities and offices in Amsterdam',
-                                'placename': [
-                                    'Amsterdam'
-                                ],
-                                'replaceQ': 'What are the  supermarkets, sport facilities and offices extent'
-                            },
-                            {
-                                'question': 'What is the  shortest path through my workplace, a gym and a supermarket from my home in Amsterdam',
-                                'placename': [
-                                    'Amsterdam'
-                                ],
-                                'replaceQ': 'What is the  shortest path through my workplace, a gym and a supermarket from my home extent'
-                            },
-                            {
-                                'question': 'What is the average network distance from households to the nearest supermarket in centrum district in Amsterdam',
-                                'aggregate': [
-                                    'average'
-                                ],
-                                'extrema': [
-                                    'nearest'
-                                ],
-                                'placename': [
-                                    'centrum district',
-                                    'Amsterdam'
-                                ],
-                                'replaceQ': 'What is the average network distance from households to the nearest supermarket extent'
-                            },
-                            {
-                                'question': 'What is the  proportion of residential area for each neighborhood in Amsterdam',
-                                'sup_object': [
-                                    'neighborhood'
-                                ],
-                                'replaceQ': 'What is the  proportion of residential area support extent',
-                                'placename': [
-                                    'Amsterdam'
-                                ]
-                            },
-                            {
-                                'question': 'What is the  density of street intersections for each neighborhood in Amsterdam',
-                                'sup_object': [
-                                    'neighborhood'
-                                ],
-                                'replaceQ': 'What is the  density of street intersections support extent',
-                                'placename': [
-                                    'Amsterdam'
-                                ]
-                            },
-                            {
-                                'question': 'What is the  diversity of land use for each neighborhood in Amsterdam',
-                                'sup_object': [
-                                    'neighborhood'
-                                ],
-                                'replaceQ': 'What is the  diversity of land use support extent',
-                                'placename': [
-                                    'Amsterdam'
-                                ]
-                            },
-                            {
-                                'question': 'What is the  shortest travel route from the AEB incineration plant through  every waste disposal place along waterways in Amsterdam',
-                                'placename': [
-                                    'Amsterdam'
-                                ],
-                                'replaceQ': 'What is the  shortest travel route from the AEB incineration plant through  every waste disposal place along waterways extent'
-                            },
-                            {
-                                'question': 'What is the total walking time from each  household to the nearest waste disposal place in the Amsterdam city center',
-                                'aggregate': [
-                                    'total'
-                                ],
-                                'extrema': [
-                                    'nearest'
-                                ],
-                                'placename': [
-                                    'Amsterdam city center'
-                                ],
-                                'replaceQ': 'What is the total walking time from each  household to the nearest waste disposal place extent'
-                            },
-                            {
-                                'question': 'What is the total kernel density of waste disposal places in the Amsterdam city center',
-                                'aggregate': [
-                                    'total'
-                                ],
-                                'placename': [
-                                    'Amsterdam city center'
-                                ],
-                                'replaceQ': 'What is the total kernel density of waste disposal places extent'
-                            }
-                        ];
-                        
-                        let bJsonListElem = document.getElementById("bJsonList");
-                        for (let jsonObj of testBlocklyJson){
-                            var option = document.createElement("option");
-                            option.value = JSON.stringify(jsonObj);
-                            option.text = jsonObj.question;
-                            bJsonListElem.appendChild(option);
-                        }
-                    </script>
+                    <section id="blocklyContainer">
+                        <div id="blocklyDiv"></div>
+                    </section>
                     
-                
-                    <!-- [SC][TODO] remove this test code -->
-                    <!--<div class="qInputMode">
-                        <select name="qStr" id="qCorpusList" style="width:100%;" >
-                            <option value="What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam">
-                                1bTask: What is the proportion of noise larger than 70 db for each neighbourhood in Amsterdam
-                            </option>
-                            <option value="What is the average temperature for each neighborhood in Amsterdam">
-                                3aTask: What is the average temperature for each neighborhood in Amsterdam
-                            </option>
-                            <option value="What is the travel distance from car accidents to the nearest hospitals in Amsterdam">
-                                4aTask: What is the travel distance from car accidents to the nearest hospitals in Amsterdam
-                            </option>
-                            <option value="What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam">
-                                6aTask: What are the potentials of solar power larger than 30 kilowatt hour for each rooftop in Amsterdam
-                            </option>
-                        </select><br>
-                        <input type="button" value="Parse corpus question" onclick="parseCorpusQ();" />
-                    </div>-->
-                
-                    <!-- [SC][TODO] remove this test code -->
-                    <!--<div class="qInputMode">
-                        <input type="text" id="nlQuestionStr" name="qStr" placeholder="Custom question in NL" style="width:100%;" ><br>
-                        <input type="button" value="Parse NL question" onclick="parseNLQ();" />
-                    </div>-->
+                    <input type="button" class="button sign-up" id="parseBtn" value="Parse blockly question" onclick="parseOutputBlocklyJson();" />
                     
                     <!-- [SC] this textarea contains the output of the question parser -->
                     <!-- [SC][TODO] refine the UI for the output -->
+                    <h3>Output from parsing</h3>
                     <textarea readonly id="parsedQContainer" style="width:100%;height:300px;" placeholder="Result of question sentence parsing"></textarea>
                 </div>
 
@@ -654,7 +460,7 @@
                     <input type="button" value="Reset" onclick="resetWfGraph();" />
                 </div>
             </div>
-            
+        
             <script>
                 // inject Blockly into an empty div. This script should be at the bottom of the page, or called by the onload event.
                 let workspace = Blockly.inject('blocklyDiv', {
@@ -675,7 +481,7 @@
                     disable_sup_grid();
                     getAllBlocksList();
                 }
-                
+
                 workspace.addChangeListener(refresh);
                 hideCategory();
                 Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));

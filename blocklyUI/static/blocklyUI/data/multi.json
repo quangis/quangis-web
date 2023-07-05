@@ -1,0 +1,3292 @@
+[
+    {
+        "@id": "https://quangis.github.io/tool/multi#CreateNetwork",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL154C13"
+            },
+            {
+                "@id": "_:ub3bL157C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL154C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CreateNetworkDataset"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL155C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b27"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL155C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b27"
+    },
+    {
+        "@id": "_:ub3bL157C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#BuildNetwork"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b27"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL159C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL159C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#ZonalStatistics",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL383C13"
+            },
+            {
+                "@id": "_:ub3bL387C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL383C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ZonalStatisticsAsTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b61"
+            },
+            {
+                "@id": "_:ub3bL385C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b62"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b61",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL385C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b62"
+    },
+    {
+        "@id": "_:ub3bL387C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b62"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b61"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL390C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL390C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#SelectSchoolsByLocationPointObject",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL335C13"
+            },
+            {
+                "@id": "_:ub3bL338C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL335C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExportFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b55"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL337C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b55"
+    },
+    {
+        "@id": "_:ub3bL337C21"
+    },
+    {
+        "@id": "_:ub3bL338C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByLocation"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL339C20"
+            },
+            {
+                "@id": "_:ub3bL340C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b55"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL339C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL340C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#ClosestFacilityAnalysis",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL115C13"
+            },
+            {
+                "@id": "_:ub3bL119C9"
+            },
+            {
+                "@id": "_:ub3bL124C9"
+            },
+            {
+                "@id": "_:ub3bL127C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL115C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#MakeClosestFacilityAnalysisLayer"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL116C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b19"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL116C20",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "roads"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b19"
+    },
+    {
+        "@id": "_:ub3bL119C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddLocations"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b19"
+            },
+            {
+                "@id": "_:ub3bL121C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b20"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL121C17",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "goals"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b20"
+    },
+    {
+        "@id": "_:ub3bL124C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Solve"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b21"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL126C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b21"
+    },
+    {
+        "@id": "_:ub3bL126C21"
+    },
+    {
+        "@id": "_:ub3bL127C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddLocations"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b20"
+            },
+            {
+                "@id": "_:ub3bL129C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL129C17",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "origins"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "3"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#LoadCountAmounts",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL269C13"
+            },
+            {
+                "@id": "_:ub3bL273C9"
+            },
+            {
+                "@id": "_:ub3bL276C9"
+            },
+            {
+                "@id": "_:ub3bL279C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL269C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b43"
+            },
+            {
+                "@id": "_:ub3bL271C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b44"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b43"
+    },
+    {
+        "@id": "_:ub3bL271C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b44"
+    },
+    {
+        "@id": "_:ub3bL273C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CopyFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL274C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b43"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL274C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL276C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b45"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL278C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b45"
+    },
+    {
+        "@id": "_:ub3bL278C21"
+    },
+    {
+        "@id": "_:ub3bL279C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b44"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b45"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#SelectNeighborhoodsByAttributeTessObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL327C13"
+            },
+            {
+                "@id": "_:ub3bL330C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL327C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExportFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b54"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL329C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b54"
+    },
+    {
+        "@id": "_:ub3bL329C21"
+    },
+    {
+        "@id": "_:ub3bL330C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL331C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b54"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL331C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#ComputeCountDensityonObject",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL134C13"
+            },
+            {
+                "@id": "_:ub3bL137C9"
+            },
+            {
+                "@id": "_:ub3bL140C9"
+            },
+            {
+                "@id": "_:ub3bL143C9"
+            },
+            {
+                "@id": "_:ub3bL146C9"
+            },
+            {
+                "@id": "_:ub3bL149C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL134C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b22"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL136C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b22"
+    },
+    {
+        "@id": "_:ub3bL136C21"
+    },
+    {
+        "@id": "_:ub3bL137C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL138C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b23"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL138C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b23"
+    },
+    {
+        "@id": "_:ub3bL140C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b24"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b25"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b24"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b25"
+    },
+    {
+        "@id": "_:ub3bL143C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b25"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b26"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b26"
+    },
+    {
+        "@id": "_:ub3bL146C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateGeometryAttributes"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b23"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b24"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL149C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b26"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b22"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#VelocityField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Computes a water flow velocity raster from slope * accumulation area\n\n    # Select by attribute is always followed by copying features\n    # This computes SquareRoot(\"slope\") * SquareRoot(\"flow_accumulation\")\n    "
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL373C13"
+            },
+            {
+                "@id": "_:ub3bL377C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL373C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#RasterCalculator"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL374C20"
+            },
+            {
+                "@id": "_:ub3bL375C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b60"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL374C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL375C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b60"
+    },
+    {
+        "@id": "_:ub3bL377C9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "This second step computes 0.1 * (Stowe_slope_area_term / [Mean slope-area term]). It needs looking up of parameter [Mean slope-area term]."
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#RasterCalculator1"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b60"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL380C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL380C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#RasterToContour",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL311C13"
+            },
+            {
+                "@id": "_:ub3bL314C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL311C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#RasterToIsoRaster"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL312C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b52"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL312C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b52"
+    },
+    {
+        "@id": "_:ub3bL314C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#RegionFromRasterExtent"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b52"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL316C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL316C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#JoinFromTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Make table from Excel"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL251C13"
+            },
+            {
+                "@id": "_:ub3bL255C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL251C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL252C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b41"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL254C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL252C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b41"
+    },
+    {
+        "@id": "_:ub3bL254C21"
+    },
+    {
+        "@id": "_:ub3bL255C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExcelToTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL256C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b41"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL256C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#InterpolateDensityonObjects2LineObject",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL218C13"
+            },
+            {
+                "@id": "_:ub3bL222C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL218C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Intersect"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL219C20"
+            },
+            {
+                "@id": "_:ub3bL220C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b36"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL219C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL220C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b36"
+    },
+    {
+        "@id": "_:ub3bL222C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SummaryStatistics"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b36"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL224C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL224C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#SelectWOZByRatioObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL344C13"
+            },
+            {
+                "@id": "_:ub3bL347C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL344C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExportTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b56"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL346C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b56"
+    },
+    {
+        "@id": "_:ub3bL346C21"
+    },
+    {
+        "@id": "_:ub3bL347C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL348C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b56"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL348C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#RasterCoverage",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Computes coverage (size) from a raster table for each raster value"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL300C13"
+            },
+            {
+                "@id": "_:ub3bL303C9"
+            },
+            {
+                "@id": "_:ub3bL306C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL300C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#TableToTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL301C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b50"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL301C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b50"
+    },
+    {
+        "@id": "_:ub3bL303C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b51"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL305C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b51"
+    },
+    {
+        "@id": "_:ub3bL305C21"
+    },
+    {
+        "@id": "_:ub3bL306C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b50"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b51"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateDiversity4onObjectVector",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL68C13"
+            },
+            {
+                "@id": "_:ub3bL71C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL68C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL69C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b12"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL69C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "4"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b12"
+    },
+    {
+        "@id": "_:ub3bL71C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL72C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b12"
+            },
+            {
+                "@id": "_:ub3bL74C17"
+            },
+            {
+                "@id": "_:ub3bL75C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL76C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL72C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL74C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "3"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL75C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL76C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#TSPRouting",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL352C13"
+            },
+            {
+                "@id": "_:ub3bL355C9"
+            },
+            {
+                "@id": "_:ub3bL359C9"
+            },
+            {
+                "@id": "_:ub3bL363C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL352C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Solve"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b57"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL354C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b57"
+    },
+    {
+        "@id": "_:ub3bL354C21"
+    },
+    {
+        "@id": "_:ub3bL355C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddLocations"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b58"
+            },
+            {
+                "@id": "_:ub3bL357C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b57"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b58"
+    },
+    {
+        "@id": "_:ub3bL357C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "3"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL359C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddLocations"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL360C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b59"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b58"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL360C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b59"
+    },
+    {
+        "@id": "_:ub3bL363C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#MakeRouteAnalysisLayer"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL364C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b59"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL364C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#MakeLayerFromTable",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL284C13"
+            },
+            {
+                "@id": "_:ub3bL287C9"
+            },
+            {
+                "@id": "_:ub3bL291C9"
+            },
+            {
+                "@id": "_:ub3bL294C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL284C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#MakeXyEventLayer"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b46"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b47"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b46",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b47"
+    },
+    {
+        "@id": "_:ub3bL287C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b48"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b49"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL290C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b48"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b49"
+    },
+    {
+        "@id": "_:ub3bL290C21"
+    },
+    {
+        "@id": "_:ub3bL291C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExcelToTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b46"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b48"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL294C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Project"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b47"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b49"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#IntersectDissolve",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "this tool computes the coverage of a field inside object region by first intersecting and then dissolving  and joining, to obtain the area covered by the field inside the object region"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL228C13"
+            },
+            {
+                "@id": "_:ub3bL232C9"
+            },
+            {
+                "@id": "_:ub3bL235C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL228C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b37"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b38"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL231C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b37"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b38",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL231C21"
+    },
+    {
+        "@id": "_:ub3bL232C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#MergeObjects"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b39"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b37"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b39"
+    },
+    {
+        "@id": "_:ub3bL235C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Intersect"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b38"
+            },
+            {
+                "@id": "_:ub3bL237C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b39"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL237C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#AddandCalculateAttribute",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Add an attribute and calculate value based on one other attribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL7C13"
+            },
+            {
+                "@id": "_:ub3bL10C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL7C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL8C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL8C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b1"
+    },
+    {
+        "@id": "_:ub3bL10C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b1"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL12C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL12C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#ZonalStatisticsSumField",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL393C13"
+            },
+            {
+                "@id": "_:ub3bL397C9"
+            },
+            {
+                "@id": "_:ub3bL401C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL393C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ZonalStatisticsAsTable"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL394C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b63"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b64"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL394C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b63",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b64"
+    },
+    {
+        "@id": "_:ub3bL397C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b65"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b63"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL400C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b65"
+    },
+    {
+        "@id": "_:ub3bL400C21"
+    },
+    {
+        "@id": "_:ub3bL401C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AlterField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b64"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b65"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculatePartialAmounts",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Calculates a set of portions from a set of object based count amounts using some boolean vector field. Only the portions that are within the true value of the boolean field are considered. This is an areal interpolation problem, which is solved by first generating area proportions and then multiplying them with the count amount."
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL100C13"
+            },
+            {
+                "@id": "_:ub3bL103C9"
+            },
+            {
+                "@id": "_:ub3bL106C9"
+            },
+            {
+                "@id": "_:ub3bL109C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL100C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b16"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL102C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b16"
+    },
+    {
+        "@id": "_:ub3bL102C21"
+    },
+    {
+        "@id": "_:ub3bL103C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b16"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b17"
+    },
+    {
+        "@id": "_:ub3bL106C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddFields"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b18"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b17"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b18"
+    },
+    {
+        "@id": "_:ub3bL109C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Clip"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL110C20"
+            },
+            {
+                "@id": "_:ub3bL111C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b18"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL110C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL111C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#convert2PointObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL406C13"
+            },
+            {
+                "@id": "_:ub3bL409C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL406C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL407C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b66"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL407C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b66"
+    },
+    {
+        "@id": "_:ub3bL409C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#FeatureToPoint"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b66"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL411C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL411C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#JoinObjectRatios",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL260C13"
+            },
+            {
+                "@id": "_:ub3bL263C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL260C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#ExportFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b42"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL262C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b42"
+    },
+    {
+        "@id": "_:ub3bL262C21"
+    },
+    {
+        "@id": "_:ub3bL263C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddJoin"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL264C20"
+            },
+            {
+                "@id": "_:ub3bL265C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b42"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL264C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL265C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateObjectVectorAmountRatio",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL79C13"
+            },
+            {
+                "@id": "_:ub3bL82C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL79C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL80C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b13"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL80C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b13"
+    },
+    {
+        "@id": "_:ub3bL82C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL83C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b13"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL85C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL83C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL85C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#SelectLayerByAttributeTessObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL319C13"
+            },
+            {
+                "@id": "_:ub3bL322C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL319C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL320C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b53"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL320C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b53"
+    },
+    {
+        "@id": "_:ub3bL322C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#FeatureClassToFeatureClass"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b53"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL324C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL324C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateCountAmountRatio",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL33C13"
+            },
+            {
+                "@id": "_:ub3bL37C9"
+            },
+            {
+                "@id": "_:ub3bL40C9"
+            },
+            {
+                "@id": "_:ub3bL43C9"
+            },
+            {
+                "@id": "_:ub3bL46C9"
+            },
+            {
+                "@id": "_:ub3bL49C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL33C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b4"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b5"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b6"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b4"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b5"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b6"
+    },
+    {
+        "@id": "_:ub3bL37C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL38C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b7"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL38C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b7"
+    },
+    {
+        "@id": "_:ub3bL40C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b8"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b5"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b8"
+    },
+    {
+        "@id": "_:ub3bL43C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b7"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b4"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL46C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddFields"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL47C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b8"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL47C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL49C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b6"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL51C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL51C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#BufferDissolve",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL15C13"
+            },
+            {
+                "@id": "_:ub3bL18C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL15C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Buffer"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL16C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL16C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b2"
+    },
+    {
+        "@id": "_:ub3bL18C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Dissolve"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b2"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL20C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL20C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#FullSelectFeatures",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Query to select items from layers using attribut values"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL178C13"
+            },
+            {
+                "@id": "_:ub3bL181C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL178C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#FC2FCObjectTess"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b31"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL180C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b31"
+    },
+    {
+        "@id": "_:ub3bL180C21"
+    },
+    {
+        "@id": "_:ub3bL181C9",
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Select by attribute is always followed by copying features"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL183C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b31"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL183C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateAreaMeasure",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "This is an abbreviated workflow for calculating area based measures with attributes"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL24C13"
+            },
+            {
+                "@id": "_:ub3bL27C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL24C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL25C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b3"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL25C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b3"
+    },
+    {
+        "@id": "_:ub3bL27C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField2"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL28C20"
+            },
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b3"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL30C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL28C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL30C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#JoinCountAttribute",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL241C13"
+            },
+            {
+                "@id": "_:ub3bL244C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL241C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CopyFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b40"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL243C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b40"
+    },
+    {
+        "@id": "_:ub3bL243C21"
+    },
+    {
+        "@id": "_:ub3bL244C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#JoinField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL245C20"
+            },
+            {
+                "@id": "_:ub3bL246C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b40"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL245C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL246C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#FullSelectLayerByLocation",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL198C13"
+            },
+            {
+                "@id": "_:ub3bL201C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL198C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CopyFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b33"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL200C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b33"
+    },
+    {
+        "@id": "_:ub3bL200C21"
+    },
+    {
+        "@id": "_:ub3bL201C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByLocation"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL202C20"
+            },
+            {
+                "@id": "_:ub3bL203C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b33"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL202C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL203C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#FullSelectLayerByAttribute",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Select by attribute is always followed by copy features (treated as one tool in the annotation"
+            },
+            {
+                "@value": "a SQL query to select features matching a selection criterion. You build a query expression to generate the subset. You can query a dataset based on a field in a layer or a table. Using this selection a new Feature dataset is created with only the selected features using the 'Copy Features tool'. This feature dataset represents all the areas that fulfill the criterion"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL190C13"
+            },
+            {
+                "@id": "_:ub3bL193C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL190C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CopyFeatures"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b32"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL192C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b32"
+    },
+    {
+        "@id": "_:ub3bL192C21"
+    },
+    {
+        "@id": "_:ub3bL193C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL194C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b32"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL194C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#DerivePartsOfPopCenters",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL162C13"
+            },
+            {
+                "@id": "_:ub3bL165C9"
+            },
+            {
+                "@id": "_:ub3bL168C9"
+            },
+            {
+                "@id": "_:ub3bL171C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL162C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateGeometryAttributes"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b28"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b29"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b28"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b29"
+    },
+    {
+        "@id": "_:ub3bL165C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b30"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL167C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b30"
+    },
+    {
+        "@id": "_:ub3bL167C21"
+    },
+    {
+        "@id": "_:ub3bL168C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b29"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b30"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL171C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#Clip"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL172C20"
+            },
+            {
+                "@id": "_:ub3bL173C17"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b28"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL172C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "2"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL173C17",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateDensityonObject",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL54C13"
+            },
+            {
+                "@id": "_:ub3bL57C9"
+            },
+            {
+                "@id": "_:ub3bL60C9"
+            },
+            {
+                "@id": "_:ub3bL63C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL54C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateGeometryAttributes"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b9"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b10"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b9"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b10"
+    },
+    {
+        "@id": "_:ub3bL57C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL58C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b11"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL58C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b11"
+    },
+    {
+        "@id": "_:ub3bL60C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b10"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL62C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL62C21"
+    },
+    {
+        "@id": "_:ub3bL63C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b11"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b9"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#makePointObjects",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL414C13"
+            },
+            {
+                "@id": "_:ub3bL417C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL414C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#FeatureToPoint"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL415C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b67"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL415C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b67"
+    },
+    {
+        "@id": "_:ub3bL417C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CreateRandomPoints"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b67"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL419C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL419C21"
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#GenerateIntersections",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL207C13"
+            },
+            {
+                "@id": "_:ub3bL210C9"
+            },
+            {
+                "@id": "_:ub3bL213C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL207C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#FeatureVerticesToPoints"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL208C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b34"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL208C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b34"
+    },
+    {
+        "@id": "_:ub3bL210C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#SelectLayerByAttribute"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b35"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL212C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b35"
+    },
+    {
+        "@id": "_:ub3bL212C21"
+    },
+    {
+        "@id": "_:ub3bL213C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CollectEvents"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b34"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b35"
+            }
+        ]
+    },
+    {
+        "@id": "https://quangis.github.io/tool/multi#CalculateObjectVectorDensity",
+        "@type": [
+            "https://quangis.github.io/vocab/tool#Multi"
+        ],
+        "https://quangis.github.io/vocab/tool#action": [
+            {
+                "@id": "_:ub3bL88C13"
+            },
+            {
+                "@id": "_:ub3bL91C9"
+            },
+            {
+                "@id": "_:ub3bL94C9"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL88C13",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b14"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b15"
+            }
+        ]
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b14"
+    },
+    {
+        "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b15"
+    },
+    {
+        "@id": "_:ub3bL91C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#AddGeometryAttributes"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:ub3bL92C20"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b14"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL92C20",
+        "https://quangis.github.io/vocab/tool#id": [
+            {
+                "@value": "1"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL94C9",
+        "https://quangis.github.io/vocab/tool#apply": [
+            {
+                "@id": "https://quangis.github.io/tool#CalculateField"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#input": [
+            {
+                "@id": "_:fb1f1082da1594d08a0ff79e535d7d180b15"
+            }
+        ],
+        "https://quangis.github.io/vocab/tool#output": [
+            {
+                "@id": "_:ub3bL96C21"
+            }
+        ]
+    },
+    {
+        "@id": "_:ub3bL96C21"
+    }
+]
