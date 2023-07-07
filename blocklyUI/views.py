@@ -17,14 +17,14 @@ import uuid
 
 from rdflib import RDF
 from rdflib.term import BNode
-from transformation_algebra import \
-    TransformationGraph, TransformationQuery, TA
-from transformation_algebra.type import Product, TypeOperation
-from cct.language import cct, R3, R2, Obj, Reg
+from transforge.namespace import TF
+from transforge.graph import TransformationGraph
+from transforge.query import TransformationQuery
+from transforge.type import Product, TypeOperation
+from transforge.util.store import TransformationStore
+from quangis.cct import cct, R3, R2, Obj, Reg
 
-from transformation_algebra.util.store import MarkLogic
-
-wf_store = MarkLogic(
+wf_store = TransformationStore.backend('marklogic',
     url=settings.TDB_URL,   
     cred=(settings.TDB_USER, settings.TDB_PASS)
 )
@@ -44,7 +44,7 @@ def question2query(queryEx: dict) -> TransformationQuery:
 
     g = TransformationGraph(cct)
     task = BNode()
-    g.add((task, RDF.type, TA.Task))
+    g.add((task, RDF.type, TF.Task))
 
     def f(q: dict) -> BNode:
         node = BNode()
@@ -65,15 +65,15 @@ def question2query(queryEx: dict) -> TransformationQuery:
                 t.operator == R2 and \
                 t.params[0].operator == Obj and \
                 t.params[1].operator != Product:
-            g.add((node, TA.type, cct.uri(R2(t.params[0], Reg * t.params[1]))))
+            g.add((node, TF.type, cct.uri(R2(t.params[0], Reg * t.params[1]))))
 
-        g.add((node, TA.type, cct.uri(t)))
+        g.add((node, TF.type, cct.uri(t)))
         for b in q.get('before') or ():
-            g.add((node, TA['from'], f(b)))
+            g.add((node, TF['from'], f(b)))
 
         return node
 
-    g.add((task, TA.output, f(queryEx)))
+    g.add((task, TF.output, f(queryEx)))
     return TransformationQuery(cct, g)
 
 
