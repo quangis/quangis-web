@@ -136,7 +136,7 @@ def parseQuestionBlock(qBlock):
         query = question2query(qParsed['queryEx'])
         qParsed['sparql'] = query.sparql()
         print("Querying the triple database")
-        qParsed['matches'] = matches = [str(wf) for wf in wf_store.query(query)]
+        qParsed['matches'] = matches = [str(wf) for wf in wf_store.run(query)]
 
         # Add the first match as JSON-LD
         if matches:
@@ -148,7 +148,7 @@ def parseQuestionBlock(qBlock):
         return qParsed
     except Exception as e:
         print("============================ Exception while querying for workflows:")
-        print(e)
+        print(type(e), e)
         return {"error": "Exception while querying for workflows."}
 
 
