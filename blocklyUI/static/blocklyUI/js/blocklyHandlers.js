@@ -101,6 +101,8 @@ function parseOutputBlocklyJson(){
     console.log(outputBlocklyJson);
     
     parseBlocklyJson(outputBlocklyJson);
+    
+    bresult = {};
 }
 
 function showDemoLoadScreen(){
