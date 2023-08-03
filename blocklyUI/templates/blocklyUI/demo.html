@@ -143,6 +143,8 @@
             <!-- [SC] django does not seem to parse embedded code within static files; so added this js code in html file -->
             <!-- [SC] URL for a request to parse blockly JSON output -->
             <script> const parsedBJAsyncUrl = "{% url 'blocklyUINS:urln_blocklyJsonAsync' %}"; </script>
+            <!-- [SC] URL for getting a ID list of all workflows -->
+            <script> const getWfListUrl = "{% url 'blocklyUINS:urln_getWfListAsync' %}"; </script>
             <!-- [SC] URL for getting a workflow graph -->
             <script> const getWfGraphUrl = "{% url 'blocklyUINS:urln_getWfGraphAsync' %}"; </script>
             
@@ -174,9 +176,14 @@
                     <input type="button" class="button sign-up" id="parseBtn" value="Parse blockly question" onclick="parseOutputBlocklyJson();" />
                     
                     <!-- [SC] this textarea contains the output of the question parser -->
-                    <!-- [SC][TODO] refine the UI for the output -->
-                    <h3>Output from parsing</h3>
-                    <textarea readonly id="parsedQContainer" style="width:100%;height:300px;" placeholder="Result of question sentence parsing"></textarea>
+                    <h3>JSON Output from parsing and querying</h3>
+                    <!-- [SC] shows a tree view of the json result -->
+                    <input type="button" class="button sign-up" id="downResBtn" value="Download JSON Output" onclick="downResJson();" disabled />
+                    <div class="info">Use [Ctrl + Left Mouse Click] to expand/collapse all child nodes.</div>
+                    <div id="parsedQContainerDiv"></div>
+                    
+                    <!-- [SC][TODO][REMOVE] -->
+                    <!--<textarea readonly id="parsedQContainer" style="width:100%;height:300px;" placeholder="Result of question sentence parsing"></textarea>-->
                 </div>
 
                 <div id="queryTab" class="tabcontent">
@@ -203,7 +210,8 @@
                         <div id="queryCyInfoBody"></div>
                     </div>
                     
-                    <select id="queryFileSelector">
+                    <!-- [SC][TODO][REMOVE] remove the corresponding JS code as well -->
+                    <!--<select id="queryFileSelector">
                         <option disabled selected value> -- select an option -- </option>
                         <option value="q01.json">1</option>
                         <option value="q02.json">2</option>
@@ -216,8 +224,7 @@
                         <option value="q09.json">9</option>
                         <option value="q10.json">10</option>
                     </select>
-                    
-                    <input type="button" value="Reset" onclick="resetQueryGraph();" />
+                    <input type="button" value="Reset" onclick="resetQueryGraph();" />-->
                 </div>
 
                 <div id="wfTab" class="tabcontent">                    
@@ -255,12 +262,15 @@
                         <div id="cyInfoBody"></div>
                     </div>
                     
-                    <select id="matchingWfSelector">
-                        <option disabled selected value> -- select an option -- </option>
+                    <select id="matchingWfSelector" class="w-select">
+                        <option disabled selected value> -- Select an option matching your query -- </option>
                     </select>
                     
-                    <select id="wfFileSelector">
-                        <option value="wfaccess.json">wfaccess</option>
+                    <select id="wfFileSelector" class="w-select">
+                        <option disabled selected value> -- Select a predefined workflow independent of your query -- </option>
+                        
+                        <!-- [SC][TODO][REMOVE] -->
+                        <!--<option value="wfaccess.json">wfaccess</option>
                         <option value="wfcrime_exposure.json">wfcrime_exposure</option>
                         <option value="wfcrime_prep.json">wfcrime_prep</option>
                         <option value="wfcrime_route.json">wfcrime_route</option>
@@ -454,10 +464,11 @@
                         <option value="solution96.json">solution96</option>
                         <option value="solution97.json">solution97</option>
                         <option value="solution98.json">solution98</option>
-                        <option value="solution99.json">solution99</option>
+                        <option value="solution99.json">solution99</option>-->
                     </select>
                     
-                    <input type="button" value="Reset" onclick="resetWfGraph();" />
+                    <!-- [SC][TODO][REMOVE] -->
+                    <!-- <input type="button" value="Reset" onclick="resetWfGraph();" /> -->
                 </div>
             </div>
         

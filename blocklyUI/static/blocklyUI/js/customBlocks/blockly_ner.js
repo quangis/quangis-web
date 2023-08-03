@@ -143,8 +143,7 @@ function block_ner() {
     });
 
     console.log('bresult',bresult);
-    return bresult
-
+    return bresult;
 }
 
 function writeBresult(){

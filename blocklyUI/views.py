@@ -169,8 +169,23 @@ def retrieveWfGraphAsync(request):
         return JsonResponse({'status': 'Invalid request'}, status=400)
     else:
         return HttpResponseBadRequest('Invalid request')
-    
 
+# [SC] retrieve IDs of all available workflows
+def retrieveWfIdsAsync(request):
+    print("========================= request from " + get_client_ip(request))
+    
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    
+    if is_ajax:
+        if request.method == 'GET':
+            sparqlStr = "SELECT ?g WHERE {GRAPH ?g {?s rdf:type <http://geographicknowledge.de/vocab/Workflow.rdf#Workflow>}}" 
+            g = wf_store.query(sparqlStr)
+            jsonLd = json.loads(g.serialize(format="json"))
+
+            return JsonResponse(jsonLd, safe=False)
+        return JsonResponse({'status': 'Invalid request'}, status=400)
+    else:
+        return HttpResponseBadRequest('Invalid request')
 
 def loadBlocklyUI(request):
     print("========================= request from " + get_client_ip(request))

@@ -7,12 +7,40 @@ function initDemo(){
         loadSupToolAnnot(),
         loadConToolAnnot(),
         loadAbsToolAnnot(),
-        loadArcScrapes()
+        loadArcScrapes(),
+        loadParserCct()
     ]).then(function (responses) {
         prepareBlocklyConstructs();
     }).catch(function (error) {
         // if there's an error, log it
         console.log(error);
+    });
+    
+    // [SC] fetch the list of existing workflows IDs from the remote database
+    fetch(getWfListUrl, {
+        method: "GET",
+        headers: {
+            "X-Requested-With": "XMLHttpRequest",
+        }
+    })
+    .then(response => response.json())
+    .then(data => {        
+        let wfFileSelector = document.getElementById("wfFileSelector");
+        wfFileSelector.innerHTML = "";
+        
+        let defOption = document.createElement("option");
+        wfFileSelector.appendChild(defOption);
+        defOption.disabled = true;
+        defOption.selected = true;
+        defOption.value = true;
+        defOption.innerHTML = " -- Select a predefined workflow independent of your query -- ";
+        
+        for (let jsonObj of data.results.bindings){
+            let newOption = document.createElement("option");
+            wfFileSelector.appendChild(newOption);
+            newOption.value = jsonObj.g.value;
+            newOption.innerHTML = jsonObj.g.value; 
+        }
     });
     
     document.getElementById("queryDownloadBtn").addEventListener('change', function() {
@@ -26,9 +54,10 @@ function initDemo(){
         this.value = "idle";
     });
     
-    document.getElementById('queryFileSelector').addEventListener('change', function() {
+    // [SC][TODO][REMOVE]
+    /*document.getElementById('queryFileSelector').addEventListener('change', function() {
         visualizezQueryGraphFile(this.value);
-    });
+    });*/
     
     document.getElementById("expandWfBtn").addEventListener('change', function() {
         if (this.checked){
@@ -54,10 +83,12 @@ function initDemo(){
     });
     
     document.getElementById('wfFileSelector').addEventListener('change', function() {
-        visualizezWfGraphFilename(this.value);
+        document.getElementById('matchingWfSelector').selectedIndex = 0;
+        visualizezWfGraphRemote(this.value);
     });
     
     document.getElementById('matchingWfSelector').addEventListener('change', function() {
+        document.getElementById('wfFileSelector').selectedIndex = 0;
         visualizezWfGraphRemote(this.value);
     });
 }
@@ -134,9 +165,6 @@ function init(page){
         createBlocklyDoc();
         navToAnchor();
     } 
-    else if (page === 'index'){
-        document.getElementById("footer").classList.add('absolute');
-    }
     
     document.getElementById(`nav.${page}`).classList.add('active');
 }

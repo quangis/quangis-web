@@ -85,6 +85,8 @@ function createIODescr(ioLabel, ccdTypes, signSect){
     paramDescrCol.setAttribute("class", "w-col w-col-11");
     
     for(let paramType of ccdTypes){
+        let typeName = parseUrlId(paramType);
+        
         let paramDescrRow = document.createElement("div");
         paramDescrCol.appendChild(paramDescrRow);
         paramDescrRow.setAttribute("class", "w-row child");
@@ -92,14 +94,18 @@ function createIODescr(ioLabel, ccdTypes, signSect){
         let paramTypeCol = document.createElement("div");
         paramDescrRow.appendChild(paramTypeCol);
         paramTypeCol.setAttribute("class", "w-col w-col-3");
-        paramTypeCol.innerHTML = parseUrlId(paramType); // [SC][TODO]
+        
+        let navA = document.createElement("a");
+        paramTypeCol.appendChild(navA);
+        navA.setAttribute("target", "_blank");
+        navA.setAttribute("href", `/docs-ccd#${typeName}`);
+        navA.innerHTML = typeName; 
         
         let typeDescrCol = document.createElement("div");
         paramDescrRow.appendChild(typeDescrCol);
         typeDescrCol.setAttribute("class", "w-col w-col-9");
-        typeDescrCol.innerHTML = "No description"; // [SC][TODO]
+        typeDescrCol.innerHTML = "No description";
         
-        // [SC][TODO] handle measurement concepts from the other ontology
         if (ccdGraph){
             let typeObj = ccdGraph.find(elem => elem[idP] === paramType);
             
@@ -117,6 +123,7 @@ function generateAbsToolDoc(){
     
     // [SC] this prefix is used to disambiguate the navigation IDs
     let navPrefix = "abs_";
+    let supNavPrefix = "sup_";
     
     // [SC] create a container for all descriptions of abstract tools
     let containerElem = createContainerElem("Abstract Tools", "absToolsDocContainer");
@@ -147,6 +154,12 @@ function generateAbsToolDoc(){
         // [SC] create the section that will contain all the info about this tool
         let toolSect = createToolElem(toolName, navPrefix, containerElem, navDiv);
         
+        // [SC] create concept URI section
+        let uriSect = createToolFeatureSection("Tool URI", toolSect);
+        let uriP = document.createElement("p");
+        uriSect.appendChild(uriP);
+        uriP.innerHTML = absToolDef[idP];
+        
         // [SC] add signature
         let signSect = createToolFeatureSection("Signature", toolSect);
         // [SC] add input descriptions
@@ -174,8 +187,6 @@ function generateAbsToolDoc(){
             let algP = document.createElement("pre");
             algSect.appendChild(algP);
             algP.innerHTML = absToolDef[cctExpP][0][valP];
-            
-            console.log(absToolDef[cctExpP][0][valP]);
         }
         
         // [SC] add tool implementation
@@ -214,6 +225,7 @@ function generateAbsToolDoc(){
             // [SC] if true, the abstract tool is implemented by a supertool
             else if (implId.includes(superToolUri) && supToolGraph){                
                 let superSect = createToolFeatureSection("Corresponding supertool", toolSect);
+                let supToolName = parseUrlId(implId);
 
                 // [SC] row for supertool name and comment
                 let arcRowDiv = document.createElement("div");
@@ -223,16 +235,17 @@ function generateAbsToolDoc(){
                 // [SC] add a column for the supertool name if it exists
                 let arcColDiv = document.createElement("div");
                 arcRowDiv.appendChild(arcColDiv);
-                arcColDiv.setAttribute("class", "w-col w-col-5");
-                arcColDiv.innerHTML = parseUrlId(implId);
+                arcColDiv.setAttribute("class", "w-col");
+                arcColDiv.setAttribute("id", `${supNavPrefix}${supToolName}`);
+                arcColDiv.innerHTML = implId;
                 
                 // [SC] add a column for the supertool comment if it exists
                 let superDef = supToolGraph.find(elem => elem[idP] === implId);
                 if (superDef.hasOwnProperty(commentP) && superDef[commentP][0][valP]) {
                     let arcCommColDiv = document.createElement("div");
                     arcRowDiv.appendChild(arcCommColDiv);
-                    arcCommColDiv.setAttribute("class", "w-col w-col-7");
-                    arcCommColDiv.innerHTML = superDef[commentP][0][valP];
+                    arcCommColDiv.setAttribute("class", "w-col");
+                    arcCommColDiv.innerHTML = `${superDef[commentP][0][valP]}`;
                 }
                 
                 // [SC] create the section that contain the supertool workflow image
@@ -376,7 +389,13 @@ function createCyElems(elemList, nquadList, idStr, titleStr){
         navA.setAttribute("href", `#${conceptName}`);
         navA.innerHTML = conceptName;
         
-        // [SC] tool comment
+        // [SC] create concept URI section
+        let uriSect = createToolFeatureSection("Concept URI", conceptSect);
+        let uriP = document.createElement("p");
+        uriSect.appendChild(uriP);
+        uriP.innerHTML = nquad[idP];
+        
+        // [SC] add the concept summary
         if (nquad.hasOwnProperty(commentP) && nquad[commentP][0][valP]){
             let summarySect = createToolFeatureSection("Summary", conceptSect);
             let summaryP = document.createElement("p");
@@ -384,7 +403,132 @@ function createCyElems(elemList, nquadList, idStr, titleStr){
             summaryP.innerHTML = nquad[commentP][0][valP];
         }
         
-        // [SC] check if this supertool implements any abstract tool
+        // [SC] list constraints
+        if (nquad.hasOwnProperty(eqClassP)) {
+            let superSect = createToolFeatureSection("Constraints", conceptSect);
+            
+            let explP = document.createElement("p");
+            superSect.appendChild(explP);
+            
+            let constrUL = document.createElement("ul");
+            superSect.appendChild(constrUL);
+            
+            if (isValidUrl(nquad[eqClassP][0][idP])){
+                let targetName = parseUrlId(nquad[eqClassP][0][idP]);
+                explP.innerHTML = `
+                    This concept ${conceptName} is equivalent to another concept <a href='#${targetName}'>${nquad[eqClassP][0][idP]}</a>
+                `;
+            }
+            else {
+                let eqClassObj = ccdGraph.find(elem => elem[idP] === nquad[eqClassP][0][idP]);
+                if (eqClassObj[typeP][0] === classC){
+                    if (eqClassObj.hasOwnProperty(intersectP)) {
+                        explP.append(`Any concept is of type ${conceptName} if it satisfies all following constraints:`);
+                        
+                        for (let constrDef of eqClassObj[intersectP][0][listP]) {
+                            let constrLI = document.createElement("li");
+                            constrUL.appendChild(constrLI);
+                            
+                            if (isValidUrl(constrDef[idP])){
+                                let targetName = parseUrlId(constrDef[idP]);
+                                constrLI.innerHTML = `
+                                    is a subclass of <a href='#${targetName}'>${targetName}</a>
+                                `;
+                            }
+                            else{
+                                let constObj = ccdGraph.find(elem => elem[idP] === constrDef[idP]);
+                                if (constObj[typeP][0] === restrictC){
+                                    let targetId = "";
+                                    if (constObj.hasOwnProperty(someValP)){
+                                        targetId = constObj[someValP][0][idP];
+                                    }
+                                    else if (constObj.hasOwnProperty(allValP)){
+                                        targetId = constObj[allValP][0][idP];
+                                    }
+                                    
+                                    if (constObj.hasOwnProperty(onPropP)){
+                                        let targetName = parseUrlId(targetId);
+                                        if (constObj[onPropP][0][idP] == ofDataSetP){
+                                            constrLI.innerHTML = `
+                                                belongs to <a href='#${targetName}'>${targetName}</a> dataset
+                                            `;
+                                        }
+                                        else if (constObj[onPropP][0][idP] == hasElementP){
+                                            constrLI.innerHTML = `
+                                                has a property of <a href='#${targetName}'>${targetName}</a>
+                                            `;
+                                        }
+                                        else if (constObj[onPropP][0][idP] == hasAttrP){
+                                            constrLI.innerHTML = `
+                                                has a <a href='#${targetName}'>${targetName}</a> geometry
+                                            `;
+                                        }
+                                    }
+                                }
+                                else if (constObj[typeP][0] === classC){
+                                    let targetName = parseUrlId(constObj[complOfP][0][idP]);
+                                    if (constObj.hasOwnProperty(complOfP)){
+                                        constrLI.innerHTML = `
+                                            is subclass of any type that is not <a href='#${targetName}'>${targetName}</a>
+                                        `;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else if (eqClassObj.hasOwnProperty(unionP)) {
+                        explP.append(`Any concept is of type ${conceptName} if it satisfies one or more following constraints:`);
+                        
+                        for (let constrDef of eqClassObj[unionP][0][listP]) {
+                            let constrLI = document.createElement("li");
+                            constrUL.appendChild(constrLI);
+                            
+                            if (isValidUrl(constrDef[idP])){
+                                let targetName = parseUrlId(constrDef[idP]);
+                                constrLI.innerHTML = `
+                                    is a superclass of or a type of <a href='#${targetName}'>${targetName}</a>
+                                `;
+                            }
+                        }
+                    }
+                }
+                else if (eqClassObj[typeP][0] === restrictC){
+                    explP.append(`Any concept is of type ${conceptName} if it satisfies all following constraints:`);
+                    
+                    let constrLI = document.createElement("li");
+                    constrUL.appendChild(constrLI);
+                    
+                    let targetId = "";
+                    if (eqClassObj.hasOwnProperty(someValP)){
+                        targetId = eqClassObj[someValP][0][idP];
+                    }
+                    else if (eqClassObj.hasOwnProperty(allValP)){
+                        targetId = eqClassObj[allValP][0][idP];
+                    }
+                    
+                    if (eqClassObj.hasOwnProperty(onPropP)){
+                        let targetName = parseUrlId(targetId);
+                        if (eqClassObj[onPropP][0][idP] == ofDataSetP){
+                            constrLI.innerHTML = `
+                                belongs to <a href='#${targetName}'>${targetName}</a> dataset
+                            `;
+                        }
+                        else if (eqClassObj[onPropP][0][idP] == hasElementP){
+                            constrLI.innerHTML = `
+                                has a property of <a href='#${targetName}'>${targetName}</a>
+                            `;
+                        }
+                        else if (eqClassObj[onPropP][0][idP] == hasAttrP){
+                            constrLI.innerHTML = `
+                                has a <a href='#${targetName}'>${targetName}</a> geometry
+                            `;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // [SC] list concept superclasses
         if (nquad.hasOwnProperty(subClassOfP)){
             let superSect = createToolFeatureSection("Superclasses", conceptSect);
             
@@ -403,7 +547,7 @@ function createCyElems(elemList, nquadList, idStr, titleStr){
             }
         }
         
-        // [SC] check if this supertool implements any abstract tool
+        // [SC] list disjoint classes
         if (nquad.hasOwnProperty(disjointP)){
             let disjSect = createToolFeatureSection("Disjoint classes", conceptSect);
             
@@ -431,17 +575,38 @@ function generateCCDDoc(){
         return;
     }
     
+    
+    /*let mainElem = document.getElementById("main");
+    let cyElems = [];
+    for(let nquadIndex=0; nquadIndex<ccdGraph.length; nquadIndex++){
+        let nquad = ccdGraph[nquadIndex];
+        
+        // [SC] skip if a blank node
+        if (nquad[idP].startsWith("_:")){
+            continue;
+        }
+        
+        createCyElem(nquad, cyElems, []);
+    }
+    let graphDiv = document.createElement("div");
+    mainElem.appendChild(graphDiv);
+    graphDiv.setAttribute("class", "conceptCyCont");
+    let tempCy = createWfCanvas(cyElems, graphDiv, false);
+    preparePngDownload(tempCy, "ccdOntoOverview");*/
+    
+    
     let rootDS = "http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet";
     let dsNquads = [];
     let dsElems = [];
-    
-    let rootML = "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA";
-    let mlNquads = [];
-    let mlElems = [];
+    let dsInclElems = [ // [SC][TODO] this a quick fix
+        "Point", "Region", "Line", "Spatial", "LineData", 
+        "SpatialData", "PointData", "RegionData"
+    ];
     
     let rootA = "http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute";
     let aNquads = [];
-    let aElems = [];    
+    let aElems = [];
+    let aIncElem = ["Attribute"];
     
     let ccdGraphCopy = [...ccdGraph];
     
@@ -459,20 +624,15 @@ function generateCCDDoc(){
                 continue;
             }
         
-            if (nquad[idP] === rootDS || isSubClassOf(nquad, dsNquads)){
+            if (nquad[idP] === rootDS || isSubClassOf(nquad, dsNquads) 
+                || dsInclElems.includes(parseUrlId(nquad[idP]))){
                 dsNquads.push(nquad);
                 removeNquad = true;
             }
-            else {
-                if(nquad[idP] === rootML || isSubClassOf(nquad, mlNquads)){
-                    mlNquads.push(nquad);
-                    removeNquad = true;
-                }
-                
-                if(nquad[idP] === rootA || nquad[idP] !== rootML && isSubClassOf(nquad, aNquads)){ 
-                    aNquads.push(nquad);
-                    removeNquad = true;
-                }
+            else if(nquad[idP] === rootA || isSubClassOf(nquad, aNquads) 
+                || aIncElem.includes(parseUrlId(nquad[idP]))){ 
+                aNquads.push(nquad);
+                removeNquad = true;
             }
             
             if (removeNquad){
@@ -481,8 +641,7 @@ function generateCCDDoc(){
         }
         
         currIter += 1;
-        console.log(currIter);
-        
+
         if (nquadsToRemove.length != 0){
             for(let index=0; index<nquadsToRemove.length; index++){
                 ccdGraphCopy.splice(ccdGraphCopy.indexOf(nquadsToRemove[index]), 1);
@@ -492,9 +651,8 @@ function generateCCDDoc(){
         }
     }
     
+    createCyElems(aElems, aNquads, "aSection", "Dataset Attribute Ontology");
     createCyElems(dsElems, dsNquads, "dsSection", "Dataset ontology");
-    createCyElems(mlElems, mlNquads, "mlSection", "Measurement level ontology");
-    //createCyElems(aElems, aNquads); // [SC][TODO]
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

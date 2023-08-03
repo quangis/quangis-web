@@ -23,4 +23,5 @@ urlpatterns = [
     path(route='parsedBJAsync', view=views.processBlocklyJsonAsync, name='urln_blocklyJsonAsync'),
     
     path(route='retrievWfGraph', view=views.retrieveWfGraphAsync, name='urln_getWfGraphAsync'),
+    path(route='retrievWfList', view=views.retrieveWfIdsAsync, name='urln_getWfListAsync'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # [SC][TODO] not sure what this for

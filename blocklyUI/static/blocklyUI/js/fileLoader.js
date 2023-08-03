@@ -31,6 +31,10 @@ const algFileName = "cct.json";
 const algKey = "algKey";
 let algGraph = null;
 
+const parserCctFileName = "parserCct.json";
+const parserCctKey = "parserCctKey";
+let parserCctJson = null;
+
 let ls = window.localStorage;
 
 // [SC] a generic async function for loading remote file
@@ -211,6 +215,31 @@ async function loadCCDOnto(){
                 return resolve("");
             }).catch(error => {
                 console.error("Unable to fetch the CCD ontology.");
+                return reject(error);
+            });
+        }
+    });
+}
+
+// [SC] loads parserCct.json file
+async function loadParserCct(){
+    return new Promise(function(resolve,reject){
+        if (ls.getItem(parserCctKey)){
+            // [SC] loading the parser cct annotation from the local storage
+            parserCctJson = JSON.parse(ls.getItem(parserCctKey));
+            console.log("Loaded the parser cct annotation from the local storage.");
+            return resolve("");
+        }
+        else {
+            console.log("Can't load the parser cct annotation from the local storage. Fetching remote file.");
+            // [SC] fetching the remote parser cct annotation
+            loadFile(datapath + parserCctFileName).then(function(results){
+                parserCctJson = JSON.parse(results);
+                ls.setItem(parserCctKey, results);
+                console.log("Fetched the parser cct annotation.");
+                return resolve("");
+            }).catch(error => {
+                console.error("Unable to fetch the parser cct annotation.");
                 return reject(error);
             });
         }

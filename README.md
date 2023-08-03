@@ -120,9 +120,9 @@ conda install -c conda-forge django rdflib plumbum pyzmq
 ```
 7. Install *transformation algebra* and *cct* packages from github:
 ```
-pip install --editable=git+https://github.com/quangis/transformation-algebra.git@develop#egg=transformation-algebra
+pip install --editable=git+https://github.com/quangis/transforge.git@develop#egg=transforge
 
-pip install --editable=git+https://github.com/quangis/cct.git#egg=cct
+pip install --editable=git+https://github.com/quangis/quangis-workflow.git#egg=quangis-workflow
 ```
 
 #### Running the Django server in a test mode

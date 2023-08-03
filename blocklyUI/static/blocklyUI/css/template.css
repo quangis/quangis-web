@@ -1887,6 +1887,10 @@ label {
     text-align: center;
 }
 
+.section.grey.last {
+    padding-bottom: 200px;
+}
+
 .section.centered {
     text-align: center;
 }

@@ -14,6 +14,7 @@
 ////// [SC] code for parsing JSON-LD into Cytoscape elements
 
 let queryObj = {};
+let resObj = {};
 let wfObj = [];
 let wfCyElems = [];
 
@@ -52,7 +53,7 @@ function createBlankEdge(){
 
 /* [SC][TODO] rewrite to use saveFile.js */
 function prepareJsonDownload(jsonObj, filename){
-    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonObj));
+    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonObj, null, 4));
     let downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", `${filename}.json`);
@@ -78,17 +79,32 @@ function isValidUrl(_string) {
     return matchpattern.test(_string);
 }
 
+function downResJson(){
+    prepareJsonDownload(resObj, "parseResult");
+}
+
 ///////////////////////////////////////////////////////////////////
 ////// [SC] general ontological concepts
 const commentP = "http://www.w3.org/2000/01/rdf-schema#comment";
 const labelP = "http://www.w3.org/2000/01/rdf-schema#label";
 const seeAlsoP = "http://www.w3.org/2000/01/rdf-schema#seeAlso";
+const eqClassP = "http://www.w3.org/2002/07/owl#equivalentClass";
 const subClassOfP = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
 const disjointP = "http://www.w3.org/2002/07/owl#disjointWith";
+const intersectP = "http://www.w3.org/2002/07/owl#intersectionOf";
+const unionP = "http://www.w3.org/2002/07/owl#unionOf";
+const onPropP = "http://www.w3.org/2002/07/owl#onProperty";
+const someValP = "http://www.w3.org/2002/07/owl#someValuesFrom";
+const allValP = "http://www.w3.org/2002/07/owl#allValuesFrom";
+const complOfP = "http://www.w3.org/2002/07/owl#complementOf";
+
+const restrictC = "http://www.w3.org/2002/07/owl#Restriction";
+const classC = "http://www.w3.org/2002/07/owl#Class";
 
 const typeP = "@type";
 const valP = "@value";
 const idP = "@id";
+const listP = "@list";
 
 
 ///////////////////////////////////////////////////////////////////
@@ -109,6 +125,9 @@ const inputsP = [
 ];
 const outputP = baseWfUri + "output";
 
+const ofDataSetP = "http://geographicknowledge.de/vocab/AnalysisData.rdf#ofDataSet";
+const hasElementP = "http://geographicknowledge.de/vocab/AnalysisData.rdf#hasElement"
+const hasAttrP = "http://geographicknowledge.de/vocab/GISConcepts.rdf#hasAttribute"
 
 ///////////////////////////////////////////////////////////////////
 ////// [SC] concepts of the tool ontology
@@ -787,9 +806,10 @@ function createWfCanvas(elems, domContainer, createListener=true){
                             if (typeIndex > 0) {
                                 nodeInfo += ", ";
                             }
+                            let typeName = parseUrlId(nodeSign[typeIndex]);
                             nodeInfo += `
-                                <a href='${nodeSign[typeIndex]}' target='_blank'>
-                                    ${parseUrlId(nodeSign[typeIndex])}
+                                <a href='/docs-ccd#${typeName}' target='_blank'>
+                                    ${typeName}
                                 </a>
                             `;  
                         }
@@ -812,9 +832,10 @@ function createWfCanvas(elems, domContainer, createListener=true){
                             if (typeIndex > 0) {
                                 nodeInfo += ", ";
                             }
+                            let typeName = parseUrlId(nodeSign[keyVal][typeIndex]);
                             nodeInfo += `
-                                <a href='${nodeSign[keyVal][typeIndex]}' target='_blank'>
-                                    ${parseUrlId(nodeSign[keyVal][typeIndex])}
+                                <a href='/docs-ccd#${typeName}' target='_blank'>
+                                    ${typeName}
                                 </a>
                             `;  
                         }
@@ -832,9 +853,10 @@ function createWfCanvas(elems, domContainer, createListener=true){
                     let refUrl = node.data().cTool;
                     
                     if (refUrl.includes(superToolUri)){
+                        let supToolName = parseUrlId(refUrl);
                         nodeInfo += `This tool is implemented by a supertool (another workflow) 
-                            <a href='${refUrl}' target='_blank'>
-                                ${parseUrlId(refUrl)}.
+                            <a href='/docs-tool#sup_${supToolName}' target='_blank'>
+                                ${supToolName}.
                             </a>
                         `;
                         
@@ -959,7 +981,7 @@ function resetWfGraph(){
     defOption.disabled = true;
     defOption.selected = true;
     defOption.value = true;
-    defOption.innerHTML = " -- select an option -- ";
+    defOption.innerHTML = " -- Select an option matching your query -- ";
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -995,6 +1017,15 @@ function queryToCytoscapeJson(queryJson){
         }
         nodeElem['data']['key'] = '';
         nodeElem['data']['width'] = queryNodeWidth;
+        if (parserCctJson) {
+            let cctAnElem = parserCctJson.find(elem => elem["cct"] === types[typeIndex]['cct']);
+            if (cctAnElem && cctAnElem.hasOwnProperty('descr') && cctAnElem['descr']) {
+                nodeElem['data']['comment'] = cctAnElem['descr'];
+            }
+            else {
+                nodeElem['data']['comment'] = '[Description is not avaiable for this CCT expression.]';
+            }
+        }
         
         nodeElemDict[nodeElem['data']['id']] = nodeElem;
     }
@@ -1126,7 +1157,9 @@ function resetQueryGraph(){
     document.getElementById("queryQuestionStr").innerHTML = "";
     document.getElementById("queryCyInfoBody").innerHTML = "";
     document.getElementById('queryCy').innerHTML = "";
-    document.getElementById('queryFileSelector').selectedIndex = 0;
+    
+    // [SC][TODO][REMOVE]
+    //document.getElementById('queryFileSelector').selectedIndex = 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

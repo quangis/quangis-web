@@ -1,0 +1,150 @@
+[
+    {
+        "cct": "Reg",
+        "descr": ""
+    },
+    {
+        "cct": "R(Loc)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Loc,Nom)",
+        "descr": "A field with a nominal attribute value. For example, areas with particular land use types."
+    },
+    {
+        "cct": "R(Loc,Bool)",
+        "descr": "A field with a boolean attribute value. For example, a boolean field representing being inside or outside of a buffer."
+    },
+    {
+        "cct": "R(Loc,Ord)",
+        "descr": "A field with an ordinal attribute value. For example, field drawn as a contour."
+    },
+    {
+        "cct": "R(Loc,Itv)",
+        "descr": "A field with an interval attribute value. For example, a field showing an average temperature."
+    },
+    {
+        "cct": "R(Loc,Ratio)",
+        "descr": "A field with a ratio attribute value. For example, a field representing distance from a certain location or object or density of objects."
+    },
+    {
+        "cct": "R(Loc,Count)",
+        "descr": "A field with a count attribute value."
+    },
+    {
+        "cct": "R(Obj*Obj,Nom)",
+        "descr": "A nominal quality (attribute) of a network."
+    },
+    {
+        "cct": "R(Obj*Obj,Bool)",
+        "descr": "A boolean quality (attribute) of a network."
+    },
+    {
+        "cct": "R(Obj*Obj,Ord)",
+        "descr": "An ordinal quality (attribute) of a network."
+    },
+    {
+        "cct": "R(Obj*Obj,Itv)",
+        "descr": "An interval quality (attribute) of a network."
+    },
+    {
+        "cct": "R(Obj*Obj,Ratio)",
+        "descr": "An interval quality (attribute) of a network. For example, an amount of traffic flow on a road segment or a network distance between a source and a destination."
+    },
+    {
+        "cct": "R(Obj*Obj,Count)",
+        "descr": "A count quality (attribute) of a network. For example, a number of cars on a road segment."
+    },
+    {
+        "cct": "R(Obj*Obj,Reg)",
+        "descr": "A network comprising of objects, events, or statistical grid units. For example, a path between objects."
+    },
+    {
+        "cct": "R(Obj,Reg*Nom)",
+        "descr": "A nominal quality/attribute of an object, event, or statistical grid unit. For example, a country name."
+    },
+    {
+        "cct": "R(Obj,Reg*Bool)",
+        "descr": "A boolean quality of an object, event, or statistical grid unit. For example, a sale status (for sale or not for sale) of houses."
+    },
+    {
+        "cct": "R(Obj,Reg*Ord)",
+        "descr": "An ordinal quality of an object, event, or statistical grid unit. For example, a priority level of fire accidents."
+    },
+    {
+        "cct": "R(Obj,Reg*Itv)",
+        "descr": "An interval quality of an object, event, or statistical grid unit. For example, a construction year of a building."
+    },
+    {
+        "cct": "R(Obj,Reg*Ratio)",
+        "descr": "A ratio quality of an object, event, or statistical grid unit. For example, an average population age of a neighbourhood."
+    },
+    {
+        "cct": "R(Obj,Reg*Count)",
+        "descr": "A count quality of an object, event, or statistical grid unit. For example, a number of people in a neighbourhood."
+    },
+    {
+        "cct": "R(Obj,Reg)",
+        "descr": "A location or area of an object, event, or statistical grid unit."
+    },
+    {
+        "cct": "R(Obj,_)",
+        "descr": "An object, event, or a statistical grid unit. It may have an attribute with an unknown measurement level."
+    },
+    {
+        "cct": "R(Reg,Nom)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,Bool)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,Ord)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,Itv)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,Ratio)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,Count)",
+        "descr": ""
+    },
+    {
+        "cct": "R(Reg,_)",
+        "descr": ""
+    },
+    {
+        "cct": "R(_,Nom)",
+        "descr": "A nominal value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Bool)",
+        "descr": "A boolean value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Ord)",
+        "descr": "An ordinal value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Itv)",
+        "descr": "An interval value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Ratio)",
+        "descr": "A ratio value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Count)",
+        "descr": "A count value that is either standalone or may belong to some unknown feature (e.g., object, event, field, etc)."
+    },
+    {
+        "cct": "R(_,Reg)",
+        "descr": ""
+    }
+]
