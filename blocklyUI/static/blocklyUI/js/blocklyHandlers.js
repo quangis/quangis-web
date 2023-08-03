@@ -101,6 +101,8 @@ function parseBlocklyJson(blocklyJsonObj) {
                 }
             }
         }
+        
+        removeDemoLoadScreen();
     })
     .catch(error => {
         // [SC][TODO][REMOVE]
@@ -108,9 +110,9 @@ function parseBlocklyJson(blocklyJsonObj) {
         
         parsedQContDiv.innerHTML = `Query Error: <br> ${error}`;
         console.error('Error in fetch for query!', error);
+        
+        removeDemoLoadScreen();
     });;
-    
-    removeDemoLoadScreen();
 }
 
 // [SC][TODO]
