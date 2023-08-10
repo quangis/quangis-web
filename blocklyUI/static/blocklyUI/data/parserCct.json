@@ -1,11 +1,11 @@
 [
     {
         "cct": "Reg",
-        "descr": ""
+        "descr": "It represents a region boundary. Its concept type may be irrelevant."
     },
     {
         "cct": "R(Loc)",
-        "descr": ""
+        "descr": "It represents all the locations within a field. For example, all the locations within a boolean field."
     },
     {
         "cct": "R(Loc,Nom)",
@@ -85,7 +85,7 @@
     },
     {
         "cct": "R(Obj,Reg)",
-        "descr": "A location or area of an object, event, or statistical grid unit."
+        "descr": "A region boundary of an object, event, or statistical grid unit."
     },
     {
         "cct": "R(Obj,_)",
@@ -93,31 +93,31 @@
     },
     {
         "cct": "R(Reg,Nom)",
-        "descr": ""
+        "descr": "A region with a nominal attribute value. For example, land use types within a buffer area."
     },
     {
         "cct": "R(Reg,Bool)",
-        "descr": ""
+        "descr": "A region with a boolean attribute value."
     },
     {
         "cct": "R(Reg,Ord)",
-        "descr": ""
+        "descr": "A region with an ordinal attribute value. "
     },
     {
         "cct": "R(Reg,Itv)",
-        "descr": ""
+        "descr": "A region with an interval attribute value."
     },
     {
         "cct": "R(Reg,Ratio)",
-        "descr": ""
+        "descr": "A region with a count attribute value. For example, land use mix in a buffer area."
     },
     {
         "cct": "R(Reg,Count)",
-        "descr": ""
+        "descr": "A region with a count attribute value. For example, population in a buffer area."
     },
     {
         "cct": "R(Reg,_)",
-        "descr": ""
+        "descr": "It represents a region boundary that may have an attribute at any measurement level. For example, a statistical grid unit"
     },
     {
         "cct": "R(_,Nom)",
@@ -145,6 +145,6 @@
     },
     {
         "cct": "R(_,Reg)",
-        "descr": ""
+        "descr": "It represents a region boundary. Its concept type is unknown from question. For exmaple, an area with population larger than 10k."
     }
 ]
