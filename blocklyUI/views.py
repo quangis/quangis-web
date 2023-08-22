@@ -25,8 +25,8 @@ from transforge.util.store import TransformationStore
 from quangis.cct import cct, R3, R2, Obj, Reg
 
 wf_store = TransformationStore.backend('marklogic',
-    url=settings.TDB_URL,   
-    cred=(settings.TDB_USER, settings.TDB_PASS)
+    url=settings.TDB_URL,
+    cred=(settings.TDB_USER, settings.TDB_PASS) if settings.TDB_USER else None
 )
 
 
@@ -149,7 +149,8 @@ def parseQuestionBlock(qBlock):
     except Exception as e:
         print("============================ Exception while querying for workflows:")
         print(type(e), e)
-        return {"error": "Exception while querying for workflows."}
+        return {"error":
+            f"Exception while querying for workflows: {type(e)}: {e}."}
 
 
 # [SC] for retrieving by URI a workflow graph on demand from the client
