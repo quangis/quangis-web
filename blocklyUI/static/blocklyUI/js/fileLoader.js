@@ -1,3 +1,5 @@
+let ls = window.localStorage;
+
 // [SC][REMOVE]
 //const toolsFileName = "tools.json";
 //let toolsGraph = null;
@@ -35,7 +37,10 @@ const parserCctFileName = "parserCct.json";
 const parserCctKey = "parserCctKey";
 let parserCctJson = null;
 
-let ls = window.localStorage;
+const cDictURL = "https://raw.githubusercontent.com/quangis/geo-question-parser/haiqi/Dictionary/coreConceptsML.txt";
+const nDictURL = "https://raw.githubusercontent.com/quangis/geo-question-parser/haiqi/Dictionary/network.txt";
+const cDictKey = "cDictKey";
+let cDict = [];
 
 // [SC] a generic async function for loading remote file
 async function loadFile(path) {    
@@ -44,6 +49,78 @@ async function loadFile(path) {
     let data = await response.text();
     
     return data;
+}
+
+// [SC] loads the question parser concept dictionary either from the local storage or from a remote file (github)
+async function loadCDict(){
+    return new Promise(function(resolve,reject){
+        if (ls.getItem(cDictKey)){
+            // [SC] loading the parser core concept dictionary from the local storage
+            cDict = JSON.parse(ls.getItem(cDictKey));
+            console.log("Loaded the parser concept dictionary from the local storage.");
+            return resolve("");
+        }
+        else {
+            console.log("Can't load the parser concept dictionary from the local storage. Fetching the remote file.");
+            // [SC] fetching the remote core concept dictionary
+            loadFile(cDictURL).then(function(results){
+                cDict = [];
+                
+                let lines = results.split('\n');
+                for (let i=0; i<lines.length; i++) {
+                    let concepts = lines[i].split('\t');
+                    
+                    let cObj = {
+                        id: `bc${i}`,
+                        term: concepts[0],
+                        cc: concepts[1],
+                        measure: ""
+                    }
+                    
+                    if (concepts.length == 3){
+                        cObj.measure = concepts[2];
+                    }
+                    
+                    cDict.push(cObj);
+                }
+                
+                // [SC] fetching the remote network concept dictionary
+                loadFile(nDictURL).then(function(results){
+                    let lines = results.split('\n');
+                    for (let i=0; i<lines.length; i++) {
+                        let concept = lines[i];
+                        
+                        if (!cDict.find(elem => elem.term === concept)) {
+                            let cObj = {
+                                id: `bc${cDict.length + i}`,
+                                term: concept,
+                                cc: "network",
+                                measure: ""
+                            }
+                            cDict.push(cObj);
+                        }
+                    }
+                    
+                    console.log("Fetched the parser network concept dictionary.");
+                    return resolve("");
+                }).catch(error => {
+                    console.error("Unable to fetch the parser network concept dictionary.");
+                    return reject(error);
+                });
+                
+                cDict.sort(function (a, b) {
+                    return a.term.localeCompare(b.term);
+                });
+                
+                ls.setItem(cDictKey, JSON.stringify(cDict));
+                console.log("Fetched the parser core concept dictionary.");
+                return resolve("");
+            }).catch(error => {
+                console.error("Unable to fetch the parser core concept dictionary.");
+                return reject(error);
+            });
+        }
+    });
 }
 
 // [SC] loads blockly constructs for the retrieval questions

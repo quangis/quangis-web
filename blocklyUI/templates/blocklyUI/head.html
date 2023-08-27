@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{% static 'blocklyUI/css/template.css'%}" type="text/css">
     <!-- [SC] CSS styling for blockly -->
     <link rel="stylesheet" href="{% static 'blocklyUI/css/main.css'%}" type="text/css">
+    <!-- [SC] CSS styling for the custom blockly input field with concept suggestions -->
+    <link rel="stylesheet" href="{% static 'blocklyUI/css/customfield_cPicker.css'%}" type="text/css">
     <!-- [SC] iconic fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <!-- [SC] CSS styling for json tree view -->
@@ -27,7 +29,11 @@
     <!-- [SC] importing Blockly core code -->
     <!-- <script type="text/javascript" charset="UTF-8" src="js/blockly/blockly_compressed.js"></script> -->
     <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/blockly/blockly-9.2.1.min.js'%}"></script>
-
+    
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/fileLoader.js'%}"></script>
+    
+    <!-- [SC] include a Blockly custom field input with core concept search and suggestion functionality -->
+    <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/customfield_cPicker.js'%}"></script>
     <!-- [SC] include the custom Blockly block definitions -->
     <script type="text/javascript" charset="UTF-8" src="{% static 'blocklyUI/js/customBlocks/blocks.js'%}"></script>
     <!-- [SC] custom Blockly code for parse tree json generation -->
