@@ -59,9 +59,15 @@ function parseBlocklyJson(blocklyJsonObj) {
     )
     .then(response => response.json())
     .then(data => {
-        // [SC][TODO][REMOVE]
-        //parsedQCont.innerHTML = JSON.stringify(data, null, 4);
-        let dataTree = jsonTree.create(data, parsedQContDiv);
+        
+        // [SC] using pretty json visualizer
+        // [SC]
+        let dataCopy = JSON.parse(JSON.stringify(data));
+        let reg = new RegExp("<", "g");
+        dataCopy.sparql = dataCopy.sparql.replace(reg,"&lt;");
+        reg = new RegExp(">", "g");
+        dataCopy.sparql = dataCopy.sparql.replace(reg,"&gt;");
+        let dataTree = jsonTree.create(dataCopy, parsedQContDiv);
         
         if (!data.hasOwnProperty("error")) {
             downResBtn.disabled = false;

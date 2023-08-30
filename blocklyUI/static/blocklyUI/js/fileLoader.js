@@ -106,14 +106,15 @@ async function loadCDict(){
                 }).catch(error => {
                     console.error("Unable to fetch the parser network concept dictionary.");
                     return reject(error);
+                }).finally(() => {
+                    cDict.sort(function (a, b) {
+                        return a.term.localeCompare(b.term);
+                    });
+                    
+                    ls.setItem(cDictKey, JSON.stringify(cDict));
+                    console.log("Fetched the parser core concept dictionary.");
                 });
                 
-                cDict.sort(function (a, b) {
-                    return a.term.localeCompare(b.term);
-                });
-                
-                ls.setItem(cDictKey, JSON.stringify(cDict));
-                console.log("Fetched the parser core concept dictionary.");
                 return resolve("");
             }).catch(error => {
                 console.error("Unable to fetch the parser core concept dictionary.");

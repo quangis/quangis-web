@@ -92,7 +92,7 @@ class FieldCPicker extends Blockly.FieldTextInput {
             option.className = 'bl_concept';
             option.dataset.cc = cObj.cc;
             option.dataset.measure = cObj.measure;
-            option.dataset.term = cObj.term;
+            option.dataset.term = cObj.term.toLowerCase();
             option.innerHTML = `'${cObj.term}' &lt;<div class="bl_cval">${cObj.cc}</div>, <div class="bl_mval">${cObj.measure}</div>&gt;`;
             
             this.boundEvents_.push(
